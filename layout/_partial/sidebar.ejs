@@ -1,6 +1,6 @@
 
 <aside class="column is-3" style="padding-top: 0;">
-    <div id="sidebar" class="border-radius overflow-hidden has-padding-bottom content-background">
+    <div class="user-info border-radius overflow-hidden has-padding-bottom content-background">
         <header class="avatar-wrap has-text-centered" style="background-image: url('<%= config.user_curtain%>')">
                 <img class="avatar" src="<%= config.user_avatar || config["sidebar-avatar"] %>">
         </header>
@@ -11,7 +11,7 @@
         </section>
         <div>
             <!-- SNS Link 社交 -->
-            <ul class="sns-container justify-center is-flex has-padding">
+            <ul class="sns-container justify-center is-flex has-padding" style="border-top: 1px solid #f1f1f1">
                 <% if (config.RSS) { %>
                     <li>
                         <a href="<%= config.root + 'feed.xml' %>">

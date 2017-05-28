@@ -134,4 +134,47 @@
 
     $container.removeClass('mobile-nav-on');
   });
+
+  /*
+   滚动函数
+   接收三个参数,
+   1 接收一个DOM对象
+   2 给目标对象切换class
+   3 触发的高度 (可选项,如果不指定高度,会将DOM的高度作为触发高度)
+   */
+    function setScrollElementClass(scrollTarget, toggleClass, scrollHeight){
+        document.addEventListener('scroll',function(){
+            var currentTop = window.pageYOffset;
+            currentTop > (scrollHeight||scrollTarget.clientHeight)
+                ?scrollTarget.classList.add(toggleClass)
+                :scrollTarget.classList.remove(toggleClass)
+        })
+    }
+
+    // 滾動懸停
+    (function(){
+      var nav = document.querySelector('#navbar .nav')
+      var user_info = document.querySelector('#user_info')
+      // setScrollElementClass(nav, 'fixed-navbar')
+      // setScrollElementClass(user_info, 'fixed-userinfo-container')
+    }());
+
+    (function() {
+        var navbar = document.querySelector('#navbar>.container')
+        var content = document.querySelector('.main-content')
+        var transtion = 0
+
+        var copyContent = content.cloneNode(true)
+        var blurCopyContent = document.createElement('div')
+            blurCopyContent.classList.add('content-blur')
+            blurCopyContent.appendChild(copyContent)
+
+        navbar.appendChild(blurCopyContent)
+
+        document.body.onscroll = function () {
+            transtion = 'translate3d(0,' + (-document.body.scrollTop + 'px') + ',0)'
+            copyContent.style.transform = transtion
+        }
+
+    }());
 })(jQuery);

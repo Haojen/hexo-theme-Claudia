@@ -66,11 +66,52 @@
   .has-padding-bottom {
     padding-bottom: 15px;
   }
+
+  .position-relative {
+    position: relative;
+  }
+
+  .position-absolute {
+    position: absolute;
+  }
   /*util end*/
+
+  #navbar {
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 2;
+    border-top: 2px solid red;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.82);
+  }
+
+  #navbar .user-info {
+    visibility: hidden;
+  }
+
+  .content-blur {
+    margin-top: 50px;
+    position: absolute;
+    top:0;
+    filter: blur(10px);
+    z-index: 1;
+  }
 
   .primary-post-container{
     height: 330px;
     margin-bottom: 15px;
+  }
+
+  .primary-post-container .title {
+    color: #fff;
+  }
+
+  .primary-post-container .sub-title {
+    color: #fff;
+  }
+  .primary-post-container .date {
+    color: #f1f1f1;
   }
 
   .primary-item-main {
@@ -81,16 +122,6 @@
 
   .primary-item-main > div {
     height: 140px;
-  }
-
-  .primary-post-container .title {
-    color: #fff;
-  }
-  .primary-post-container .sub-title {
-    color: #fff;
-  }
-  .primary-post-container .date {
-    color: #f1f1f1;
   }
 
   .primary-item-sub {
@@ -128,19 +159,24 @@
     border-bottom: 1px solid #e1e1e1;
   }
 
-  /*slidebar*/
+  /*用戶狀態欄*/
 
-  #sidebar .avatar-wrap {
-    background: rebeccapurple;
+  .user-info {
+    max-width: 270px;
+    position: fixed;
+  }
+
+  .user-info .avatar-wrap {
     height: 150px;
     padding-top: 90px;
     margin-bottom: 45px;
 
     background-size: cover;
+    background-color: blueviolet;
     background-repeat: no-repeat;
   }
 
-  #sidebar .avatar {
+  .user-info .avatar {
     width: 110px;
     height: 110px;
     border-radius: 50%;
@@ -160,9 +196,9 @@
   <div style="background: #f5f8f9;">
     <!-- 全局头部导航-->
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-    <div class="container">
-      <div class="is-flex" style="margin-top: 20px">
-        <section><%- body %></section>
+    <div id="main-container" class="container" style="position: relative; z-index: 1; padding-top: 50px;">
+      <div class="is-flex main-content" style="margin-top: 20px">
+        <section class="main-content"><%- body %></section>
         <% if(theme.sidebar){ %>
           <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
         <%}%>
