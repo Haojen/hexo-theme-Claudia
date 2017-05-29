@@ -1,11 +1,14 @@
-<footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+<footer class="has-text-centered" style="margin-top: 15px">
+  <div class="container has-padding" style="border-top: 1px solid #f1f1f1; ">
+    <div>
+      <div>
+        Theme by <a href="http://haojen.github.io/">Haojen Ma</a>
+        <br>
+        Copyright © <%= config.author || config.title %> <%= date(new Date(), 'YYYY') %>
+        <br>
+        <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </div>
     </div>
+    <%- partial('_partial/after-footer') %>
   </div>
 </footer>
