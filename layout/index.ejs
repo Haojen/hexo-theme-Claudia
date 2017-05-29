@@ -1,1 +1,28 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+
+<div style="background: #f5f8f9;">
+    <!-- 全局头部导航-->
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div id="main-container" class="container" style="padding-top: 50px;">
+        <div class="is-flex main-content" style="margin-top: 20px">
+            <section class="main-content">
+                <%- partial('_partial/archive', {pagination: 2, index: true}) %>
+                <!--翻頁-->
+                <nav class="pagination is-flex" style="justify-content: flex-end">
+                    <% if (is_home()){%>
+                    <% if (page.prev){%>
+                    <a class="pagination-previous" href="<%- config.root %><%- page.prev_link %>">Previous</a>
+                    <%}%>
+                    <% if (page.next){ %>
+                    <a class="pagination-next" href="<%- config.root %><%- page.next_link %>">Next page</a>
+                    <%}%>
+                    <%}%>
+                </nav>
+            </section>
+            <% if(is_home()){ %>
+            <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+            <%}%>
+        </div>
+    </div>
+
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+</div>

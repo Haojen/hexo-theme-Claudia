@@ -159,6 +159,7 @@
       // setScrollElementClass(user_info, 'fixed-userinfo-container')
     }());
 
+    // 模糊效果
     (function() {
         var navbar = document.querySelector('#navbar>.container')
         var content = document.querySelector('.main-content')
