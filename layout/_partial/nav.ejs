@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="nav" style="background-color: rgba(255,255,255,0.88);">
       <div class="nav-left">
-        <a class="nav-item" style="font-family: fantasy; font-size: 20px;">
+        <a href="<%- config.root %>" class="nav-item" style="font-family: fantasy; font-size: 20px;">
           <span class="logo"><%= config.author || ''%></span>'s Blog
         </a>
       </div>
@@ -11,17 +11,12 @@
         <span></span>
         <span></span>
       </span>
-
       <div class="nav-right nav-menu">
-        <a class="nav-item">
-          Home
-        </a>
-        <a class="nav-item">
-          Archive
-        </a>
-        <a class="nav-item">
-          Tag
-        </a>
+          <% for (var i in theme.menu) { %>
+            <a class="nav-item" href="<%- url_for(theme.menu[i])%>">
+              <%- theme.menu[i] %>
+            </a>
+          <% } %>
       </div>
     </nav>
   </div>

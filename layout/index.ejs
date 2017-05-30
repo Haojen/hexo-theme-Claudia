@@ -1,11 +1,213 @@
+<style>
+    .post-hover:hover {
+        box-shadow: inset 0 0 100px #000;
+        transition: box-shadow .2s;
+    }
 
+    .primary-post-container{
+        height: 330px;
+        margin-bottom: 15px;
+    }
+
+    .primary-post-container .title {
+        color: #fff;
+    }
+
+    .primary-post-container .sub-title {
+        color: #fff;
+    }
+    .primary-post-container .date {
+        color: #f1f1f1;
+    }
+
+    .primary-1-color {
+        background-color: yellowgreen;
+    }
+
+    .primary-2-color {
+        background-color: darkcyan;
+    }
+
+    .primary-3-color {
+        background-color: sienna;
+    }
+
+    .primary-item-main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+    }
+
+    .primary-item-main > div {
+        height: 140px;
+    }
+
+    .primary-item-sub {
+        display: flex;
+        align-items: center;
+        height: 48.6%;
+        background-size: cover;
+    }
+
+    .primary-item-sub > div {
+        height: 100px;
+        display: flex;
+        align-items: center;
+
+        padding-left: 15px;
+    }
+
+    /*次要的 post 内容样式*/
+
+    .sub-post-container {
+        height: 234px;
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .sub-post-container > div {
+    }
+
+    .sub-post-container .post-avatar {
+
+    }
+
+    .sub-post-container .post-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    /*用戶狀態欄*/
+
+    .user-info {
+        max-width: 270px;
+        position: fixed;
+    }
+
+    .user-info .avatar-wrap {
+        height: 150px;
+        padding-top: 90px;
+        margin-bottom: 45px;
+
+        background-size: cover;
+        background-color: blueviolet;
+        background-repeat: no-repeat;
+    }
+
+    .user-info .avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+
+    .sns-container {
+        flex-wrap: wrap;
+    }
+</style>
 <div style="background: #f5f8f9;">
-    <!-- 全局头部导航-->
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
     <div id="main-container" class="container" style="padding-top: 50px;">
         <div class="is-flex main-content" style="margin-top: 20px">
             <section class="main-content">
-                <%- partial('_partial/archive', {pagination: 2, index: true}) %>
+                <%
+                    var defaultTitle = 'Title is empty'
+
+                    var anisina_cover = 'header-img'
+
+                    var firstArticle = page.posts.data[0]
+                    var secondArticle = page.posts.data[1]
+                    var thirdArticle = page.posts.data[2]
+
+                    var cover_photo = firstArticle.cover_photo || firstArticle.header_img || ''
+
+
+                    function getArticleFirstPhoto(post) {
+                        var content = post.content
+                        var regex = /<img src="\S+"/
+                        var result = regex.exec(content)
+
+                        if (result) {
+                            console.log(result[0].split('src="')[1].split('"')[0])
+                            return result[0].split('src="')[1].split('"')[0]
+                        }
+
+                        return ''
+                    }
+                %>
+                <div class="primary-post-container is-flex content-background">
+                    <div class="column is-7">
+                        <a href="<%= config.root + firstArticle.path %>">
+                            <div class="primary-item-main full-height primary-1-color post-hover" style="background-image: url('<%= getArticleFirstPhoto(firstArticle) || cover_photo  %>')">
+                                <div class="full-width">
+                                    <div class="content has-text-centered">
+                                        <% firstArticle.tags.forEach( function(tag){%>
+                                        <span class="tag"><%= tag %></span>
+                                        <%})%>
+                                        <h1 class="title"><%= firstArticle.title || defaultTitle %></h1>
+                                        <p class="sub-title"><%= firstArticle.subtitle || 'subtitle'%></p>
+                                        <p class="date"><%= firstArticle.date.format(config.date_format) %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column is-5" style="padding-left: 0;">
+                        <div class="full-height is-flex flex-column justify-space-between">
+
+                            <div class="primary-item-sub primary-2-color" style="background-image: url('<%= getArticleFirstPhoto(secondArticle) || cover_photo  %>')" >
+                                <a class="full-width has-padding" href="<%= config.root + secondArticle.path %>">
+                                    <div class="full-width">
+                                        <div class="content">
+                                            <h2 class="title"><%= secondArticle.title || defaultTitle%></h2>
+                                            <p class="sub-title"><%= secondArticle.subtitle || 'subtitle'%></p>
+                                            <p class="date"><%= secondArticle.date.format(config.date_format) %></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="primary-item-sub primary-3-color" style="background-image: url('<%= getArticleFirstPhoto(thirdArticle) || cover_photo  %>')" >
+                                <a class="full-width has-padding" href="<%= config.root + thirdArticle.path %>">
+                                    <div class="full-width">
+                                        <div class="content">
+                                            <h2 class="title">
+                                                <%= thirdArticle.title || defaultTitle%>
+                                            </h2>
+                                            <p class="sub-title"><%= thirdArticle.subtitle || 'subtitle'%></p>
+                                            <p class="date"><%= thirdArticle.date.format(config.date_format) %></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <% page.posts.each (function (post, index) { %>
+                <% if ( index > 2 ){%>
+                <%
+                    var cover_photo = post.cover_photo || post[anisina_cover] || getArticleFirstPhoto(post)
+                %>
+                <a class="post-hover" href="<%= config.root + post.path %>">
+                    <div class="sub-post-container is-flex content-background">
+                        <% if (cover_photo){%>
+                        <div class="flex-1 post-avatar"
+                             style="margin: 12px;background-image: url('<%= cover_photo %>')" >
+                        </div>
+                        <%}%>
+                        <div class="flex-2 post-content is-flex align-center">
+                            <div class="content">
+                                <h3><%= post.title || 'title' %></h3>
+                                <p>
+                                    <%- truncate(strip_html(post.content), {length: 180, omission: '..'}) %>
+                                </p>
+                                <p><%= post.date.format(config.date_format) %></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <%}%>
+                <% })%>
                 <!--翻頁-->
                 <nav class="pagination is-flex" style="justify-content: flex-end">
                     <% if (is_home()){%>
@@ -23,6 +225,4 @@
             <%}%>
         </div>
     </div>
-
-    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 </div>

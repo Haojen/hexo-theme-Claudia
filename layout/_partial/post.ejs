@@ -1,0 +1,59 @@
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
+        background-size: cover;
+        background-color: lightsteelblue;
+    }
+
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
+    }
+
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+</style>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong><%- post.title || 'Title is Empty'%></strong>
+            </h1>
+            <% if (post.subtitle) {%>
+            <h2><%- post.subtitle%></h2>
+            <%}%>
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="<%- config.user_avatar %>">
+                <span style="padding:0 10px;">By <%- config.user_name%></span>
+                <span class="post-date">At: <%= post.date.format(config.date_format) %></span>
+            </div>
+
+            <% if(post.tags.length > 0){%>
+            <div>
+                Tags:
+                <% post.tags.forEach(function(tag){%>
+                <a class="tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
+                <%})%>
+            </div>
+            <%}%>
+        </div>
+        <div class="content">
+            <%- post.content %>
+        </div>
+    </div>
+</section>
+<script>
+    var img = document.querySelectorAll('img')[1]
+    var header_box = document.querySelector('#header_box')
+    header_box.style.backgroundImage = 'url('+ img.src +')'
+</script>

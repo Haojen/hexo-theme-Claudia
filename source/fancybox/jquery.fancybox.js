@@ -999,7 +999,7 @@
 			// This helps IE
 			$(coming.wrap).bind('onReset', function () {
 				try {
-					$(this).find('iframe').hide().attr('src', '//about:blank').end().empty();
+					$(this).find('iframe').hide().attr('src', '//about.ejs:blank').end().empty();
 				} catch (e) {}
 			});
 

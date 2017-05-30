@@ -1,0 +1,31 @@
+#navbar {
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 2;
+    border-top: 2px solid red;
+    border-bottom: 1px solid #f1f1f1;
+    background-color:#fff;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 5px;
+    border-radius: 4px;
+    font-family: fantasy;
+    margin-right: 5px;
+    background-color: black;
+}
+
+#navbar .user-info {
+    visibility: hidden;
+}
+
+.content-blur {
+    margin-top: 50px;
+    position: absolute;
+    top:0;
+    filter: blur(10px);
+    z-index: 1;
+}
