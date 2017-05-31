@@ -6,7 +6,9 @@
 </style>
 <body>
   <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
-  <%- body %>
+  <div style="padding-top: 80px">
+      <%- body %>
+  </div>
   <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 </body>
 </html>
