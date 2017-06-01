@@ -1,6 +1,26 @@
----
- layout: false
----
-<div>
-    ggg
+<style>
+    .info-box {
+        padding: 15px;
+        width: 315px;
+        background-color: rgba(255, 255, 255, .8);
+    }
+</style>
+<%
+    var avatar = 'https://images.apple.com/leadership/jonathan-ive/bio/image_large.png' || config.user_avatar || config.user_info_avatar
+%>
+<div style="background-color: #e1e1e1">
+    <div class="container is-flex justify-center">
+        <div class="info-box content">
+            <h1><strong><%- config.user_name %></strong></h1>
+            <span class="description"><%- config.user_description %></span>
+            <span class="location"><%- config.user_location || 'Earth'%></span>
+            <p class="contact"><%- config.user_contact || 'Earth'%></p>
+            <article>
+                <p><%= config.user_introduction || '李开复（1961年12月3日－），生于中華民國臺灣省臺北縣中和李开复（1961年12月3日－），生于中華民國臺灣省臺北縣中和李开复（1961年12月3日－），生于中華民國臺灣省臺北縣中和鄉（現為新北市中和區），擁有中華民國國籍，是一位信息产业的經理人、創業者、和電腦科学的研究者。現任創新工場的董事长兼執行長。曾在蘋果、SGI、微軟和Google等多家IT公司擔當要職。他因过去的雇主微软和谷歌在2005年的法律纠纷而成为公众的爭議焦点[1][2]。' %></p>
+            </article>
+        </div>
+        <div class="avatar-box" style="align-self: flex-end; font-size: 0;">
+            <img class="avatar" src="<%- avatar %>">
+        </div>
+    </div>
 </div>
