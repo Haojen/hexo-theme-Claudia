@@ -71,3 +71,7 @@
 .position-absolute {
     position: absolute;
 }
+
+.sub-title {
+    color: darkgray;
+}

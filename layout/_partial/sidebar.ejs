@@ -1,17 +1,22 @@
 
-<aside class="column is-3" style="padding-top: 0;">
+<aside class="column is-3" style="padding: 20px;padding-top: 0;">
     <div class="user-info border-radius overflow-hidden has-padding-bottom content-background">
-        <header class="avatar-wrap has-text-centered" style="background-image: url('<%= config.user_curtain%>')">
-                <img class="avatar" src="<%= config.user_avatar || config["sidebar-avatar"] %>">
+        <header class="avatar-wrap has-text-centered">
+            <img class="avatar" src="<%= config.user_avatar || config["sidebar-avatar"] %>">
         </header>
-        <section class=" has-padding has-text-centered">
+        <section class=" has-padding has-text-centered" style="border-bottom: 1px solid #f1f1f1">
             <h3><strong><%= config.user_name || 'User Name'%></strong></h3>
-            <p><%= config.user_description || 'Hello World'%></p>
-            <p><%= config.user_location || 'Earth'%></p>
+            <p class="sub-title"><%= config.user_description || 'Hello World'%></p>
+            <% if (config.user_location){%>
+                <p class="is-flex center" style=" color: gray">
+                    <i class="fa fa-map-marker" style="padding: 5px"></i>
+                    <%- config.user_location %>
+                </p>
+            <%}%>
         </section>
         <div>
             <!-- SNS Link 社交 -->
-            <ul class="sns-container justify-center is-flex has-padding" style="border-top: 1px solid #f1f1f1">
+            <ul class="sns-container justify-center is-flex has-padding">
                 <% if (config.RSS) { %>
                     <li>
                         <a href="<%= config.root + 'feed.xml' %>">
