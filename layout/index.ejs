@@ -5,7 +5,7 @@
     }
 
     .primary-post-container{
-        height: 330px;
+        height: 377px;
         margin-bottom: 15px;
     }
 
@@ -64,13 +64,6 @@
         height: 234px;
         display: flex;
         margin-bottom: 15px;
-    }
-
-    .sub-post-container > div {
-    }
-
-    .sub-post-container .post-avatar {
-
     }
 
     .sub-post-container .post-content {
@@ -140,8 +133,11 @@
                                         <% firstArticle.tags.forEach( function(tag){%>
                                             <span class="tag"><%= tag %></span>
                                         <%})%>
-                                        <h1 class="title"><%= firstArticle.title || defaultTitle %></h1>
+                                        <h1 class="title is-marginless"><%= firstArticle.title || defaultTitle %></h1>
                                         <p class="sub-title"><%= firstArticle.subtitle || 'subtitle'%></p>
+                                        <p class="is-marginless">
+                                            <%- truncate(strip_html(firstArticle.content), {length: 150, omission: '..'}) %>
+                                        </p>
                                         <p class="date"><%= firstArticle.date.format(config.date_format) %></p>
                                     </div>
                                 </div>
@@ -150,28 +146,29 @@
                     </div>
                     <div class="column is-5" style="padding-left: 0;">
                         <div class="full-height is-flex flex-column justify-space-between">
-
                             <div class="primary-item-sub primary-2-color" style="background-image: url('<%= getArticleFirstPhoto(secondArticle) || cover_photo  %>')" >
                                 <a class="full-width has-padding" href="<%= config.root + secondArticle.path %>">
-                                    <div class="full-width">
-                                        <div class="content">
-                                            <h2 class="title"><%= secondArticle.title || defaultTitle%></h2>
-                                            <p class="sub-title"><%= secondArticle.subtitle || 'subtitle'%></p>
-                                            <p class="date"><%= secondArticle.date.format(config.date_format) %></p>
-                                        </div>
+                                    <div class="content">
+                                        <h2 class="title is-marginless"><%= secondArticle.title || defaultTitle%></h2>
+                                        <p class="sub-title"><%= secondArticle.subtitle || 'subtitle'%></p>
+                                        <p class="is-marginless">
+                                            <%- truncate(strip_html(secondArticle.content), {length: 80, omission: '..'}) %>
+                                        </p>
+                                        <p class="date"><%= secondArticle.date.format(config.date_format) %></p>
                                     </div>
                                 </a>
                             </div>
                             <div class="primary-item-sub primary-3-color" style="background-image: url('<%= getArticleFirstPhoto(thirdArticle) || cover_photo  %>')" >
                                 <a class="full-width has-padding" href="<%= config.root + thirdArticle.path %>">
-                                    <div class="full-width">
-                                        <div class="content">
-                                            <h2 class="title">
-                                                <%= thirdArticle.title || defaultTitle%>
-                                            </h2>
-                                            <p class="sub-title"><%= thirdArticle.subtitle || 'subtitle'%></p>
-                                            <p class="date"><%= thirdArticle.date.format(config.date_format) %></p>
-                                        </div>
+                                    <div class="content">
+                                        <h2 class="title is-marginless">
+                                            <%= thirdArticle.title || defaultTitle%>
+                                        </h2>
+                                        <p class="sub-title"><%= thirdArticle.subtitle || 'subtitle'%></p>
+                                        <p class="is-marginless">
+                                            <%- truncate(strip_html(thirdArticle.content), {length: 80, omission: '..'}) %>
+                                        </p>
+                                        <p class="date"><%= thirdArticle.date.format(config.date_format) %></p>
                                     </div>
                                 </a>
                             </div>
@@ -207,17 +204,17 @@
                 <!--翻頁-->
                 <nav class="pagination is-flex" style="justify-content: flex-end">
                     <% if (is_home()){%>
-                    <% if (page.prev){%>
-                    <a class="pagination-previous" href="<%- config.root %><%- page.prev_link %>">Previous</a>
-                    <%}%>
-                    <% if (page.next){ %>
-                    <a class="pagination-next" href="<%- config.root %><%- page.next_link %>">Next page</a>
-                    <%}%>
+                        <% if (page.prev){%>
+                            <a class="pagination-previous" href="<%- config.root %><%- page.prev_link %>">Previous</a>
+                        <%}%>
+                        <% if (page.next){ %>
+                            <a class="pagination-next" href="<%- config.root %><%- page.next_link %>">Next page</a>
+                        <%}%>
                     <%}%>
                 </nav>
             </section>
             <% if(is_home()){ %>
-            <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+                <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
             <%}%>
         </div>
     </div>
