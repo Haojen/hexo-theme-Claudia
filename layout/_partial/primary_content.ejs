@@ -1,0 +1,76 @@
+<%
+    var defaultTitle = 'Title is empty'
+
+    var anisina_cover = 'header-img'
+
+    var firstArticle = posts.data[0]
+    var secondArticle = posts.data[1]
+    var thirdArticle = posts.data[2]
+
+    var cover_photo = firstArticle.cover_photo || firstArticle.header_img || ''
+
+
+    function getArticleFirstPhoto(post) {
+        var content = post.content
+        var regex = /<img src="\S+"/
+        var result = regex.exec(content)
+
+        if (result) {
+            console.log(result[0].split('src="')[1].split('"')[0])
+            return result[0].split('src="')[1].split('"')[0]
+        }
+
+        return ''
+    }
+%>
+<div class="primary-post-container is-flex content-background">
+    <div class="column is-7">
+        <a href="<%= config.root + firstArticle.path %>">
+            <div class="primary-item-main full-height primary-1-color post-hover" style="background-image: url('<%= getArticleFirstPhoto(firstArticle) || cover_photo  %>')">
+                <div class="full-width">
+                    <div class="content has-text-centered">
+                        <% firstArticle.tags.forEach( function(tag){%>
+                            <span class="tag"><%= tag %></span>
+                        <%})%>
+                            <h1 class="title text-shadow is-marginless"><%= firstArticle.title || defaultTitle %></h1>
+                            <p class="sub-title text-shadow"><%= firstArticle.subtitle || 'subtitle'%></p>
+                            <p class="post-content-text is-marginless text-shadow">
+                                <%- truncate(strip_html(firstArticle.content), {length: 150, omission: '..'}) %>
+                            </p>
+                            <p class="date text-shadow"><%= firstArticle.date.format(config.date_format) %></p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="column is-5" style="padding-left: 0;">
+        <div class="full-height is-flex flex-column justify-space-between">
+            <div class="primary-item-sub primary-2-color" style="background-image: url('<%= getArticleFirstPhoto(secondArticle) || cover_photo  %>')" >
+                <a class="post-hover full-width has-padding" href="<%= config.root + secondArticle.path %>">
+                    <div class="content">
+                        <h2 class="title is-marginless text-shadow"><%= secondArticle.title || defaultTitle%></h2>
+                        <p class="sub-title text-shadow"><%= secondArticle.subtitle || 'subtitle'%></p>
+                        <p class="post-content-text text-shadow is-marginless">
+                            <%- truncate(strip_html(secondArticle.content), {length: 80, omission: '..'}) %>
+                        </p>
+                        <p class="date text-shadow"><%= secondArticle.date.format(config.date_format) %></p>
+                    </div>
+                </a>
+            </div>
+            <div class="primary-item-sub primary-3-color" style="background-image: url('<%= getArticleFirstPhoto(thirdArticle) || cover_photo  %>')" >
+                <a class="post-hover full-width has-padding" href="<%= config.root + thirdArticle.path %>">
+                    <div class="content">
+                        <h2 class="title is-marginless text-shadow">
+                            <%= thirdArticle.title || defaultTitle%>
+                        </h2>
+                        <p class="sub-title text-shadow"><%= thirdArticle.subtitle || 'subtitle'%></p>
+                        <p class="is-marginless text-shadow post-content-text">
+                            <%- truncate(strip_html(thirdArticle.content), {length: 80, omission: '..'}) %>
+                        </p>
+                        <p class="date text-shadow"><%= thirdArticle.date.format(config.date_format) %></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
