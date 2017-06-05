@@ -99,22 +99,37 @@
         flex-wrap: wrap;
     }
 </style>
+<%
+function getPostCoverPhoto(post) {
+    var content = post.content
+    var regex = /<img src="\S+"/
+    var result = regex.exec(content)
+
+    // is post first img
+    if (result) {
+        return result[0].split('src="')[1].split('"')[0]
+    }
+
+    // is anisina font-matter
+    if (post.header_img){
+        return post.header_img
+    }
+    return ''
+}
+%>
 <div style="background: #f5f8f9;">
     <div id="main-container" class="container" style="padding-top: 15px;">
         <div class="is-flex main-content">
             <section>
-                <%- partial('_partial/primary_content', {posts: page.posts}) %>
+                <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
                 <% page.posts.each (function (post, index) { %>
                     <% if ( index > 2 ){%>
-                        <%
-                            var cover_photo = post.cover_photo || post[anisina_cover] || getArticleFirstPhoto(post)
-                        %>
                         <a class="post-hover" href="<%= config.root + post.path %>">
                             <div class="sub-post-container is-flex content-background">
-                                <% if (cover_photo){%>
-                                <div class="flex-1 post-avatar"
-                                     style="margin: 12px;background-image: url('<%= cover_photo %>')" >
-                                </div>
+                                <% if (getPostCoverPhoto(post)){%>
+                                    <div class="flex-1 post-avatar"
+                                         style="margin: 12px;background-image: url('<%- getPostCoverPhoto(post) %>')" >
+                                    </div>
                                 <%}%>
                                 <div class="flex-2 post-content is-flex align-center">
                                     <div class="content">
