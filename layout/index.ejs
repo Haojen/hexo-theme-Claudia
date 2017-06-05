@@ -114,11 +114,12 @@ function getPostCoverPhoto(post) {
     if (post.header_img){
         return post.header_img
     }
+
     return ''
 }
 %>
 <div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 15px;">
+    <div id="main-container" class="container" style="padding-top: 25px;">
         <div class="is-flex main-content">
             <section>
                 <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
