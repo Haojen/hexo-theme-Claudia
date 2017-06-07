@@ -20,20 +20,13 @@
         color: #f1f1f1;
     }
 
-    .primary-1-color {
-        background-color: yellowgreen;
-    }
-
-    .primary-2-color {
-        background-color: darkcyan;
-    }
-
-    .primary-3-color {
-        background-color: sienna;
-    }
-
     .post-content-text {
         color: #fff;
+    }
+
+    .primary-item-main,
+    .primary-item-sub {
+        background-color: #e1e1e1;
     }
 
     .primary-item-main {
@@ -100,23 +93,23 @@
     }
 </style>
 <%
-function getPostCoverPhoto(post) {
-    var content = post.content
-    var regex = /<img src="\S+"/
-    var result = regex.exec(content)
+    function getPostCoverPhoto(post) {
+        var content = post.content
+        var regex = /<img src="\S+"/
+        var result = regex.exec(content)
 
-    // is post first img
-    if (result) {
-        return result[0].split('src="')[1].split('"')[0]
+        // is post first img
+        if (result) {
+            return result[0].split('src="')[1].split('"')[0]
+        }
+
+        // is anisina font-matter
+        if (post.header_img){
+            return post.header_img
+        }
+
+        return ''
     }
-
-    // is anisina font-matter
-    if (post.header_img){
-        return post.header_img
-    }
-
-    return ''
-}
 %>
 <div style="background: #f5f8f9;">
     <div id="main-container" class="container" style="padding-top: 25px;">
@@ -134,7 +127,10 @@ function getPostCoverPhoto(post) {
                                 <%}%>
                                 <div class="flex-2 post-content is-flex align-center">
                                     <div class="content">
-                                        <h3><%= post.title || 'title' %></h3>
+                                        <h3><%= post.title || 'Null' %></h3>
+                                        <% if (post.subtitle){%>
+                                            <p class="sub-title"><%- post.subtitle %></p>
+                                        <%}%>
                                         <p>
                                             <%- truncate(strip_html(post.content), {length: 180, omission: '..'}) %>
                                         </p>

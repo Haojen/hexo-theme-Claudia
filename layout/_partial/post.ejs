@@ -27,10 +27,10 @@
     <div class="container post-box">
         <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px">
             <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong><%- post.title || 'Title is Empty'%></strong>
+                <strong><%- post.title || 'Null'%></strong>
             </h1>
             <% if (post.subtitle) {%>
-            <h2><%- post.subtitle%></h2>
+                <h2><%- post.subtitle%></h2>
             <%}%>
             <div class="is-flex align-center">
                 <img class="post-avatar" src="<%- config.user_avatar %>">
@@ -39,12 +39,12 @@
             </div>
 
             <% if(post.tags.length > 0){%>
-            <div>
-                Tags:
-                <% post.tags.forEach(function(tag){%>
-                <a class="tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
-                <%})%>
-            </div>
+                <div>
+                    Tags:
+                    <% post.tags.forEach(function(tag){%>
+                         <a class="tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
+                    <%})%>
+                </div>
             <%}%>
         </div>
         <div class="content">
@@ -53,6 +53,7 @@
     </div>
 </section>
 <script>
+    // 获取第一张图, 用以当封面背景图
     var img = document.querySelectorAll('img')[1]
     var header_box = document.querySelector('#header_box')
     header_box.style.backgroundImage = 'url('+ img.src +')'
