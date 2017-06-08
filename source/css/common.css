@@ -36,6 +36,10 @@
     justify-content: space-between;
 }
 
+.justify-space-around {
+    justify-content: space-around;
+}
+
 .align-center {
     align-items: center;
 }
@@ -111,5 +115,10 @@
 }
 .right-line {
     border-right: 1px solid #f1f1f1;
+}
+
+.content-inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 /*tools end*/

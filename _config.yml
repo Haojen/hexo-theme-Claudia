@@ -1,7 +1,6 @@
 # Header
 menu:
   Home: /
-  Categories: /categories
   Tags: /tags
   About: /about
 rss: /atom.xml

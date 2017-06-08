@@ -1,10 +1,7 @@
 <style>
     /*user info start*/
     .user-info {
-    }
-
-    .user-info .avatar-wrap {
-
+        padding: 15px 0 0;
     }
 
     .user-info .avatar {
@@ -25,13 +22,12 @@
     /*Tag start*/
     #tag_cloud .tags-item{
         display: inline-block;
-        color: #e1e1e1;
-        border: 1px solid #f1f1f1;
+        color: #000;
+        border: 1px solid gray;
 
-        margin: 2px;
+        margin: 4px 2px;
         padding: 0 4px;
         border-radius: 6px;
-        background-color: black;
     }
     /*Tag end*/
 
@@ -40,9 +36,26 @@
         height: 60px;
     }
     /*Site box end*/
+
+    .category-list-item {
+        display: flex;
+        margin-bottom: 4px;
+        justify-content: space-between;
+    }
+    .category-list-link {
+        color: black;
+    }
+
+    .category-list-count {
+        width: 32px;
+        text-align: center;
+        border-radius: 4px;
+        color: #fff;
+        background-color: gray;
+    }
 </style>
 <aside class="column is-3" style="max-width: 280px; min-width: 230px">
-    <div class="user-info overflow-hidden content-box">
+    <div class="content-box user-info ">
         <div class="has-padding">
             <header class="has-text-centered">
                 <img class="avatar" src="<%= theme.user_avatar || config["sidebar-avatar"] %>">
@@ -140,7 +153,7 @@
         </div>
     </div>
     <div class="content-box">
-        <!--post数量和tag\category 数量-->
+        <!--post数量和tag category 数量-->
         <div class="site-box is-flex">
             <div class="flex-1 is-flex flex-column center full-height right-line">
                 <strong><%- site.posts.length || ''%></strong>
@@ -152,13 +165,26 @@
             </div>
         </div>
     </div>
-    <div id='tag_cloud' class="content-box">
-        <div class="is-flex flex-wrap center">
+    <div id='tag_cloud' class="content-inner content-box">
+        <div class="has-text-centered">
+            <strong>Tags</strong>
+        </div>
+        <div class="content-inner is-flex flex-wrap justify-space-between">
             <% site.tags.map(function(tag){ %>
             <a class="tags-item" href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>">
                 <%= tag.name %>
             </a>
             <% }) %>
+        </div>
+    </div>
+    <div class="content-inner content-box">
+        <div class="has-text-centered">
+            <strong>Categories</strong>
+        </div>
+        <div class="content-inner">
+            <%- list_categories(site.categories, {
+                depth: 1
+            }) %>
         </div>
     </div>
 </aside>

@@ -33,9 +33,9 @@
                 <h2><%- post.subtitle%></h2>
             <%}%>
             <div class="is-flex align-center">
-                <img class="post-avatar" src="<%- config.user_avatar %>">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> <%- config.user_name%></span>
-                <span class="post-date sub-title">At: <%= post.date.format(config.date_format) %></span>
+                <img class="post-avatar" src="<%- theme.user_avatar %>">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> <%- theme.user_name%></span>
+                <span class="post-date sub-title">at: <%= post.date.format(config.date_format) %></span>
             </div>
 
             <% if(post.tags.length > 0){%>

@@ -30,7 +30,7 @@
 
     .primary-item-main,
     .primary-item-sub {
-        background-color: #e1e1e1;
+        background-color: #636363;
     }
 
     .primary-item-main {
@@ -95,7 +95,7 @@
 <div style="background: #f5f8f9;">
     <div id="main-container" class="container" style="padding-top: 25px;">
         <div class="is-flex main-content">
-            <section>
+            <section class="column is-9">
                 <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
                 <% page.posts.each (function (post, index) { %>
                     <% if ( index > 2 ){%>
