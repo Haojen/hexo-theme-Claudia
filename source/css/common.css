@@ -2,6 +2,15 @@
     border: 1px solid red;
 }
 
+/*layout start*/
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -43,12 +52,14 @@
     width: 100%;
 }
 
-.border-radius {
-    border-radius: 4px;
-}
-
 .overflow-hidden {
     overflow: hidden;
+}
+
+/*layout end*/
+
+.border-radius {
+    border-radius: 4px;
 }
 
 /*邊距控制*/
@@ -64,6 +75,7 @@
     padding-bottom: 15px;
 }
 
+/*position start*/
 .position-relative {
     position: relative;
 }
@@ -71,11 +83,33 @@
 .position-absolute {
     position: absolute;
 }
+/*position end*/
 
+/*content start*/
 .sub-title {
     color: darkgray;
 }
 
 .text-shadow {
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 1px 20px black;
 }
+/*position end*/
+
+/*tools start*/
+.content-box {
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    padding: 0 15px;
+}
+
+.bottom-line {
+    border-bottom: 1px solid #f1f1f1;
+}
+.top-line {
+    border-top: 1px solid #f1f1f1;
+}
+.right-line {
+    border-right: 1px solid #f1f1f1;
+}
+/*tools end*/

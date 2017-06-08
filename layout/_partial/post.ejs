@@ -40,7 +40,6 @@
 
             <% if(post.tags.length > 0){%>
                 <div>
-                    Tags:
                     <% post.tags.forEach(function(tag){%>
                          <a class="tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
                     <%})%>

@@ -159,7 +159,7 @@
       // setScrollElementClass(user_info, 'fixed-userinfo-container')
     }());
 
-    // 模糊效果
+    // 主页导航模糊效果
     (function() {
         var navbar = document.querySelector('#navbar>.container')
         var content = document.querySelector('.main-content')
@@ -169,11 +169,12 @@
         var blurCopyContent = document.createElement('div')
             blurCopyContent.classList.add('content-blur')
             blurCopyContent.appendChild(copyContent)
+            navbar.appendChild(blurCopyContent)
 
-        navbar.appendChild(blurCopyContent)
-
+        // 间距
+        var spaceNumber = 35
         document.body.onscroll = function () {
-            transtion = 'translate3d(0,' + (-document.body.scrollTop + 'px') + ',0)'
+            transtion = 'translate3d(0,' + (-(document.body.scrollTop - spaceNumber) + 'px') + ',0)'
             copyContent.style.transform = transtion
         }
 

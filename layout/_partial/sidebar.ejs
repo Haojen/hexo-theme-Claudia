@@ -1,99 +1,164 @@
+<style>
+    /*user info start*/
+    .user-info {
+    }
 
-<aside class="column is-3" style="padding: 20px;padding-top: 0;">
-    <div class="user-info border-radius overflow-hidden content-background">
-        <header class="avatar-wrap has-text-centered">
-            <img class="avatar" src="<%= config.user_avatar || config["sidebar-avatar"] %>">
-        </header>
-        <section class=" has-padding has-text-centered" style="border-bottom: 1px solid #f1f1f1">
-            <h3><strong><%= config.user_name || 'User Name'%></strong></h3>
-            <p class="sub-title"><%= config.user_description || 'Hello World'%></p>
-            <% if (config.user_location){%>
+    .user-info .avatar-wrap {
+
+    }
+
+    .user-info .avatar {
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+    }
+
+    .sns-container {
+        flex-wrap: wrap;
+    }
+
+    .sns-container a{
+        color: black;
+    }
+    /*user info end*/
+
+    /*Tag start*/
+    #tag_cloud .tags-item{
+        display: inline-block;
+        color: #e1e1e1;
+        border: 1px solid #f1f1f1;
+
+        margin: 2px;
+        padding: 0 4px;
+        border-radius: 6px;
+        background-color: black;
+    }
+    /*Tag end*/
+
+    /*Site box start*/
+    .site-box {
+        height: 60px;
+    }
+    /*Site box end*/
+</style>
+<aside class="column is-3" style="max-width: 280px; min-width: 230px">
+    <div class="user-info overflow-hidden content-box">
+        <div class="has-padding">
+            <header class="has-text-centered">
+                <img class="avatar" src="<%= theme.user_avatar || config["sidebar-avatar"] %>">
+            </header>
+            <section class="has-text-centered">
+                <h3><strong><%= theme.user_name || 'User Name'%></strong></h3>
+                <p class="sub-title"><%= theme.user_description || 'Hello World'%></p>
+                <% if (theme.user_location){%>
                 <p class="is-flex center" style=" color: gray">
                     <i class="fa fa-map-marker" style="padding: 5px"></i>
-                    <%- config.user_location %>
+                    <%- theme.user_location %>
                 </p>
-            <%}%>
-        </section>
-        <div>
-            <!-- SNS Link 社交 -->
+                <%}%>
+            </section>
+        </div>
+        <div class="top-line">
             <ul class="sns-container justify-center is-flex has-padding">
                 <% if (config.RSS) { %>
-                    <li>
-                        <a href="<%= config.root + 'feed.xml' %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="<%= config.root + 'feed.xml' %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
 
                 <% if (config.twitter_username) { %>
-                    <li>
-                        <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
 
                 <% if (config.zhihu_username) { %>
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
 
                 <% if (config.weibo_username) { %>
-                    <li>
-                        <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
 
                 <% if (config.facebook_username) { %>
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
 
                 <% if (config.github_username) { %>
-                    <li>
-                        <a target="_blank" href="https://github.com/<%= config.github_username %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a target="_blank" href="https://github.com/<%= config.github_username %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
 
                 <% if (config.linkedin_username) { %>
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
-                                            <span class="fa-stack fa-lg">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                                            </span>
-                        </a>
-                    </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                        </span>
+                    </a>
+                </li>
                 <% } %>
             </ul>
+        </div>
+    </div>
+    <div class="content-box">
+        <!--post数量和tag\category 数量-->
+        <div class="site-box is-flex">
+            <div class="flex-1 is-flex flex-column center full-height right-line">
+                <strong><%- site.posts.length || ''%></strong>
+                <p>Posts</p>
+            </div>
+            <div class="flex-1 is-flex flex-column center full-height">
+                <strong><%- site.tags.length || ''%></strong>
+                <p>Tags</p>
+            </div>
+        </div>
+    </div>
+    <div id='tag_cloud' class="content-box">
+        <div class="is-flex flex-wrap center">
+            <% site.tags.map(function(tag){ %>
+            <a class="tags-item" href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>">
+                <%= tag.name %>
+            </a>
+            <% }) %>
         </div>
     </div>
 </aside>
