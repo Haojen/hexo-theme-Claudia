@@ -102,9 +102,17 @@
 /*tools start*/
 .content-box {
     background-color: #fff;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    margin-bottom: 2px;
+    border-radius: 2px;
     padding: 0 15px;
+}
+
+.clear-padding {
+    padding: 0;
+}
+
+.clear-margin {
+    margin: 0;
 }
 
 .bottom-line {

@@ -93,14 +93,14 @@
     }
 %>
 <div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 25px;">
+    <div id="main-container" class="container" style="padding-top: 20px;">
         <div class="is-flex main-content">
             <section class="column is-9">
                 <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
                 <% page.posts.each (function (post, index) { %>
                     <% if ( index > 2 ){%>
                         <a class="post-hover" href="<%= config.root + post.path %>">
-                            <div class="sub-post-container is-flex content-background">
+                            <div class="sub-post-container is-flex content-box clear-padding">
                                 <% if (getPostCoverPhoto(post)){%>
                                     <div class="flex-1 post-avatar"
                                          style="margin: 12px;background-image: url('<%- getPostCoverPhoto(post) %>')" >

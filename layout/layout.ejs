@@ -1,12 +1,7 @@
 <%- partial('_partial/head') %>
-<style>
-  .content-background {
-    background: rgba(255, 255, 255, .96);
-  }
-</style>
 <body>
   <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
-  <div style="margin-top: 55px">
+  <div style="margin-top: 55px;">
       <%- body %>
   </div>
   <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

@@ -37,16 +37,19 @@
     }
     /*Site box end*/
 
-    .category-list-item {
+    .category-list-item,
+    .archive-list-item {
         display: flex;
         margin-bottom: 4px;
         justify-content: space-between;
     }
-    .category-list-link {
+    .category-list-link,
+    .archive-list-link {
         color: black;
     }
 
-    .category-list-count {
+    .category-list-count,
+    .archive-list-count {
         width: 32px;
         text-align: center;
         border-radius: 4px;
@@ -185,6 +188,14 @@
             <%- list_categories(site.categories, {
                 depth: 1
             }) %>
+        </div>
+    </div>
+    <div class="content-inner content-box">
+        <div class="has-text-centered">
+            <strong>Archives</strong>
+        </div>
+        <div class="content-inner">
+            <%- list_archives(site.archives,{}) %>
         </div>
     </div>
 </aside>

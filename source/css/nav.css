@@ -18,10 +18,6 @@
     background-color: black;
 }
 
-#navbar .user-info {
-    visibility: hidden;
-}
-
 .content-blur {
     margin-top: 50px;
     position: absolute;
