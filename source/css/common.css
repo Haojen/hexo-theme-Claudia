@@ -130,3 +130,11 @@
     padding-bottom: 15px;
 }
 /*tools end*/
+
+/*通用样式*/
+.is-post-tag {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ff919d;
+    color: #ff7479;
+}

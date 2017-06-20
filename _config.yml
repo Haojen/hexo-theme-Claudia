@@ -1,8 +1,8 @@
 # Header
 menu:
   Home: /
-  Tags: /tags
-  About: /about
+  #Tags: /tags
+  #About: /about
 rss: /atom.xml
 
 # User Info

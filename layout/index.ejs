@@ -113,9 +113,15 @@
                                             <p class="sub-title"><%- post.subtitle %></p>
                                         <%}%>
                                         <p>
+                                            <% post.tags.forEach(function(tag){%>
+                                                <span class="tag is-post-tag"><%- tag.name %></span>
+                                            <%})%>
+                                        </p>
+                                        <p>
                                             <%- truncate(strip_html(post.content), {length: 180, omission: '..'}) %>
                                         </p>
                                         <p><%= post.date.format(config.date_format) %></p>
+                                        <button class="button">阅读更多</button>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +135,7 @@
                             <a class="pagination-previous" href="<%- config.root %><%- page.prev_link %>">Previous</a>
                         <%}%>
                         <% if (page.next){ %>
-                            <a class="pagination-next" href="<%- config.root %><%- page.next_link %>">Next page</a>
+                            <a class="pagination-next" href="<%- config.root %><%- page.next_link %>"> <%-page.next%>Next page</a>
                         <%}%>
                     <%}%>
                 </nav>
