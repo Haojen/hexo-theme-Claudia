@@ -42,7 +42,7 @@
             <% if(post.tags.length > 0){%>
                 <div>
                     <% post.tags.forEach(function(tag){%>
-                         <a class="tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
+                         <a class="tag is-post-tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
                     <%})%>
                 </div>
             <%}%>

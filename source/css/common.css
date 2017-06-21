@@ -133,8 +133,12 @@
 
 /*通用样式*/
 .is-post-tag {
-    background: #fff;
+    background: rgba(0,0,0,0);
     border-radius: 3px;
-    border: 1px solid #ff919d;
-    color: #ff7479;
+    border: 1px solid orangered;
+    color: orangered;
+}
+
+.is-invisible {
+    visibility: hidden;
 }

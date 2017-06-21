@@ -97,7 +97,8 @@
         <div class="is-flex main-content">
             <section class="column is-9">
                 <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
-                <% page.posts.each (function (post, index) { %>
+                <% if (page.posts.length > 0){%>
+                    <% page.posts.each (function (post, index) { %>
                     <% if ( index > 2 ){%>
                         <a class="post-hover" href="<%= config.root + post.path %>">
                             <div class="sub-post-container is-flex content-box clear-padding">
@@ -128,6 +129,7 @@
                         </a>
                     <%}%>
                 <% })%>
+                <%}%>
                 <!--翻頁-->
                 <nav class="pagination is-flex" style="justify-content: flex-end">
                     <% if (is_home()){%>
