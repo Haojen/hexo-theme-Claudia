@@ -36,8 +36,11 @@ archive_type: 'monthly'
 show_count: false
 
 # 评论系统
-use_livere: true
+use_livere: false
 livere_uid: MTAyMC8yOTE4Ni81NzUz
+
+use_disqus: true
+disqus_url: https://haojen.disqus.com/embed.js
 
 # Miscellaneous
 google_analytics:
