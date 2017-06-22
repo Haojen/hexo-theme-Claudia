@@ -35,6 +35,10 @@ index_widgets:
 archive_type: 'monthly'
 show_count: false
 
+# 评论系统
+use_livere: true
+livere_uid: MTAyMC8yOTE4Ni81NzUz
+
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png

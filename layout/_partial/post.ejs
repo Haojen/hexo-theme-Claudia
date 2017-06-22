@@ -38,8 +38,7 @@
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> <%- theme.user_name%></span>
                 <span class="post-date sub-title">at: <%= post.date.format(config.date_format) %></span>
             </div>
-
-            <% if(post.tags.length > 0){%>
+            <% if(post.tags){%>
                 <div>
                     <% post.tags.forEach(function(tag){%>
                          <a class="tag is-post-tag" href="<%- config.root + tag.path %>"><%- tag.name %></a>
@@ -49,6 +48,28 @@
         </div>
         <div class="content">
             <%- post.content %>
+        </div>
+        <div class="post-reply">
+            <% if (theme.use_livere){%>
+            <!-- 来必力City版安装代码 -->
+            <div id="lv-container" data-id="city" data-uid="<%- theme.livere_uid%>">
+                <script type="text/javascript">
+                    (function(d, s) {
+                        var j, e = d.getElementsByTagName(s)[0];
+
+                        if (typeof LivereTower === 'function') { return; }
+
+                        j = d.createElement(s);
+                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                        j.async = true;
+
+                        e.parentNode.insertBefore(j, e);
+                    })(document, 'script');
+                </script>
+                <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+            </div>
+            <!-- City版安装代码已完成 -->
+            <%}%>
         </div>
     </div>
 </section>
