@@ -183,23 +183,25 @@
     // 搜索功能
     (function () {
         var search = document.querySelector('#search');
+        var close_search_btn = document.querySelector('#close_search');
+
+        function toggleSearchView() {
+            // main content bulr
+            var mainWrap = document.querySelector('#main-wrap');
+
+            // hidden nav menu
+            var nav_menu = document.querySelector('.nav-menu');
+            nav_menu.classList.toggle('is-invisible');
+
+            var search_container = document.querySelector('#search_container');
+            search_container.classList.toggle('is-hidden');
+
+            var navbar = document.querySelector('#navbar');
+            navbar.classList.toggle('overflow-hidden');
+        }
 
         search.addEventListener('click', function () {
-          // main content add mask
-          var mainWrap = document.querySelector('#main-wrap');
-          // var mask = document.createElement('div');
-          //     mask.className = 'mask';
-          //     mainWrap.appendChild(mask);
-
-          // hidden nav menu
-          var nav_menu = document.querySelector('.nav-menu');
-              nav_menu.classList.add('is-invisible');
-
-          var search_container = document.querySelector('#search_container');
-              search_container.classList.remove('is-hidden');
-
-          var navbar = document.querySelector('#navbar');
-              navbar.classList.remove('overflow-hidden');
+          toggleSearchView();
 
           // start searching
           var doSearch = searchFunc,
@@ -210,6 +212,8 @@
           search_input.onkeyup = function () {
               doSearch(search_data_path, search_input.id, search_result.id);
           }
-      })
+      });
+
+        close_search_btn.addEventListener('click', toggleSearchView)
     }());
 })(jQuery);
