@@ -179,4 +179,37 @@
         }
 
     }());
+
+    // 搜索功能
+    (function () {
+        var search = document.querySelector('#search');
+
+        search.addEventListener('click', function () {
+          // main content add mask
+          var mainWrap = document.querySelector('#main-wrap');
+          // var mask = document.createElement('div');
+          //     mask.className = 'mask';
+          //     mainWrap.appendChild(mask);
+
+          // hidden nav menu
+          var nav_menu = document.querySelector('.nav-menu');
+              nav_menu.classList.add('is-invisible');
+
+          var search_container = document.querySelector('#search_container');
+              search_container.classList.remove('is-hidden');
+
+          var navbar = document.querySelector('#navbar');
+              navbar.classList.remove('overflow-hidden');
+
+          // start searching
+          var doSearch = searchFunc,
+              search_data_path = 'search.xml',
+              search_input = document.querySelector('#search_input'),
+              search_result = document.querySelector('#search_result');
+
+          search_input.onkeyup = function () {
+              doSearch(search_data_path, search_input.id, search_result.id);
+          }
+      })
+    }());
 })(jQuery);

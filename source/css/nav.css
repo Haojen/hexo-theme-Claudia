@@ -24,3 +24,27 @@
     filter: blur(10px);
     z-index: 1;
 }
+
+/*search*/
+#search_container {
+    width: 50vw;
+}
+
+.search-input {
+    color: black;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: inherit;
+}
+
+.search-result-list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    width: 100%;
+    padding: 15px;
+
+    background: rgba(255,255,255, .85);
+}

@@ -11,12 +11,23 @@
         <span></span>
         <span></span>
       </span>
+      <div class="nav-center is-hidden position-relative" id="search_container">
+          <div class="nav-item full-width full-height">
+              <i class="fa fa-search has-padding" aria-hidden="true"></i>
+              <input type="text" id="search_input" class="search-input full-height full-width" placeholder="Search post" autofocus>
+              <i id="close_search" class="fa fa-times" aria-hidden="true"></i>
+          </div>
+          <div id="search_result"></div>
+      </div>
       <div class="nav-right nav-menu">
-          <% for (var i in theme.menu) { %>
-            <a class="nav-item" href="<%- url_for(theme.menu[i])%>">
-              <%- i %>
-            </a>
-          <% } %>
+        <% for (var menu in theme.menu) { %>
+          <a class="nav-item" href="<%- url_for(theme.menu[menu])%>">
+            <%- menu %>
+          </a>
+        <% } %>
+        <a class="nav-item" id="search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
       </div>
     </nav>
   </div>

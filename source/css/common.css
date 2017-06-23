@@ -129,6 +129,14 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.is-show {
+    display: inherit;
+}
+
+.is-hidden {
+    display: none;
+}
 /*tools end*/
 
 /*通用样式*/
@@ -142,3 +150,31 @@
 .is-invisible {
     visibility: hidden;
 }
+
+/*遮罩*/
+.mask {
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0,0,0, .6);
+}
+
+/*!*index page*!*/
+/*#main-wrap:after {*/
+    /*content: '';*/
+    /*display: block;*/
+
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+
+    /*background-color: rgba(0,0,0, .6);*/
+/*}*/

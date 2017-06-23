@@ -1,9 +1,9 @@
 <%- partial('_partial/head') %>
 <body>
   <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
-  <div style="margin-top: 55px;">
+  <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <%- body %>
   </div>
-  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/footer') %>
 </body>
 </html>
