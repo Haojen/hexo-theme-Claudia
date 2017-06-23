@@ -178,3 +178,7 @@
 
     /*background-color: rgba(0,0,0, .6);*/
 /*}*/
+
+.blur {
+    filter: blur(10px);
+}

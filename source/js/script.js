@@ -185,29 +185,35 @@
         var search = document.querySelector('#search');
         var close_search_btn = document.querySelector('#close_search');
 
+        var html_body = document.querySelector('html');
+        // content main wrap
+        var mainWrap = document.querySelector('#main-wrap');
+
+        // hidden nav menu
+        var navbar = document.querySelector('#navbar');
+        var nav_menu = document.querySelector('.nav-menu');
+        var search_container = document.querySelector('#search_container');
+        var nav_blur_content = document.querySelector('#navbar .main-content');
+
+        // start searching
+        var doSearch = searchFunc,
+            search_data_path = 'search.xml',
+            search_input = document.querySelector('#search_input'),
+            search_result = document.querySelector('#search_result');
+
         function toggleSearchView() {
-            // main content bulr
-            var mainWrap = document.querySelector('#main-wrap');
-
-            // hidden nav menu
-            var nav_menu = document.querySelector('.nav-menu');
+            search_input.value = '';
             nav_menu.classList.toggle('is-invisible');
-
-            var search_container = document.querySelector('#search_container');
-            search_container.classList.toggle('is-hidden');
-
-            var navbar = document.querySelector('#navbar');
             navbar.classList.toggle('overflow-hidden');
+            search_container.classList.toggle('is-hidden');
+            mainWrap.classList.toggle('blur');
+            html_body.classList.toggle('overflow-hidden');
+            nav_blur_content.classList.toggle('is-hidden')
         }
 
         search.addEventListener('click', function () {
           toggleSearchView();
-
-          // start searching
-          var doSearch = searchFunc,
-              search_data_path = 'search.xml',
-              search_input = document.querySelector('#search_input'),
-              search_result = document.querySelector('#search_result');
+          search_input.focus();
 
           search_input.onkeyup = function () {
               doSearch(search_data_path, search_input.id, search_result.id);

@@ -3,7 +3,7 @@
     width: 100%;
     top:0;
     z-index: 2;
-    border-top: 2px solid red;
+    border-top: 2px solid black;
     border-bottom: 1px solid #f1f1f1;
     background-color:#fff;
 }
@@ -44,9 +44,11 @@
     top: 100%;
 
     width: 100%;
+    max-height: 70vh;
     padding: 15px;
 
-    background: rgba(255,255,255, .9);
+    overflow: auto;
 
-    box-shadow: 0 10px 15px 0px black;
+    box-shadow: 0 10px 15px 0;
+    background: rgba(255,255,255, .9);
 }
