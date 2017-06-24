@@ -166,18 +166,18 @@
 }
 
 /*!*index page*!*/
-/*#main-wrap:after {*/
-    /*content: '';*/
-    /*display: block;*/
+#main-wrap.add-mask:after {
+    content: '';
+    display: block;
 
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*height: 100%;*/
-    /*width: 100%;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 
-    /*background-color: rgba(0,0,0, .6);*/
-/*}*/
+    background-color: rgba(0,0,0, .15);
+}
 
 .blur {
     filter: blur(10px);

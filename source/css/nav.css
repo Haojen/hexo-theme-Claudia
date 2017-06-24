@@ -45,10 +45,31 @@
 
     width: 100%;
     max-height: 70vh;
-    padding: 15px;
 
     overflow: auto;
 
     box-shadow: 0 10px 15px 0;
-    background: rgba(255,255,255, .9);
+    background: rgba(255,255,255, .8);
 }
+
+.search-result-list>li {
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.search-result-list .search-result-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.search-result-list>li:hover,
+.search-result-list>li:hover .search-result-title{
+    color: #fff;
+    background-color: gray;
+}
+
+.search-result-list .search-keyword {
+    font-weight: 600;
+}
+

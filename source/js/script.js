@@ -207,6 +207,7 @@
             navbar.classList.toggle('overflow-hidden');
             search_container.classList.toggle('is-hidden');
             mainWrap.classList.toggle('blur');
+            mainWrap.classList.toggle('add-mask');
             html_body.classList.toggle('overflow-hidden');
             nav_blur_content.classList.toggle('is-hidden')
         }
