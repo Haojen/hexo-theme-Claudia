@@ -6,7 +6,7 @@
     var thirdArticle = posts.data[2] || false
 %>
 <div class="primary-post-container is-flex content-box clear-padding">
-    <div class="column <%- secondArticle ? 'is-7':'is-12'%>">
+    <div class="column <%- secondArticle ? 'is-7':'is-12'%> full-height">
         <a href="<%= config.root + firstArticle.path %>">
             <div class="primary-item-main full-height post-hover"
                  style="background-image: url('<%- getPostCoverPhoto(firstArticle) %>')">
@@ -29,7 +29,7 @@
             </div>
         </a>
     </div>
-    <div class="column is-5" style="padding-left: 0;">
+    <div class="column is-5 full-height" style="padding-left: 0;">
         <div class="full-height is-flex flex-column justify-space-between">
             <% if (secondArticle){%>
                 <div class="primary-item-sub"
