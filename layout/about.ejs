@@ -1,27 +1,29 @@
 <style>
-    .info-box {
+    .content-box {
         min-height: 93vh;
         padding: 15px;
-        width: 315px;
         background-color: rgba(255, 255, 255, .8);
     }
 </style>
 <%
     // 优先使用专用的about页面头像, 如果没有设置才是用主页的用户头像
-    var avatar = theme.user_intro_avatar
+    var avatar = 'http://o7bkkhiex.bkt.clouddn.com/discobolus-avatar.png' || 'http://o7bkkhiex.bkt.clouddn.com/avatar.png' || theme.user_intro_avatar || theme.user_avatar
 %>
-<div style="background-color: #e1e1e1">
-    <div class="container is-flex justify-center">
-        <div class="info-box content">
-            <h1><strong><%- theme.user_name || '' %></strong></h1>
-            <span class="sub-title"><%- theme.user_description || '' %></span>
-            <p class="contact"><%- theme.user_contact || ''%></p>
-            <article>
+<div class="container">
+    <div class="content-box full-width is-flex justify-center">
+        <div class="columns">
+            <div class="column is-5">
+                <img class="avatar" src="<%- avatar %>">
+            </div>
+            <div class="column content">
+                <h1 class="">
+                    About
+                    <br>
+                    <%- theme.user_name || '' %>
+                    <p class="contact"><%- theme.user_contact || ''%></p>
+                </h1>
                 <p><%- theme.user_introduction || ''%></p>
-            </article>
-        </div>
-        <div class="avatar-box" style="align-self: flex-end; font-size: 0;">
-            <img class="avatar" src="<%- avatar %>">
+            </div>
         </div>
     </div>
 </div>
