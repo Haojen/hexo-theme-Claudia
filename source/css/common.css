@@ -28,6 +28,7 @@
     justify-content: center;
 }
 
+/*水平居中*/
 .justify-center {
     justify-content: center;
 }
@@ -40,6 +41,7 @@
     justify-content: space-around;
 }
 
+/*垂直居中*/
 .align-center {
     align-items: center;
 }

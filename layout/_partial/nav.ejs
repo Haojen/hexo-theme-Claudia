@@ -20,14 +20,14 @@
           <div id="search_result"></div>
       </div>
       <div class="nav-right nav-menu">
-        <% for (var menu in theme.menu) { %>
-          <a class="nav-item" href="<%- url_for(theme.menu[menu])%>">
-            <%- menu %>
+          <a class="nav-item" id="search">
+              <i class="fa fa-search" aria-hidden="true"></i>
           </a>
-        <% } %>
-        <a class="nav-item" id="search">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </a>
+            <% for (var menu in theme.menu) { %>
+              <a class="nav-item" href="<%- url_for(theme.menu[menu])%>">
+                <%- menu %>
+              </a>
+            <% } %>
       </div>
     </nav>
   </div>

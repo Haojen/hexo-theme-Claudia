@@ -19,3 +19,14 @@
 2. 用户简介，姓名，地址等信息不用写。
 
 ## 评论系统的配置
+
+## Works 页面的配置
+在 source 页面创建一个 `works` 文件夹, 然后打开新建一个 `index.md`
+
+## about 页面的配置
+在 source 页面创建一个 `about` 文件夹, 然后打开新建一个 `index.md`
+
+
+## 如何创建一个 Works 页面
+
+1. 在 source 页面创建一个 `_data` 文件夹, 然后打开, 在里面新建一个 `project.json` 文件
