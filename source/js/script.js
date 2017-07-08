@@ -161,8 +161,14 @@
 
     // 主页导航模糊效果
     (function() {
-        var navbar = document.querySelector('#navbar>.container')
-        var content = document.querySelector('.main-content')
+
+        /*
+        * 主页: .main-content
+        * post: #main-wrap
+        *
+        * */
+        var navbar = document.querySelector('#navbar')
+        var content = document.querySelector('#main-wrap')
         var transtion = 0
 
         var copyContent = content.cloneNode(true)
@@ -172,7 +178,7 @@
             navbar.appendChild(blurCopyContent)
 
         // 间距
-        var spaceNumber = 35
+        var spaceNumber = -50;
         document.body.onscroll = function () {
             transtion = 'translate3d(0,' + (-(document.body.scrollTop - spaceNumber) + 'px') + ',0)'
             copyContent.style.transform = transtion

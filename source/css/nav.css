@@ -8,6 +8,10 @@
     background-color:#fff;
 }
 
+#navbar .nav {
+    background-color: inherit;
+}
+
 .logo {
     color: #fff;
     font-size: 20px;
@@ -21,8 +25,10 @@
     margin-top: 50px;
     position: absolute;
     top:0;
-    filter: blur(10px);
+    filter: blur(25px);
     z-index: 1;
+
+    width: 100%;
 }
 
 /*search*/

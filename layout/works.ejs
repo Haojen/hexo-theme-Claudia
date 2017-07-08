@@ -86,28 +86,6 @@ layout: layout
         margin: 0;
         font-size: 17px;
     }
-
-    /*@media screen and (max-width: 400px) {*/
-        /*.works-item .footer .use {*/
-            /*font-size: 14px;*/
-        /*}*/
-
-        /*.works-item .works-item-img {*/
-            /*height: 200px;*/
-        /*}*/
-
-        /*.bg-header .avatar img {*/
-            /*max-width: 150px;*/
-        /*}*/
-
-        /*.bg-header h1 {*/
-            /*font-size: 24px;*/
-        /*}*/
-
-        /*section .works-area {*/
-            /*margin-top: -210px;*/
-        /*}*/
-    /*}*/
 </style>
 
 <div class="works-container" style="background-color: #fafafa">
@@ -115,11 +93,11 @@ layout: layout
         <div class="bg-header is-flex justify-center">
             <div class="profile">
                 <div class="avatar">
-                    <img src="<%= theme.user_avatar %>">
+                    <img src="<%- theme.user_avatar %>">
                 </div>
-                <div class="personal-profile has-text-centered">
+                <div class="personal-profile has-text-centered content">
                     <h1>
-                        <%= theme.user_name %>
+                        <%- theme.user_name %>
                     </h1>
                     <h2>-- 个人作品集 --</h2>
                 </div>
