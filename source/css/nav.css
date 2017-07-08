@@ -12,6 +12,20 @@
     background-color: inherit;
 }
 
+#navbar:after{
+    content: '';
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0; left: 0;
+
+    background-color: rgba(255, 255, 255, .35);
+
+    z-index: 1;
+}
+
 .logo {
     color: #fff;
     font-size: 20px;
@@ -25,7 +39,7 @@
     margin-top: 50px;
     position: absolute;
     top:0;
-    filter: blur(25px);
+    filter: blur(20px);
     z-index: 1;
 
     width: 100%;
