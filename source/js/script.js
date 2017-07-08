@@ -163,12 +163,11 @@
     (function() {
 
         /*
-        * 主页: .main-content
         * post: #main-wrap
         *
         * */
         var navbar = document.querySelector('#navbar')
-        var content = document.querySelector('#main-wrap')
+        var content = document.querySelector('.main-inner-content')
         var transtion = 0
 
         var copyContent = content.cloneNode(true)
@@ -177,8 +176,8 @@
             blurCopyContent.appendChild(copyContent)
             navbar.appendChild(blurCopyContent)
 
-        // 间距
-        var spaceNumber = -50;
+        // 顶部间距
+        var spaceNumber = 50;
         document.body.onscroll = function () {
             transtion = 'translate3d(0,' + (-(document.body.scrollTop - spaceNumber) + 'px') + ',0)'
             copyContent.style.transform = transtion
@@ -199,7 +198,7 @@
         var navbar = document.querySelector('#navbar');
         var nav_menu = document.querySelector('.nav-menu');
         var search_container = document.querySelector('#search_container');
-        var nav_blur_content = document.querySelector('#navbar .main-content');
+        var nav_blur_content = document.querySelector('#navbar .content-blur');
 
         // start searching
         var doSearch = searchFunc,
