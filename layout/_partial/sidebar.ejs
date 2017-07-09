@@ -174,9 +174,9 @@
         </div>
         <div class="content-inner is-flex flex-wrap justify-space-between">
             <% site.tags.map(function(tag){ %>
-            <a class="tags-item" href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>">
-                <%= tag.name %>
-            </a>
+                <a class="tags-item" href="<%= tag.path %>" title="<%= tag.name %>" rel="<%= tag.length %>">
+                    <%= tag.name %>
+                </a>
             <% }) %>
         </div>
     </div>

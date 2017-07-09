@@ -26,6 +26,11 @@
 ## about 页面的配置
 在 source 页面创建一个 `about` 文件夹, 然后打开新建一个 `index.md`
 
+## 支持数学公式
+
+1. 安装 npm package
+2. 在 `_config.yml` 中配置该插件
+
 
 ## 如何创建一个 Works 页面
 

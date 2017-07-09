@@ -177,7 +177,7 @@
             navbar.appendChild(blurCopyContent)
 
         // 顶部间距
-        var spaceNumber = 50;
+        var spaceNumber = 30;
         document.body.onscroll = function () {
             transtion = 'translate3d(0,' + (-(document.body.scrollTop - spaceNumber) + 'px') + ',0)'
             copyContent.style.transform = transtion

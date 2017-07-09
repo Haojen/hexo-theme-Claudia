@@ -1,5 +1,19 @@
+<style>
+    .container.tag-cate-wrap {
+        min-height: 93vh;
+    }
+
+    .category-title-inner {
+        padding-top: 50px;
+    }
+
+    strong {
+        text-transform: capitalize;
+    }
+</style>
+
 <%
-    var title = type + '-'
+    var title = type + '·'
 
     switch (type) {
         case 'tag':
@@ -10,7 +24,7 @@
             break;
     }
 %>
-<div class="container">
+<div class="container tag-cate-wrap">
     <div class="category-title-inner content has-text-centered">
         <h1><strong style="border-top: 2px solid; border-bottom: 2px solid;"><%- title %></strong></h1>
     </div>
@@ -50,14 +64,8 @@
                                 <br>
                                 <%- truncate(strip_html(post.content), {length: 180, omission: '..'}) %>
                             </p>
+                            <button class="button is-info">Read</button>
                         </div>
-                        <nav class="level is-mobile">
-                            <div class="level-left">
-                                <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                                </a>
-                            </div>
-                        </nav>
                     </div>
                 </a>
             </article>
