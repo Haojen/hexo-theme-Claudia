@@ -12,7 +12,9 @@
                  style="background-image: url('<%- getPostCoverPhoto(firstArticle) %>')">
                 <div class="full-width">
                     <div class="content has-text-centered">
-                        <h1 class="title text-shadow is-marginless"><%= firstArticle.title || defaultTitle %></h1>
+                        <h1 class="title text-shadow is-marginless">
+                            <%- truncate(strip_html(firstArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
+                        </h1>
                         <% if (firstArticle.tags){%>
                             <% firstArticle.tags.forEach(function(tag){%>`
                                 <span class="tag is-post-tag"><%- tag.name %></span>
@@ -36,7 +38,9 @@
                      style="background-image: url('<%- getPostCoverPhoto(secondArticle) %>')" >
                     <a class="post-hover full-width full-height has-padding" href="<%- config.root + secondArticle.path %>">
                         <div class="content">
-                            <h3 class="title is-marginless text-shadow"><%- secondArticle.title || defaultTitle%></h3>
+                            <h3 class="title is-marginless text-shadow">
+                                <%- truncate(strip_html(secondArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
+                            </h3>
                             <% if (secondArticle.tags){%>
                                 <% secondArticle.tags.forEach(function(tag){%>
                                     <span class="tag is-post-tag"><%- tag.name %></span>
@@ -46,7 +50,9 @@
                             <p class="post-content-text text-shadow is-marginless">
                                 <%- truncate(strip_html(secondArticle.content), {length: 80, omission: '..'}) %>
                             </p>
-                            <p class="date text-shadow clear-padding is-marginless"><%- secondArticle.date.format(config.date_format) %></p>
+                            <p class="date text-shadow clear-padding is-marginless">
+                                <%- secondArticle.date.format(config.date_format) %>
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -57,7 +63,7 @@
                     <a class="post-hover full-width full-height has-padding" href="<%- config.root + thirdArticle.path %>">
                         <div class="content">
                             <h3 class="title is-marginless text-shadow">
-                                <%= thirdArticle.title || defaultTitle%>
+                                <%- truncate(strip_html(thirdArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
                             </h3>
                             <% if (thirdArticle.tags){%>
                                 <% thirdArticle.tags.forEach(function(tag){%>

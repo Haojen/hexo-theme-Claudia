@@ -34,7 +34,7 @@
 </header>
 <section>
     <div class="container post-box">
-        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
             <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
                 <strong><%- post.title || 'Null'%></strong>
             </h1>
@@ -54,7 +54,7 @@
                 </div>
             <%}%>
         </div>
-        <div class="content">
+        <div class="content" style="overflow: auto">
             <%- post.content %>
         </div>
         <div class="post-reply">

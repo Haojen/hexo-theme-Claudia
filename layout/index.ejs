@@ -62,15 +62,20 @@
     /*次要的 post 内容样式*/
 
     .sub-post-container {
-        height: 234px;
-        display: flex;
+        min-height: 240px;
+
         margin-bottom: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid #e1e1e1;
     }
 
     .sub-post-container .post-content {
         padding-left: 15px;
         padding-right: 15px;
-        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .primary-post-container h3.title {
+
     }
 </style>
 <%
@@ -95,7 +100,7 @@
 <div style="background: #f5f8f9;">
     <div id="main-container" class="container" style="padding-top: 20px;">
         <div class="is-flex main-content justify-center">
-            <section class="column is-9">
+            <section class="column is-9" style="padding-right: 0;">
                 <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
                 <% if (page.posts.length > 0){%>
                     <% page.posts.each (function (post, index) { %>
@@ -104,7 +109,7 @@
                             <div class="sub-post-container is-flex content-box clear-padding">
                                 <% if (getPostCoverPhoto(post)){%>
                                     <div class="flex-1 post-avatar"
-                                         style="margin: 12px;background-image: url('<%- getPostCoverPhoto(post) %>')" >
+                                         style="margin: 0 12px;background-image: url('<%- getPostCoverPhoto(post) %>')" >
                                     </div>
                                 <%}%>
                                 <div class="flex-2 post-content is-flex align-center">
@@ -122,7 +127,7 @@
                                             <%- truncate(strip_html(post.content), {length: 180, omission: '..'}) %>
                                         </p>
                                         <p><%= post.date.format(config.date_format) %></p>
-                                        <button class="button is-small">阅读更多</button>
+                                        <button class="button is-small">Read More</button>
                                     </div>
                                 </div>
                             </div>
