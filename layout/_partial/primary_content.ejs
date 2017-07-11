@@ -5,12 +5,11 @@
     var secondArticle = posts.data[1] || false
     var thirdArticle = posts.data[2] || false
 %>
-<div class="primary-post-container is-flex content-box clear-padding">
-    <div class="column <%- secondArticle ? 'is-7':'is-12'%> full-height">
-        <a href="<%= config.root + firstArticle.path %>">
-            <div class="primary-item-main full-height post-hover"
-                 style="background-image: url('<%- getPostCoverPhoto(firstArticle) %>')">
-                <div class="full-width">
+<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 15px;">
+    <div class="column  <%- secondArticle ? 'is-7-desktop':'is-12'%>">
+        <a href="<%- config.root + firstArticle.path %>">
+            <div class="post-hover is-flex center"
+                 style="background-image: url('<%- getPostCoverPhoto(firstArticle) %>'); min-height: 350px">
                     <div class="content has-text-centered">
                         <h1 class="title text-shadow is-marginless">
                             <%- truncate(strip_html(firstArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
@@ -25,60 +24,27 @@
                             <%- truncate(strip_html(firstArticle.content), {length: 150, omission: '..'}) %>
                         </p>
                         <p class="date text-shadow"><%= firstArticle.date.format(config.date_format) %></p>
-                        <button class="button is-info is-small is-outlined2">Read More</button>
+                        <button class="button is-info is-small">Read More</button>
                     </div>
-                </div>
             </div>
         </a>
     </div>
-    <div class="column is-5 full-height" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between">
+    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
+        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             <% if (secondArticle){%>
-                <div class="primary-item-sub"
-                     style="background-image: url('<%- getPostCoverPhoto(secondArticle) %>')" >
-                    <a class="post-hover full-width full-height has-padding" href="<%- config.root + secondArticle.path %>">
-                        <div class="content">
-                            <h3 class="title is-marginless text-shadow">
-                                <%- truncate(strip_html(secondArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
-                            </h3>
-                            <% if (secondArticle.tags){%>
-                                <% secondArticle.tags.forEach(function(tag){%>
-                                    <span class="tag is-post-tag"><%- tag.name %></span>
-                                <%})%>
-                            <%}%>
-                            <p class="sub-title text-shadow"><%- secondArticle.subtitle || ''%></p>
-                            <p class="post-content-text text-shadow is-marginless">
-                                <%- truncate(strip_html(secondArticle.content), {length: 80, omission: '..'}) %>
-                            </p>
-                            <p class="date text-shadow clear-padding is-marginless">
-                                <%- secondArticle.date.format(config.date_format) %>
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                <%- partial('_partial/second_content', {article: secondArticle}) %>
             <%}%>
             <% if (thirdArticle){%>
-                <div class="primary-item-sub"
-                     style="background-image: url('<%- getPostCoverPhoto(thirdArticle)%>')" >
-                    <a class="post-hover full-width full-height has-padding" href="<%- config.root + thirdArticle.path %>">
-                        <div class="content">
-                            <h3 class="title is-marginless text-shadow">
-                                <%- truncate(strip_html(thirdArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
-                            </h3>
-                            <% if (thirdArticle.tags){%>
-                                <% thirdArticle.tags.forEach(function(tag){%>
-                                    <span class="tag is-post-tag"><%- tag.name %></span>
-                                <%})%>
-                            <%}%>
-                            <p class="sub-title text-shadow"><%= thirdArticle.subtitle || '' %></p>
-                            <p class="is-marginless text-shadow post-content-text">
-                                <%- truncate(strip_html(thirdArticle.content), {length: 80, omission: '..'}) %>
-                            </p>
-                            <p class="date text-shadow is-marginless"><%= thirdArticle.date.format(config.date_format) %></p>
-                        </div>
-                    </a>
-                </div>
+                <%- partial('_partial/second_content', {article: thirdArticle}) %>
             <%}%>
         </div>
+    </div>
+    <div class="column is-12 is-hidden-desktop">
+        <% if (secondArticle){%>
+        <%- partial('_partial/second_content', {article: secondArticle}) %>
+        <%}%>
+        <% if (thirdArticle){%>
+        <%- partial('_partial/second_content', {article: thirdArticle}) %>
+        <%}%>
     </div>
 </div>

@@ -4,79 +4,23 @@
         transition: box-shadow .2s;
     }
 
-    .post-hover:hover h3 {
+    .sub-post-container .post-hover:hover h3 {
         text-decoration: underline gray;
     }
 
-    .primary-post-container{
-        height: 377px;
-        margin-bottom: 15px;
-    }
-
-    .primary-post-container .title {
-        color: #fff;
-    }
-
-    .primary-post-container .sub-title {
-        color: #fff;
-    }
-    .primary-post-container .date {
-        color: #f1f1f1;
-    }
-
-    .post-content-text {
-        color: #fff;
-    }
-
-    .primary-item-main,
-    .primary-item-sub {
-        background-color: #636363;
-    }
 
     .primary-item-main {
-        width: 100%;
-        display: flex;
-        align-items: center;
+        height: 330px;
         background-size: cover;
     }
 
-    .primary-item-main > div {
-        height: 140px;
+    .primary-container .title,
+    .primary-container .sub-title,
+    .primary-container .post-content-text,
+    .primary-container .date {
+        color: #fff;
     }
 
-    .primary-item-sub {
-        display: flex;
-        align-items: center;
-        height: 48.6%;
-        background-size: cover;
-    }
-
-    .primary-item-sub > div {
-        height: 100px;
-        display: flex;
-        align-items: center;
-
-        padding-left: 15px;
-    }
-
-    /*次要的 post 内容样式*/
-
-    .sub-post-container {
-        min-height: 240px;
-
-        margin-bottom: 15px;
-        padding: 15px 0;
-        border-bottom: 1px solid #e1e1e1;
-    }
-
-    .sub-post-container .post-content {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .primary-post-container h3.title {
-
-    }
 </style>
 <%
     function getPostCoverPhoto(post) {
@@ -93,26 +37,24 @@
         if (post.header_img){
             return post.header_img
         }
-
-        return ''
     }
 %>
 <div style="background: #f5f8f9;">
     <div id="main-container" class="container" style="padding-top: 20px;">
         <div class="is-flex main-content justify-center">
-            <section class="column is-9" style="padding-right: 0;">
+            <section class="column is-9">
                 <%- partial('_partial/primary_content', {posts: page.posts, getPostCoverPhoto: getPostCoverPhoto}) %>
-                <% if (page.posts.length > 0){%>
-                    <% page.posts.each (function (post, index) { %>
-                    <% if ( index > 2 ){%>
-                        <a class="post-hover" href="<%= config.root + post.path %>">
-                            <div class="sub-post-container is-flex content-box clear-padding">
+                    <% page.posts.length > 0 && page.posts.each (function (post, index) { %>
+                    <% if ( index > 0 ){%>
+                        <div class="content-box  <%- index == 1 || index == 2 ? 'is-hidden-desktop':''%>" style="margin-bottom: 30px;">
+                            <a class="post-hover" href="<%= config.root + post.path %>">
+                            <div class="columns">
                                 <% if (getPostCoverPhoto(post)){%>
-                                    <div class="flex-1 post-avatar"
-                                         style="margin: 0 12px;background-image: url('<%- getPostCoverPhoto(post) %>')" >
+                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" >
+                                        <img src="<%- getPostCoverPhoto(post) %>">
                                     </div>
                                 <%}%>
-                                <div class="flex-2 post-content is-flex align-center">
+                                <div class="column is-8-desktop is-7-tablet post-content is-flex align-center">
                                     <div class="content">
                                         <h3><%= post.title || 'Null' %></h3>
                                         <% if (post.subtitle){%>
@@ -132,9 +74,9 @@
                                 </div>
                             </div>
                         </a>
+                        </div>
                     <%}%>
                 <% })%>
-                <%}%>
                 <!--翻頁-->
                 <nav class="pagination is-flex" style="justify-content: flex-end">
                     <% if (is_home()){%>
