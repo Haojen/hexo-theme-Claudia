@@ -228,4 +228,15 @@
 
         close_search_btn.addEventListener('click', toggleSearchView)
     }());
+
+
+    // 导航菜单
+    (function () {
+        var dropDownBtn = document.querySelector('#navMenuDropdown');
+        var navbar = document.querySelector('#navbar');
+
+        dropDownBtn.onclick = function () {
+            navbar.classList.toggle('overflow-hidden')
+        }
+    }())
 })(jQuery);
