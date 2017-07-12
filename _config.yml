@@ -2,8 +2,8 @@
 menu:
   Home: /
   My Works: /works
-  #Tags: /tags
   About: /about
+  #Tags: /tags
 
 rss: /atom.xml
 
