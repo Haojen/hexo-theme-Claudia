@@ -1,6 +1,6 @@
 
 <a class="post-hover" href="<%- config.root + article.path %>" style="height: 48.5%">
-    <div class="is-hidden-touch full-height has-padding overflow-hidden" style="background-image: url('<%- getPostCoverPhoto(article)%>')">
+    <div class="content is-hidden-touch full-height has-padding overflow-hidden" style="background-image: url('<%- getPostCoverPhoto(article)%>')">
         <h3 class="title is-marginless text-shadow">
             <%- truncate(strip_html(article.title || 'Null'), {length: 50, omission: '..'}) %>
         </h3>
