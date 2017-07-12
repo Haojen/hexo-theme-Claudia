@@ -3,7 +3,7 @@
     <nav class="nav">
          <div class="nav-left">
             <a href="<%- config.root %>" class="nav-item" style="font-size: 20px;">
-              <span class="logo"><%= theme.user_name || ''%></span>'s Blog
+              <span class="logo"><%- theme.user_name || ''%></span>'s Blog
             </a>
          </div>
         <div class="nav-center is-hidden position-relative" id="search_container">
@@ -29,9 +29,9 @@
             <span></span>
             <span></span>
         </span>
-        <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop" style="top: 100%;">
+        <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
             <% for (var menu in theme.menu) { %>
-            <a class="nav-item" href="<%- url_for(theme.menu[menu])%>">
+            <a class="nav-item flex-1" href="<%- url_for(theme.menu[menu])%>">
                 <%- menu %>
             </a>
             <% } %>

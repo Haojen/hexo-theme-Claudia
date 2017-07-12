@@ -8,22 +8,23 @@
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  <%- secondArticle ? 'is-7-desktop':'is-12'%>">
         <a href="<%- config.root + firstArticle.path %>">
-            <div class="post-hover is-flex center"
+            <div class="full-height post-hover"
                  style="background-image: url('<%- getPostCoverPhoto(firstArticle) %>'); min-height: 350px">
-                    <div class="content has-text-centered">
-                        <h1 class="title text-shadow is-marginless">
+                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
+                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
                             <%- truncate(strip_html(firstArticle.title || defaultTitle), {length: 50, omission: '..'}) %>
                         </h1>
+                        <div>
                         <% if (firstArticle.tags){%>
                             <% firstArticle.tags.forEach(function(tag){%>`
                                 <span class="tag is-post-tag"><%- tag.name %></span>
                             <%})%>
                         <%}%>
-                        <p class="sub-title text-shadow"><%= firstArticle.subtitle || ''%></p>
-                        <p class="post-content-text is-marginless text-shadow">
-                            <%- truncate(strip_html(firstArticle.content), {length: 150, omission: '..'}) %>
+                        </div>
+                        <p class="post-content-text is-marginless has-padding text-shadow">
+                            <%- truncate(strip_html(firstArticle.content), {length: 120, omission: '..'}) %>
                         </p>
-                        <p class="date text-shadow"><%= firstArticle.date.format(config.date_format) %></p>
+                        <p class="date text-shadow"><%- firstArticle.date.format(config.date_format) %></p>
                         <button class="button is-info is-small">Read More</button>
                     </div>
             </div>

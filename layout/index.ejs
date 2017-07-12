@@ -21,6 +21,18 @@
         color: #fff;
     }
 
+    .post-content-text {
+        color: #f1f1f1!important;
+    }
+
+    .primary-container .post-hover {
+        background: black;
+    }
+
+    .content-bg-mask {
+        background: rgba(0,0,0,.4);
+    }
+
 </style>
 <%
     function getPostCoverPhoto(post) {
@@ -54,7 +66,7 @@
                                          style="margin: 10px; background-size: cover;background-image: url('<%- getPostCoverPhoto(post) %>')">
                                     </div>
                                 <%}%>
-                                <div class="column is-8-desktop is-7-tablet post-content is-flex align-center">
+                                <div class="column is-8-desktop post-content is-flex align-center">
                                     <div class="content">
                                         <h3><%= post.title || 'Null' %></h3>
                                         <% if (post.subtitle){%>
