@@ -1,5 +1,5 @@
-[;]: ;
-
+# Claudia
+![cover](./screenshot/claudia-cover.png)
 ## 侧边栏的配置
 
 ### 用户信息配置
