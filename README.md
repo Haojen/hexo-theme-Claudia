@@ -1,4 +1,7 @@
 # Claudia
+
+[点我查看项目演示](https://haojen.github.io/Claudia-theme-blog/)
+
 ![cover](./screenshot/claudia-cover.png)
 
 ## 用户信息配置
