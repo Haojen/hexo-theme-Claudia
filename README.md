@@ -34,7 +34,7 @@
 	---
 
 ## 创建 Works 页面
-创建的方式和上述创建 About 页面相同, 只不过是 `index.md` 内容略有不同, Works 页面的 `index.md` 如下:
+创建的方式和上述创建 About 页面相同, 只不过是 `index.md` 内容略有不同, about 页面的 `index.md` 如下:
 
 ```
 title: My Works
