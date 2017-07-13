@@ -64,7 +64,7 @@
                 <img class="avatar" src="<%= theme.user_avatar || config["sidebar-avatar"] %>">
             </header>
             <section class="has-text-centered">
-                <h3><strong><%= theme.user_name || 'User Name'%></strong></h3>
+                <h3><strong><%= theme.user_name || config.author  || 'User Name'%></strong></h3>
                 <p class="sub-title"><%= theme.user_description || 'Hello World'%></p>
                 <% if (theme.user_location){%>
                 <p class="is-flex center" style=" color: gray">
@@ -76,7 +76,7 @@
         </div>
         <div class="top-line">
             <ul class="sns-container justify-center is-flex has-padding">
-                <% if (config.RSS) { %>
+                <% if (false && config.RSS) { %>
                 <li>
                     <a href="<%= config.root + 'feed.xml' %>">
                                         <span class="fa-stack fa-lg">
@@ -87,9 +87,9 @@
                 </li>
                 <% } %>
 
-                <% if (config.twitter_username) { %>
+                <% if (theme.twitter_username) { %>
                 <li>
-                    <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
+                    <a target="_blank" href="https://twitter.com/<%= theme.twitter_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -98,9 +98,9 @@
                 </li>
                 <% } %>
 
-                <% if (config.zhihu_username) { %>
+                <% if (theme.zhihu_username) { %>
                 <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
+                    <a target="_blank" href="https://www.zhihu.com/people/<%= theme.zhihu_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa  fa-stack-1x fa-inverse">知</i>
@@ -109,9 +109,9 @@
                 </li>
                 <% } %>
 
-                <% if (config.weibo_username) { %>
+                <% if (theme.weibo_username) { %>
                 <li>
-                    <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
+                    <a target="_blank" href="http://weibo.com/<%= theme.weibo_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -120,9 +120,9 @@
                 </li>
                 <% } %>
 
-                <% if (config.facebook_username) { %>
+                <% if (theme.facebook_username) { %>
                 <li>
-                    <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
+                    <a target="_blank" href="https://www.facebook.com/<%= theme.facebook_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -131,9 +131,9 @@
                 </li>
                 <% } %>
 
-                <% if (config.github_username) { %>
+                <% if (theme.github_username) { %>
                 <li>
-                    <a target="_blank" href="https://github.com/<%= config.github_username %>">
+                    <a target="_blank" href="https://github.com/<%= theme.github_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -142,9 +142,9 @@
                 </li>
                 <% } %>
 
-                <% if (config.linkedin_username) { %>
+                <% if (theme.linkedin_username) { %>
                 <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
+                    <a target="_blank" href="https://www.linkedin.com/in/<%= theme.linkedin_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
