@@ -6,6 +6,19 @@
 
 ## 使用
 
+### 使用评论系统
+> 在本主题的`_config.yml`配置文件
+
+## 来比力
+
+	use_livere: true
+	livere_uid: 你注册的来比力 uid
+
+## Disqus
+
+	use_disqus: true
+	disqus_url: 你的 Disqus 链接
+
 ### 配置博文封面图
 
 将 img 的 `alt` 属性设置为 `post-cover` 即可
@@ -43,7 +56,7 @@
 	linkedin_username:  
 	
 ## 创建 About 页面
-在博客根目录下的 `source` 文件夹里创建一个 `works` 文件夹, 然后打开该文件夹, 新建一个 `index.md`, 打开, 将下面这段文本复制到 `index.md` 里保存
+在博客根目录下的 `source` 文件夹里创建一个 `about` 文件夹, 然后打开该文件夹, 新建一个 `index.md`, 打开, 将下面这段文本复制到 `index.md` 里保存
 	
 	title: about
 	date: 2017-05-31 10:05:56
@@ -51,7 +64,7 @@
 	---
 
 ## 创建 Works 页面
-创建的方式和上述创建 About 页面相同, 只不过是 `index.md` 内容略有不同, about 页面的 `index.md` 如下:
+创建的方式和上述创建 About 页面相同, 只不过是 `index.md` 内容略有不同, works 页面的 `index.md` 如下:
 
 ```
 title: My Works
