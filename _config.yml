@@ -40,10 +40,11 @@ fancybox: true
 #show_count: false
 
 # 评论系统
-use_livere: false
+# 不要用别人的 uid, 自己去注册一个吧
+use_livere: true
 livere_uid: MTAyMC8yOTE4Ni81NzUz
 
-use_disqus: true
+use_disqus: false
 disqus_url: https://haojen.disqus.com/embed.js
 
 # Miscellaneous

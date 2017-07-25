@@ -79,7 +79,7 @@
                 <!-- City版安装代码已完成 -->
             <%}%>
             <% if (theme.use_disqus){%>
-                <div id="disqus_thread" style="width: 80%; margin: 0 auto;"></div>
+            <div id="disqus_thread" style="width: 80%; margin: 0 auto;"></div>
                 <script>
 
                     /**
@@ -106,6 +106,9 @@
 <script>
     // 获取第一张图, 用以当封面背景图
     var img = document.querySelectorAll('img')[1]
-    var header_box = document.querySelector('#header_box')
-    header_box.style.backgroundImage = 'url('+ img.src +')'
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
 </script>

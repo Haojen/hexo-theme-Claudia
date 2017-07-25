@@ -161,8 +161,13 @@
 
     // 主页导航模糊效果
     (function() {
-        var navbar = document.querySelector('#navbar>.container')
-        var content = document.querySelector('.main-content')
+
+        /*
+        * post: #main-wrap
+        *
+        * */
+        var navbar = document.querySelector('#navbar')
+        var content = document.querySelector('.main-inner-content')
         var transtion = 0
 
         var copyContent = content.cloneNode(true)
@@ -171,12 +176,67 @@
             blurCopyContent.appendChild(copyContent)
             navbar.appendChild(blurCopyContent)
 
-        // 间距
-        var spaceNumber = 35
+        // 顶部间距
+        var spaceNumber = 30;
         document.body.onscroll = function () {
             transtion = 'translate3d(0,' + (-(document.body.scrollTop - spaceNumber) + 'px') + ',0)'
             copyContent.style.transform = transtion
         }
 
     }());
+
+    // 搜索功能
+    (function () {
+        var search = document.querySelector('#search');
+        var close_search_btn = document.querySelector('#close_search');
+
+        var html_body = document.querySelector('html');
+        // content main wrap
+        var mainWrap = document.querySelector('#main-wrap');
+
+        // hidden nav menu
+        var navbar = document.querySelector('#navbar');
+        var nav_menu = document.querySelector('.nav-menu');
+        var search_container = document.querySelector('#search_container');
+        var nav_blur_content = document.querySelector('#navbar .content-blur');
+
+        // start searching
+        var doSearch = searchFunc,
+            search_data_path = 'search.xml',
+            search_input = document.querySelector('#search_input'),
+            search_result = document.querySelector('#search_result');
+
+        function toggleSearchView() {
+            search_input.value = '';
+            nav_menu.classList.toggle('is-invisible');
+            navbar.classList.toggle('overflow-hidden');
+            search_container.classList.toggle('is-hidden');
+            mainWrap.classList.toggle('blur');
+            mainWrap.classList.toggle('add-mask');
+            html_body.classList.toggle('overflow-hidden');
+            nav_blur_content.classList.toggle('is-hidden')
+        }
+
+        search.addEventListener('click', function () {
+          toggleSearchView();
+          search_input.focus();
+
+          search_input.onkeyup = function () {
+              doSearch(search_data_path, search_input.id, search_result.id);
+          }
+      });
+
+        close_search_btn.addEventListener('click', toggleSearchView)
+    }());
+
+
+    // 导航菜单
+    (function () {
+        var dropDownBtn = document.querySelector('#navMenuDropdown');
+        var navbar = document.querySelector('#navbar');
+
+        dropDownBtn.onclick = function () {
+            navbar.classList.toggle('overflow-hidden')
+        }
+    }())
 })(jQuery);

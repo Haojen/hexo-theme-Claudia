@@ -4,6 +4,23 @@
 
 ![cover](./screenshot/claudia-cover.png)
 
+## 使用
+
+### 配置博文封面图
+
+将 img 的 `alt` 属性设置为 `post-cover` 即可
+
+### 配置右上角导航栏菜单项
+
+注意: 必须在主题的 `_config.yml` 中配置以下信息, 而非博客根目录下的 `_config.yml`
+
+    menu:
+      Home: / #页面所在的路径
+      My Works: /works
+      About: /about
+      #Tags: /tags
+
+
 ## 用户信息配置
 
 注意: 必须在主题的 `_config.yml` 中配置以下信息, 而非博客根目录下的 `_config.yml`
