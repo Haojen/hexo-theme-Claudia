@@ -112,3 +112,10 @@
         header_box.style.backgroundImage = 'url('+ img.src +')'
     }
 </script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<%- css('css/' + theme.block_highlight) %>
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
