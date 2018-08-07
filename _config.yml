@@ -55,4 +55,8 @@ favicon: /favicon.png
 #fb_admins:
 #fb_app_id:
 
-
+# Highlight code
+# do ensure u have closed all the highlight choices in ur root _config.yml
+# currently we provided 6 choices based on highlight script
+# highlight_default, highlight_light, highlight_github, highlight_rainbow, highlight_vs, highlight_atom
+block_highlight: highlight_rainbow

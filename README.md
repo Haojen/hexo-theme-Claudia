@@ -52,8 +52,33 @@
 	zhihu_username: 
 	github_username:
 	twitter_username: 
-	facebook_username:  
-	linkedin_username:  
+	facebook_username: 
+	linkedin_username: 
+
+## 配置代码高亮
+
+在theme主题目录下, 可以通过 `_config.yml` 文件(注意不是hexo根目录), 配置代码高亮的style, 步骤如下:
+首先在您的hexo根目录下 `_config.yml` , 关闭内置的着色器:
+```
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace: false
+```
+然后在主题的 `_config.yml` 中配置 `block_highlight` 字段, 例如:
+```
+block_highlight: highlight_rainbow
+```
+目前提供一下几种选择, 并且一旦您关闭内嵌的风格, 最好要选一种:
+* highlight_default
+* highlight_light
+* highlight_github
+* highlight_rainbow
+* highlight_vs
+* highlight_atom
+
+
 	
 ## 创建 About 页面
 在博客根目录下的 `source` 文件夹里创建一个 `about` 文件夹, 然后打开该文件夹, 新建一个 `index.md`, 打开, 将下面这段文本复制到 `index.md` 里保存
