@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <ul class="sns-container is-flex">
-                        <% if (theme.RSS) { %>
+                        <% if (config.RSS) { %>
                         <li>
                             <a href="<%= config.root + 'feed.xml' %>">
                                         <span class="fa-stack fa-lg">
@@ -45,9 +45,9 @@
                         </li>
                         <% } %>
 
-                        <% if (theme.twitter_username) { %>
+                        <% if (config.twitter_username) { %>
                         <li>
-                            <a target="_blank" href="https://twitter.com/<%= theme.twitter_username %>">
+                            <a target="_blank" href="https://twitter.com/<%= config.twitter_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -56,9 +56,9 @@
                         </li>
                         <% } %>
 
-                        <% if (theme.zhihu_username) { %>
+                        <% if (config.zhihu_username) { %>
                         <li>
-                            <a target="_blank" href="https://www.zhihu.com/people/<%= theme.zhihu_username %>">
+                            <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa  fa-stack-1x fa-inverse">知</i>
@@ -67,9 +67,9 @@
                         </li>
                         <% } %>
 
-                        <% if (theme.weibo_username) { %>
+                        <% if (config.weibo_username) { %>
                         <li>
-                            <a target="_blank" href="http://weibo.com/<%= theme.weibo_username %>">
+                            <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -78,9 +78,9 @@
                         </li>
                         <% } %>
 
-                        <% if (theme.facebook_username) { %>
+                        <% if (config.facebook_username) { %>
                         <li>
-                            <a target="_blank" href="https://www.facebook.com/<%= theme.facebook_username %>">
+                            <a target="_blank" href="https://www.facebook.com/<%= config.facebook_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -89,9 +89,9 @@
                         </li>
                         <% } %>
 
-                        <% if (theme.github_username) { %>
+                        <% if (config.github_username) { %>
                         <li>
-                            <a target="_blank" href="https://github.com/<%= theme.github_username %>">
+                            <a target="_blank" href="https://github.com/<%= config.github_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -100,9 +100,9 @@
                         </li>
                         <% } %>
 
-                        <% if (theme.linkedin_username) { %>
+                        <% if (config.linkedin_username) { %>
                         <li>
-                            <a target="_blank" href="https://www.linkedin.com/in/<%= theme.linkedin_username %>">
+                            <a target="_blank" href="https://www.linkedin.com/in/<%= config.linkedin_username %>">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
