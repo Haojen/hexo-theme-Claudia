@@ -11,7 +11,7 @@
 </style>
 <%
     // 优先使用专用的about页面头像, 如果没有设置才是用主页的用户头像
-    var avatar = 'http://o7bkkhiex.bkt.clouddn.com/discobolus-avatar.png' || 'http://o7bkkhiex.bkt.clouddn.com/avatar.png' || theme.user_intro_avatar || theme.user_avatar
+    var avatar = theme.user_intro_avatar || theme.user_avatar || 'http://o7bkkhiex.bkt.clouddn.com/discobolus-avatar.png' || 'http://o7bkkhiex.bkt.clouddn.com/avatar.png'
 %>
 <div class="container">
     <div class="content-box full-width is-flex justify-center">
@@ -27,6 +27,7 @@
                         <strong><%- theme.user_name || '' %></strong>
                     </h1>
                     <p class="is-flex align-center"><i class="fa fa-location-arrow" style="margin-right: 5px;"></i> <%- theme.user_location %></p>
+                    <p><strong>E-mail:&nbsp;&nbsp;</strong><%- theme.user_contact %></p>
                     <p><%- theme.user_description %></p>
                     <p><%- theme.user_introduction || ''%></p>
 

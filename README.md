@@ -4,12 +4,12 @@
 
 ![cover](./screenshot/claudia-cover.png)
 
-## 使用
+## Use (使用)
 
-### 使用评论系统
+### Enable comments (使用评论系统)
 > 在本主题的`_config.yml`配置文件
 
-## 来比力
+## livere (来比力)
 
 	use_livere: true
 	livere_uid: 你注册的来比力 uid
@@ -19,13 +19,15 @@
 	use_disqus: true
 	disqus_url: 你的 Disqus 链接
 
-### 配置博文封面图
+### Config Post the cover (配置博文封面图)
 
 将 img 的 `alt` 属性设置为 `post-cover` 即可
+Sets the img `Alt` attributes to `post - cover`
 
-### 配置右上角导航栏菜单项
+### Configure the upper-right navigation bar menu item (配置右上角导航栏菜单项)
 
 注意: 必须在主题的 `_config.yml` 中配置以下信息, 而非博客根目录下的 `_config.yml`
+Note: must be in the theme of `_config. Yml` configured in the following information, rather than the blog root directory `_config. Yml`
 
     menu:
       Home: / #页面所在的路径
@@ -34,8 +36,9 @@
       #Tags: /tags
 
 
-## 用户信息配置
+## Config user info (用户信息配置)
 
+Note: must be in the theme of `_config. Yml` configured in the following information, rather than the blog root directory `_config. Yml`
 注意: 必须在主题的 `_config.yml` 中配置以下信息, 而非博客根目录下的 `_config.yml`
 
 	user_name: your name
@@ -52,8 +55,33 @@
 	zhihu_username: 
 	github_username:
 	twitter_username: 
-	facebook_username:  
-	linkedin_username:  
+	facebook_username: 
+	linkedin_username: 
+
+## Code highlighting (配置代码高亮)
+
+在theme主题目录下, 可以通过 `_config.yml` 文件(注意不是hexo根目录), 配置代码高亮的style, 步骤如下:
+首先在您的hexo根目录下 `_config.yml` , 关闭内置的着色器:
+```
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace: false
+```
+然后在主题的 `_config.yml` 中配置 `block_highlight` 字段, 例如:
+```
+block_highlight: highlight_rainbow
+```
+目前提供一下几种选择, 并且一旦您关闭内嵌的风格, 最好要选一种:
+* highlight_default
+* highlight_light
+* highlight_github
+* highlight_rainbow
+* highlight_vs
+* highlight_atom
+
+
 	
 ## 创建 About 页面
 在博客根目录下的 `source` 文件夹里创建一个 `about` 文件夹, 然后打开该文件夹, 新建一个 `index.md`, 打开, 将下面这段文本复制到 `index.md` 里保存
