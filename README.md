@@ -4,6 +4,11 @@
 
 ![cover](./screenshot/claudia-cover.png)
 
+## Bug fix (2018.12.29)
+
+fix embed element height auto issues
+
+
 ## Use (使用)
 
 ### Enable comments (使用评论系统)
