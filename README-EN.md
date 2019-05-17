@@ -151,20 +151,25 @@ project.json demo:
 install these following function package as you need
 
 * flowchart
+
     npm install hexo-filter-flowchart --save
 * Emoji
+
     npm install hexo-filter-github-emojis --save
 * search
-        npm install hexo-generator-search --save
+
+    npm install hexo-generator-search --save
 * Math formula
+
     npm install hexo-renderer-mathjax --save
 
-For more details of configuration please visit [article in this blog](https://haojen.github.io/Claudia-theme-blog/)
+For more detail of configuration please visit [article in this blog](https://haojen.github.io/Claudia-theme-blog/)
 
 ## 💙 At Last
 
 You can commit your issue after any questions you've met. This
 is very import with your feedback.
+
 BTW, Star me if you like😍
 
 ## License
