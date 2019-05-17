@@ -1,5 +1,7 @@
 # Claudia
 
+简体中文 | [English](./README-EN.md)
+
 [点我查看项目演示](https://haojen.github.io/Claudia-theme-blog/)
 
 ![cover](./screenshot/claudia-cover.png)
@@ -9,9 +11,9 @@
 fix embed element height auto issues
 
 
-## Use (使用)
+## 使用
 
-### Enable comments (使用评论系统)
+### 使用评论系统
 > 在本主题的`_config.yml`配置文件
 
 ## livere (来比力)
@@ -24,15 +26,13 @@ fix embed element height auto issues
 	use_disqus: true
 	disqus_url: 你的 Disqus 链接
 
-### Config Post the cover (配置博文封面图)
+### 配置博文封面图
 
 将 img 的 `alt` 属性设置为 `post-cover` 即可
-Sets the img `Alt` attributes to `post - cover`
 
-### Configure the upper-right navigation bar menu item (配置右上角导航栏菜单项)
+### 配置右上角导航栏菜单项
 
 注意: 必须在主题的 `_config.yml` 中配置以下信息, 而非博客根目录下的 `_config.yml`
-Note: must be in the theme of `_config. Yml` configured in the following information, rather than the blog root directory `_config. Yml`
 
     menu:
       Home: / #页面所在的路径
@@ -41,9 +41,8 @@ Note: must be in the theme of `_config. Yml` configured in the following informa
       #Tags: /tags
 
 
-## Config user info (用户信息配置)
+## 用户信息配置
 
-Note: must be in the theme of `_config. Yml` configured in the following information, rather than the blog root directory `_config. Yml`
 注意: 必须在主题的 `_config.yml` 中配置以下信息, 而非博客根目录下的 `_config.yml`
 
 	user_name: your name
@@ -63,7 +62,7 @@ Note: must be in the theme of `_config. Yml` configured in the following informa
 	facebook_username: 
 	linkedin_username: 
 
-## Code highlighting (配置代码高亮)
+## 配置代码高亮
 
 在theme主题目录下, 可以通过 `_config.yml` 文件(注意不是hexo根目录), 配置代码高亮的style, 步骤如下:
 首先在您的hexo根目录下 `_config.yml` , 关闭内置的着色器:
