@@ -36,7 +36,7 @@ Set the attribute of `alt` in `img` to `post-cover`
 
 ### upper-right navigation bar
 
-Attention: Configure the file `_config.yml` under the theme profile not the root of whole hexo direction
+Attention: Configure the file `_config.yml` under the theme profile ,not the root of whole hexo direction
 
 ```yml
    menu:
@@ -49,7 +49,7 @@ Attention: Configure the file `_config.yml` under the theme profile not the root
 
 ## User's Profile
 
-Attention: Configure the file `_config.yml` under the theme profile not the root of whole hexo direction
+Attention: Configure the file `_config.yml` under the theme profile, not the root of whole hexo direction
 
 ```yml
 user_name: your name
@@ -88,7 +88,7 @@ tab_replace: false
 block_highlight: highlight_rainbow
 ```
 
-After you disabled the default highlight configuration, you should betther choose one of these fllowing options I offered.
+After you disabled the default highlight configuration, you should better choose one of these following options I offered.
 
 * highlight_default
 * highlight_light
@@ -99,7 +99,7 @@ After you disabled the default highlight configuration, you should betther choos
 
 ## Create About Page
 
-Create a new folder `about` under the source of hexo, then create a `index.md` file and copy the following content into it.
+Create a new folder `about` under the source of hexo, and then, create a `index.md` file and copy the following content into it.
 
 	--
     title: about
@@ -118,9 +118,9 @@ layout: works
 ---
 ```
 
-After copied, create a parallel folder `_data` with `work` and create file `project.json` in it.
+After copied, create a parallel folder `_data` with `work` and create a file `project.json` in it.
 
-project.json demo:
+`project.json` demo:
 
 ```json
 {
