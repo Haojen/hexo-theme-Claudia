@@ -36,7 +36,7 @@ Set the attribute of `alt` in `img` to `post-cover`
 
 ### upper-right navigation bar
 
-Attention: Configure the file `_config.yml` under the theme profile ,not the root of whole hexo direction
+Attention: Configure the file `_config.yml` under the theme profile ,not the one in root of whole hexo direction
 
 ```yml
    menu:
@@ -49,7 +49,7 @@ Attention: Configure the file `_config.yml` under the theme profile ,not the roo
 
 ## User's Profile
 
-Attention: Configure the file `_config.yml` under the theme profile, not the root of whole hexo direction
+Attention: Configure the file `_config.yml` under the theme profile, not the one in  root of whole hexo direction
 
 ```yml
 user_name: your name
@@ -118,7 +118,7 @@ layout: works
 ---
 ```
 
-After copied, create a parallel folder `_data` with `work` and create a file `project.json` in it.
+After content copied, create a parallel folder `_data` with `work` and create a file `project.json` in it.
 
 `project.json` demo:
 
@@ -167,9 +167,8 @@ For more detail of configuration please visit [article in this blog](https://hao
 
 ## 💙 At Last
 
-You can commit your issue after any questions you've met. This
-is very import with your feedback.
-
+You can commit your issue if any questions you've met.
+Your feedback after your use is very important to me.
 BTW, Star me if you like😍
 
 ## License
