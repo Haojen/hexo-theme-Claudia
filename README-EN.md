@@ -1,6 +1,6 @@
 # Claudia
 
-简体中文 | [English](./README-EN.md)
+简体中文 | [English](./README.md)
 
 [点我查看项目演示](https://haojen.github.io/Claudia-theme-blog/)
 
