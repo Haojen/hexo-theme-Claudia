@@ -146,7 +146,7 @@ After content copied, create a parallel folder `_data` with `work` and create a 
 }
 ```
 
-## Extension Fcuntion
+## Extension Function
 
 install these following function package as you need
 
