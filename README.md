@@ -20,7 +20,7 @@ fix embed element height auto issues
 
 ```yml
     use_livere: true
-    livere_uid: your livere id (Plase use your own livere id)
+    livere_uid: your livere id (Please use your own livere id)
 ```
 
 #### Disqus
