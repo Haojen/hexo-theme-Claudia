@@ -1,0 +1,35 @@
+$borderRadius: 6px;
+
+.post-container {
+  margin-top: 40px;
+  background: aliceblue;
+
+  .top-post-container {
+    height: 350px;
+    padding: 15px;
+
+    background: #fff;
+    border-radius: $borderRadius;
+
+    .post-one {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .post-item-card {
+    height: 230px;
+    padding: 15px;
+    margin-top: 15px;
+
+    background: #fff;
+    border-radius: $borderRadius;
+  }
+
+  .profile-info-container {
+    background: pink;
+    height: 400px;
+  }
+}

@@ -1,0 +1,6 @@
+header.header-widget
+    section
+        a(href="/")= config.author + "'s blog"
+    section
+        each url, label in theme.menu
+            a(href=url)= label
