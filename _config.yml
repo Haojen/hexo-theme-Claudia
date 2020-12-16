@@ -20,10 +20,12 @@ stylesheets:
 scripts:
 - /js/theme.js
 
-
+# SNS config
 github_username: haojen
 facebook_username: haojen
 instagram_username: haojenma
 twitter_username: williamlong
 #zhihu_username: zhihu user id
 #linkedin_username: linkedin user id
+
+user_location: In the dust

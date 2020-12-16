@@ -36,12 +36,10 @@ block content
               else
                 div.avatar
             h3.user-name= theme.user_name || config.author || 'User Name'
-            div.has-text-centered
-              blockquote.has-text-centered.is-relative.is-inline-block2
-                //span.quote.quote-left “
-                span= theme.user_description || 'May the Force be with you'
-                //span.quote.quote-right ”
-            if (debugSNS || theme.user_location)
+            - var placeholderText = 'May the Force be with you'
+            blockquote.has-text-centered.is-relative.is-inline-block2
+              span(style="margin-bottom: 5px;")= theme.user_description || placeholderText
+            if (theme.user_location)
               address.has-text-centered
                 i.iconfont.icon-location(style="margin-right: 5px;")
                 span= theme.user_location || 'In the dust'

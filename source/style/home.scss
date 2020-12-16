@@ -36,12 +36,12 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     }
   }
 
-  // 通用卡片组建
+  // common card
   .aside-card-container {
     padding: 15px;
   }
 
-  // 用户信息栏
+  // user info card
   .profile-info-container {
     background: #fff;
     min-height: 300px;
@@ -77,41 +77,40 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
       font-weight: bold;
     }
 
+    // user describe quote style
     blockquote:before {
-      content: open-quote;
+      content: '“';
+      margin-right: 5px;
+
+      vertical-align: middle;
     }
+
     blockquote:after {
-      content: close-quote;
+      content: '”';
+      margin-left: 5px;
+      vertical-align: bottom;
     }
 
-    .quote {
-      //position: absolute;
-
-      //color: #000;
-      //font-size: 30px;
-      //line-height: 20px;
-      //font-family: sans-serif;
-
-      //&.quote-left {
-      //  top: 0;
-      //  left: -10px;
-      //}
-      //
-      //&.quote-right {
-      //  top: 100%;
-      //  right: -10px;
-      //}
+    blockquote:before,
+    blockquote:after {
+      line-height: 0;
+      font-size: 32px;
+      font-family: sans-serif;
     }
 
     address {
-      color: gray;
       margin-top: 12px;
       font-style: normal;
     }
 
     .sns-container {
-      margin-top: 30px;
+      overflow: auto;
+      padding-top: 15px;
+      margin: 30px -15px 0;
+      border-top: 1.333px solid rgba(0, 0, 0, 0.05);
+
       i {
+        color: #000;
         margin: 0 8px;
         font-size: 34px;
       }
