@@ -9,26 +9,24 @@ block content
       div.columns
         section.column.is-9
             if page.posts.length > 0
-                article.top-post-container.is-flex
-                  - var posts= page.posts.sort('date', -1).limit(3).toArray()
-                    div.post-one.content.is-flex-grow-3
-                      h2= posts[0].title
-                      h3= date(posts[0].date)
-                    section.is-flex-grow-2.is-flex.is-flex-direction-column
-                      div.post-two.is-flex-grow-1.content.debug
-                        h3= posts[1].title
-                        h4= date(posts[1].date)
-                      div.post-three.is-flex-grow-1.content
-                        h3= posts[2].title
-                        h4= date(posts[2].date)
+                each post in page.posts.sort('date', -1).limit(10).toArray()
+                  article.post-item-card
+                    img(src="https://api.ixiaowai.cn/gqapi/gqapi.php" style="width: 100%")
 
-                each post, idx in page.posts.sort('date', -1).limit(10).toArray()
-                  // TODO: 在移动响应模式下展示前两个
-                  if idx > 3
-                    .post-item-card
-                      a(href=url_for(post.path))= post.title
-                      if post.date
-                        time(datetime=post.date.toJSON())= date(post.date, date_format)
+                    section.content.post-card-content
+                      div.is-flex.is-justify-content-space-between
+                        aside
+                          if post.tags && post.tags.length > 0
+                            each tag, idx in post.tags.toArray()
+                              i.tag.post-item-tag= tag.name
+                        if post.date
+                          time(datetime=post.date.toJSON())= date(post.date, date_format)
+                      h2
+                        a(href=url_for(post.path))= post.title || ''
+                      p= truncate(strip_html(post.content), {length: 600, omission: '..'})
+
+
+
         aside.column.is-3
           div.profile-info-container
             section.avatar
