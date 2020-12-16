@@ -36,23 +36,52 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     }
   }
 
-  // common card
-  .aside-card-container {
+  .profile-info-container,
+  .categories-widget,
+  .archives-widget,
+  .recent-widget {
     padding: 15px;
-  }
-
-  // user info card
-  .profile-info-container {
     background: #fff;
-    min-height: 300px;
+    margin-bottom: 15px;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
+  }
+
+  .categories-widget,
+  .archives-widget,
+  .recent-widget {
+    h3 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .category-list .category-list-item,
+    .archive-list .archive-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 5px;
+
+      .category-list-count,
+      .archive-list-count {
+        color: #fff;
+        padding: 0 12px;
+        border-radius: 11px;
+        background: #515151;
+      }
+    }
+  }
+
+  .profile-info-container {
+    min-height: 300px;
 
     .avatar {
       position: relative;
 
       width: $avatarSize;
       height: $avatarSize;
+      margin-top: 25px;
 
       border-radius: 50%;
       border: 5px solid #fff;
@@ -114,6 +143,17 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
         margin: 0 8px;
         font-size: 34px;
       }
+    }
+  }
+
+  .recent-widget {
+    ul li {
+      margin-bottom: 15px;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
     }
   }
 }

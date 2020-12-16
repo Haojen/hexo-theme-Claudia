@@ -15,7 +15,6 @@ stylesheets:
 - /style/theme.css
 - /style/widget-header.css
 
-
 # scripts loaded in the end of the body
 scripts:
 - /js/theme.js
@@ -29,3 +28,4 @@ twitter_username: williamlong
 #linkedin_username: linkedin user id
 
 user_location: In the dust
+user_description: May the Force be with you

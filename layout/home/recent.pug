@@ -1,0 +1,14 @@
+main.recent-widget
+    h3 Recent posts
+    ul
+        if page.posts.length > 0
+            each post in page.posts.sort('date', -1).limit(6).toArray()
+                li.is-flex.is-align-items-center
+                    img(src="https://api.ixiaowai.cn/gqapi/gqapi.php")
+                    section
+                        h4
+                            a(href=url_for(post.path))= post.title || ''
+                        if post.date
+                            time(datetime=post.date.toJSON())= date(post.date, date_format)
+
+

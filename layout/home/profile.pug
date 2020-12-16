@@ -1,0 +1,41 @@
+div.aside-card-container.profile-info-container
+    // todo: 使用取色工具动态阴影
+    // todo: 演示文章用矢量图？
+    section.is-flex.is-justify-content-center
+        if (config.avatar)
+            img.avatar(src= config.avatar || "https://api.ixiaowai.cn/gqapi/gqapi.php2")
+        else
+            div.avatar
+    h3.user-name= theme.user_name || config.author || 'User Name'
+    - var placeholderText = ''
+    blockquote.has-text-centered.is-relative.is-inline-block2
+        span(style="margin-bottom: 5px;")= theme.user_description || placeholderText
+    if (theme.user_location)
+        address.has-text-centered
+            i.iconfont.icon-location(style="margin-right: 5px;")
+            span= theme.user_location || 'In the dust'
+    section.sns-container.is-flex.is-justify-content-center
+        - var debugSNS = false
+        if (debugSNS || theme.twitter_username)
+            a(target="_blank" href=`//twitter.com/${theme.twitter_username}`)
+                i.iconfont.icon-twitter
+        // Github
+        if (debugSNS || theme.github_username)
+            a(target="_blank" href=`//twitter.com/${theme.github_username}`)
+                i.iconfont.icon-github
+        // Ins
+        if (debugSNS || theme.instagram_username)
+            a(target="_blank" href=`//www.instagram.com/${theme.instagram_username}`)
+                i.iconfont.icon-ins
+        // 知乎
+        if (debugSNS || theme.zhihu_username)
+            a(target="_blank" href=`//twitter.com/${theme.zhihu_username}`)
+                i.iconfont.icon-zhihu
+        // 领英
+        if (debugSNS || theme.linkedin_username)
+            a(target="_blank" href=`//www.linkedin.com/in/${theme.linkedin_username}`)
+                i.iconfont.icon-linkedin
+        // 脸书
+        if (debugSNS || theme.facebook_username)
+            a(target="_blank" href=`//www.facebook.com/${facebook_username}`)
+                i.iconfont.icon-tian7_facebook
