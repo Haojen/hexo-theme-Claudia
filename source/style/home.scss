@@ -1,3 +1,4 @@
+$avatarSize: 150px;
 $borderRadius: 6px;
 $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 
@@ -7,7 +8,6 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 
   .post-item-card {
     min-height: 300px;
-    //padding: 15px;
     margin-bottom: 15px;
 
     background: #fff;
@@ -36,10 +36,85 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     }
   }
 
+  // 通用卡片组建
+  .aside-card-container {
+    padding: 15px;
+  }
+
+  // 用户信息栏
   .profile-info-container {
-    height: 400px;
     background: #fff;
+    min-height: 300px;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
+
+    .avatar {
+      position: relative;
+
+      width: $avatarSize;
+      height: $avatarSize;
+
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: $boxShadow, inset 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    div.avatar:after {
+      content: "\e62a";
+      font-size: 80px;
+      font-family: iconfont;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .user-name {
+      margin: 15px 0 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    blockquote:before {
+      content: open-quote;
+    }
+    blockquote:after {
+      content: close-quote;
+    }
+
+    .quote {
+      //position: absolute;
+
+      //color: #000;
+      //font-size: 30px;
+      //line-height: 20px;
+      //font-family: sans-serif;
+
+      //&.quote-left {
+      //  top: 0;
+      //  left: -10px;
+      //}
+      //
+      //&.quote-right {
+      //  top: 100%;
+      //  right: -10px;
+      //}
+    }
+
+    address {
+      color: gray;
+      margin-top: 12px;
+      font-style: normal;
+    }
+
+    .sns-container {
+      margin-top: 30px;
+      i {
+        margin: 0 8px;
+        font-size: 34px;
+      }
+    }
   }
 }
