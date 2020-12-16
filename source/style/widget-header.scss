@@ -1,3 +1,5 @@
+$boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+
 .header-widget {
   position: absolute;
   top: 0;
@@ -11,11 +13,13 @@
   width: 100vw;
   height: 40px;
   padding: 0 15px;
+  box-shadow: $boxShadow;
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
   a {
+    color: #2b2a2a;
     margin: 0 8px;
+    font-weight: bold;
   }
 }
