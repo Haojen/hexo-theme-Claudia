@@ -21,7 +21,9 @@ scripts:
 - /js/theme.js
 
 
-twitter_username: williamlong
-instagram_username: haojenma
 github_username: haojen
 facebook_username: haojen
+instagram_username: haojenma
+twitter_username: williamlong
+#zhihu_username: zhihu user id
+#linkedin_username: linkedin user id

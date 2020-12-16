@@ -14,8 +14,8 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
   height: 40px;
   padding: 0 15px;
   box-shadow: $boxShadow;
-  backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.9);
 
   a {
     color: #2b2a2a;
