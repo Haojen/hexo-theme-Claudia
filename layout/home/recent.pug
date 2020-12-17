@@ -3,12 +3,10 @@ main.recent-widget
     ul
         if page.posts.length > 0
             each post in page.posts.sort('date', -1).limit(6).toArray()
-                li.is-flex.is-align-items-center
+                li.is-flex
                     img(src="https://api.ixiaowai.cn/gqapi/gqapi.php")
-                    section
+                    section.is-flex-grow-2
                         h4
-                            a(href=url_for(post.path))= post.title || ''
+                            a(href=url_for(post.path))= post.title || 'Title'
                         if post.date
                             time(datetime=post.date.toJSON())= date(post.date, date_format)
-
-

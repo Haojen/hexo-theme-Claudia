@@ -149,11 +149,33 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
   .recent-widget {
     ul li {
       margin-bottom: 15px;
+
+      &:last-child {
+        section {
+          border-bottom: none;
+        }
+      }
     }
     img {
       width: 50px;
       height: 50px;
-      border-radius: 5px;
+      margin-right: 5px;
+      border-radius: 4px;
+    }
+
+    section {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+      h4 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+      }
+
+      time {
+        font-size: 12px;
+        font-weight: bold;
+      }
     }
   }
 }
