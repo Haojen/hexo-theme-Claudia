@@ -9,7 +9,7 @@ block content
       div.columns
         section.column.is-9
             if page.posts.length > 0
-                each post in page.posts.sort('date', -1).limit(0).toArray()
+                each post in page.posts.sort('date', -1).limit(2).toArray()
                   article.post-item-card
                     img(src="https://api.ixiaowai.cn/gqapi/gqapi.php" style="width: 100%")
 
@@ -24,10 +24,9 @@ block content
                       h2
                         a(href=url_for(post.path))= post.title || ''
                       p= truncate(strip_html(post.content), {length: 600, omission: '..'})
-        //aside.column.is-3
-        //  include home/profile
-        //  include home/recent
-        //  include home/categories
-        //  include home/archives
-
-  section.paginator.is-flex.is-justify-content-flex-end!= paginator()
+                section.paginator.is-flex.is-justify-content-flex-end!= paginator()
+        aside.column.is-3
+          include home/profile
+          include home/recent
+          include home/categories
+          include home/archives
