@@ -8,6 +8,14 @@ body {
   margin: 0;
   height: 100vh;
   overflow: auto;
+
+  background: #fafbff;
+
+  > footer {
+    margin: 0 15px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
 }
 
 .debug {

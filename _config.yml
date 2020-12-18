@@ -12,7 +12,7 @@ menu:
 # stylesheets loaded in the <head>
 stylesheets:
 - /style/bulma.css
-- /style/theme.css
+- /style/layout.css
 - /style/widget-header.css
 
 # scripts loaded in the end of the body

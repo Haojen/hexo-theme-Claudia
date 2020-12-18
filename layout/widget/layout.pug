@@ -21,18 +21,19 @@ html(lang=config.language)
     include ./header.pug
     main.is-flex-grow-2
       block content
-    footer
-      #bottom-outer
-        #bottom-inner
-          span Site construction by
-          span= ' ' + config.author + ' '
-          span using
-          a(href='http://hexo.io')
-            span hexo blog framework
-          span .
-          br
-          a(href=config.root) Home
+    footer.is-flex.is-flex-direction-column.is-align-items-center
+      p
+        span Copyright ©
+        span= ' ' + config.author + ' ' + new Date().getFullYear()
+      p Powered by Hexo
+      div.is-flex.is-justify-content-center.is-align-items-center
+        span Theme by
+        a(href='//github.com/haojen') &nbspHaojen&nbsp
+        div(style="margin-top: 8px;")
+          a(class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-icon="octicon-star" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true")
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
         script(src=url)
+    script(async defer src="https://buttons.github.io/buttons.js")
+
