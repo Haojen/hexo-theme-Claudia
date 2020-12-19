@@ -1,7 +1,15 @@
 extends widget/layout.pug
 
+block append link
+  link(rel='stylesheet', href="/style/post.css")
+
 block content
-  article#post
-    h1= page.title
-    != page.content
-  #paginator!= paginator()
+  main.post-page.section.content
+    article.container.is-max-widescreen
+      .columns
+        .column.is-3
+            != toc(page.content, {list_number: false})
+        .column.is-9
+            h1= page.title
+            != page.content
+  //#paginator!= paginator()

@@ -1,0 +1,25 @@
+.post-page {
+  margin-top: 15px;
+
+  > article {
+    padding: 15px 15px 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .toc {
+    position: sticky;
+    top: 60px;
+
+    margin-left: 0;
+    overflow: auto;
+    height: calc(100vh - 120px);
+
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+
+    &, ol {
+      list-style: none!important;
+    }
+  }
+}
