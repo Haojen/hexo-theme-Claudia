@@ -1,4 +1,5 @@
-$borderRadius: 10px;
+@import "./variable";
+
 .post-page {
   margin-top: 10px;
 
@@ -9,8 +10,8 @@ $borderRadius: 10px;
 
     overflow: hidden;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, .05);
-    border-top-left-radius: $borderRadius + 2px;
-    border-top-right-radius: $borderRadius + 2px;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
 
     .header-content {
       position: absolute;
