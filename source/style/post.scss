@@ -1,5 +1,4 @@
 $borderRadius: 10px;
-$boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 .post-page {
   margin-top: 10px;
 
@@ -9,9 +8,9 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     min-height: 300px;
 
     overflow: hidden;
-    box-shadow: $boxShadow;
-    border-top-left-radius: $borderRadius;
-    border-top-right-radius: $borderRadius;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, .05);
+    border-top-left-radius: $borderRadius + 2px;
+    border-top-right-radius: $borderRadius + 2px;
 
     .header-content {
       position: absolute;
@@ -33,20 +32,12 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
         border-radius: $borderRadius;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
-
-      p {
-        max-width: 400px;
-      }
     }
   }
 
   > article {
-    padding: 15px 15px 30px;
-
     background: #ffffff;
-    box-shadow: $boxShadow;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    padding: 15px 15px 30px;
 
     .post-item-tag {
       margin: 0 5px;
@@ -60,8 +51,9 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     }
 
     pre {
-      border-radius: $borderRadius;
+      padding: 5px;
       background: transparent;
+      border-radius: $borderRadius;
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
   }
@@ -86,6 +78,10 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
       margin-top: 5px;
       margin-left: 15px;
       list-style: none!important;
+    }
+
+    a {
+      color: #4a4a4a;
     }
   }
 }
