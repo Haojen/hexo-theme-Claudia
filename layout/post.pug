@@ -1,15 +1,20 @@
 extends widget/layout.pug
 
 block append link
-  link(rel='stylesheet', href="/style/post.css")
+  link(rel='stylesheet', href='/style/post.css')
+  link(rel='stylesheet', href='/style/highlight-theme-light.css')
+  script(src="/jslib/highlight.pack.js")
 
 block content
-  main.post-page.section.content
-    article.container.is-max-widescreen
-      .columns
-        .column.is-3
-            != toc(page.content, {list_number: false})
-        .column.is-9
-            h1= page.title
-            != page.content
-  //#paginator!= paginator()
+    main.post-page.section.content
+        article.container.is-max-widescreen
+            .columns
+                .column.is-3
+                    != toc(page.content, {list_number: false})
+                .column.is-9
+                    h1= page.title
+                    != page.content
+    // Next post, maybe most people don't need it.
+    //#paginator!= paginator()
+block script
+  script hljs.initHighlighting();

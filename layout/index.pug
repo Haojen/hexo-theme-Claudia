@@ -9,7 +9,7 @@ block content
       div.columns
         section.column.is-9
             if page.posts.length > 0
-                each post in page.posts.sort('date', -1).limit(2).toArray()
+                each post in page.posts.sort('date', -1).limit(3).toArray()
                   article.post-item-card
                     img(src="https://api.ixiaowai.cn/gqapi/gqapi.php" style="width: 100%")
 
