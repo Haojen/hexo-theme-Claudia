@@ -1,14 +1,66 @@
+$borderRadius: 10px;
+$boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 .post-page {
-  margin-top: 15px;
+  margin-top: 10px;
+
+  > header {
+    position: relative;
+    max-height: 40vh;
+    min-height: 300px;
+
+    overflow: hidden;
+    box-shadow: $boxShadow;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+
+    .header-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      h1, p {
+        color: #fff;
+        padding: 0 10px;
+        backdrop-filter: blur(15px);
+        border-radius: $borderRadius;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        max-width: 400px;
+      }
+    }
+  }
 
   > article {
     padding: 15px 15px 30px;
+
     background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: $boxShadow;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .post-item-tag {
+      margin: 0 5px;
+
+      color: darkorange;
+      font-weight: bold;
+      font-style: normal;
+      border-radius: 12px;
+      background: transparent;
+      border: 2px darkorange solid;
+    }
 
     pre {
-      border-radius: 10px;
+      border-radius: $borderRadius;
       background: transparent;
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
@@ -19,12 +71,20 @@
     top: 60px;
 
     margin-left: 0;
+    margin-right: 0;
     overflow: auto;
     height: calc(100vh - 120px);
 
     border-right: 1px solid rgba(0, 0, 0, 0.05);
 
     &, ol {
+      margin-left: 0;
+      list-style: none!important;
+    }
+
+    ol {
+      margin-top: 5px;
+      margin-left: 15px;
       list-style: none!important;
     }
   }

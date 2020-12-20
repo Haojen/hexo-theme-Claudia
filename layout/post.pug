@@ -7,12 +7,21 @@ block append link
 
 block content
     main.post-page.section.content
+        header.container.is-max-widescreen
+            img(src="https://api.ixiaowai.cn/gqapi/gqapi.php")
         article.container.is-max-widescreen
             .columns
                 .column.is-3
                     != toc(page.content, {list_number: false})
                 .column.is-9
-                    h1= page.title
+                    .is-flex.is-justify-content-space-between.is-align-items-center
+                        div
+                            if page.tags && page.tags.length > 0
+                                each tag, idx in page.tags.toArray()
+                                    i.tag.post-item-tag= tag.name
+                        if page.date
+                            time(datetime=page.date.toJSON())= date(page.date, date_format)
+                    h1(style="margin-top: 20px;")= page.title
                     != page.content
     // Next post, maybe most people don't need it.
     //#paginator!= paginator()
