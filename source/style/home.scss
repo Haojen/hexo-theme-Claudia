@@ -15,6 +15,13 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
 
+    // cover image
+    img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+    }
+
     .post-card-content {
       padding: 15px 15px 30px;
 
