@@ -6,8 +6,8 @@ language: en
 menu:
   Home: /
   About: /about
-  Contact: /contact
   Archives: /archives
+  Categories: /Categorie
 
 # stylesheets loaded in the <head>
 stylesheets:

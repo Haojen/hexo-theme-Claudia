@@ -1,0 +1,15 @@
+extends widget/layout.pug
+
+block link
+    link(rel='stylesheet' href='/style/about.css')
+
+block content
+    main.about-page.is-fullheight.is-flex.is-align-items-center.content
+        .container.is-max-widescreen
+            .columns.is-marginless
+                aside.column.is-4.is-flex.is-flex-direction-column.is-justify-content-center
+                    img(src='/about/about.png')
+                section.column.is-8.is-flex.is-flex-direction-column.is-justify-content-center
+                    //article
+                    h2.about-title About
+                    article!= page.content

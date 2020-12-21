@@ -17,6 +17,7 @@ html(lang=config.language)
       each url in theme.stylesheets
         link(rel='stylesheet', href=url)
     block link
+    block style
   body.is-flex.is-flex-direction-column
     include ./header.pug
     main.is-flex-grow-2
