@@ -4,7 +4,7 @@ $borderRadius: 6px;
 $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 
 .post-container {
-  margin-top: 20px;
+  margin-top: 15px;
 
   .post-item-card {
     min-height: 300px;
@@ -40,6 +40,10 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
         font-size: 14px;
         font-weight: bold;
       }
+
+      .read-more-btn {
+        border-radius: $borderRadius;
+      }
     }
   }
 
@@ -72,10 +76,9 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 
       .category-list-count,
       .archive-list-count {
-        color: #fff;
         padding: 0 12px;
         border-radius: 11px;
-        background: #515151;
+        background: whitesmoke;
       }
     }
   }

@@ -1,7 +1,7 @@
 @import "./variable";
 
 .post-page {
-  margin-top: 10px;
+  margin-top: 15px;
 
   > header {
     position: relative;
@@ -79,10 +79,6 @@
       margin-top: 5px;
       margin-left: 15px;
       list-style: none!important;
-    }
-
-    a {
-      color: #4a4a4a;
     }
   }
 }
