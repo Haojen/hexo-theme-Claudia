@@ -7,7 +7,7 @@ article.post-container.is-flex.is-justify-content-center.section
         div.columns
             section.column.is-9
                 if page.posts.length > 0
-                    each post in page.posts.sort('date', -1).limit(5).toArray()
+                    each post in page.posts.sort('date', -1).toArray()
                         - var postURL = url_for(post.path)
                         article.post-item-card
                             a(href= postURL)
