@@ -1,11 +1,9 @@
 extends widget/layout.pug
 
+block topic
+  span= `Tag · ${ page.tag || 'all' }`
+
 block content
-  div#tag
-    h1= 'Tag: ' + page.tag
-    - page.posts.each(function(article){
-      a(href=url_for(article.path))= article.title
-      time(datetime=date_xml(article.date))= date(article.date)
-      br.clear
-    - })
-  #paginator!= paginator()
+  include widget/post-list
+    block sidebar
+      include widget/tag.pug

@@ -1,6 +1,6 @@
 
 block append link
-    link(rel='stylesheet', href="/style/home.css")
+    link(rel='stylesheet', href="/style/post-list.css")
 
 article.post-container.is-flex.is-justify-content-center.section
     div.container.is-max-widescreen
@@ -17,7 +17,8 @@ article.post-container.is-flex.is-justify-content-center.section
                                     aside
                                         if post.tags && post.tags.length > 0
                                             each tag in post.tags.toArray()
-                                                i.tag.post-item-tag= tag.name
+                                                a(href= `/tags/${tag.name}`)
+                                                    i.tag.post-item-tag= tag.name
                                     if post.date
                                         time(datetime=post.date.toJSON())= date(post.date, date_format)
                                 if post.title

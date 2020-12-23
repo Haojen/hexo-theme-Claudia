@@ -4,7 +4,7 @@ block topic
     span= `Archive · ${ page.year || 'all' }`
 
 block content
-    include widget/showcase.pug
+    include widget/post-list
         block sidebar
             include widget/archives.pug
 block script

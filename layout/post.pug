@@ -17,8 +17,9 @@ block content
                     .is-flex.is-justify-content-space-between.is-align-items-center
                         div
                             if page.tags && page.tags.length > 0
-                                each tag, idx in page.tags.toArray()
-                                    i.tag.post-item-tag= tag.name
+                                each tag in page.tags.toArray()
+                                    a(href= `/tags/${tag.name}`)
+                                        i.tag.post-item-tag= tag.name
                         if page.date
                             time(datetime=page.date.toJSON())= date(page.date, date_format)
                     h1(style="margin-top: 20px;")= page.title

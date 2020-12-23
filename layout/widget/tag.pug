@@ -1,4 +1,5 @@
 main.tag-widget
     h3 Tag
     each tag in site.tags.toArray()
-        span.tag.post-item-tag(style="margin-bottom: 5px;")= tag.name
+        a(href= `/tags/${tag.name}`)
+            span.tag.post-item-tag(style="margin-bottom: 5px;")= tag.name
