@@ -22,6 +22,8 @@ html(lang=config.language)
     main.is-flex-grow-2
       block content
     footer.is-flex.is-flex-direction-column.is-align-items-center
+      section.sns-container
+        include ./sns.pug
       p
         span Copyright ©
         span= ' ' + config.author + ' ' + new Date().getFullYear()
