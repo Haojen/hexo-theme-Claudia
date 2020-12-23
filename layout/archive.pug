@@ -6,7 +6,8 @@ block topic
 block content
     include widget/post-list
         block sidebar
-            include widget/archives.pug
+            div(style="position: sticky; top: 50px;")
+                include widget/archives.pug
 block script
     script(src='/js/addActiveLinkStyle.js')
 

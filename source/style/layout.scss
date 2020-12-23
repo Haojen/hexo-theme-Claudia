@@ -9,6 +9,11 @@ body {
   height: 100vh;
   overflow: auto;
 
+  // override
+  .section {
+    padding-top: 15px;
+  }
+
   a {
     color: #4a4a4a;
 
