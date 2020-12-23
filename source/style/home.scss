@@ -23,17 +23,6 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     .post-card-content {
       padding: 15px 15px 30px;
 
-      .post-item-tag {
-        margin-right: 5px;
-        border-radius: 10px;
-
-        font-weight: bold;
-        color: darkorange;
-        font-style: normal;
-
-        background: transparent;
-        border: 2px solid darkorange;
-      }
       time {
         font-size: 14px;
         font-weight: bold;
@@ -48,7 +37,8 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
   .profile-info-container,
   .categories-widget,
   .archives-widget,
-  .recent-widget {
+  .recent-widget,
+  .tag-widget {
     padding: 15px;
     background: #fff;
     margin-bottom: 15px;
@@ -58,7 +48,8 @@ $boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 
   .categories-widget,
   .archives-widget,
-  .recent-widget {
+  .recent-widget,
+  .tag-widget {
     h3 {
       font-weight: bold;
       margin-bottom: 15px;

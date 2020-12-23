@@ -1,13 +1,4 @@
 main.tag-widget
-
-
-    //block content
-    //    div#tag
-    //        h1= 'Tag: ' + page.tag
-    //        - page.posts.each(function(article){
-    //        a(href=url_for(article.path))= article.title
-    //        time(datetime=date_xml(article.date))= date(article.date)
-    //        br.clear
-    //        - })
-    //    #paginator!= paginator()
-    //
+    h3 Tag
+    each tag in site.tags.toArray()
+        span.tag.post-item-tag(style="margin-bottom: 5px;")= tag.name

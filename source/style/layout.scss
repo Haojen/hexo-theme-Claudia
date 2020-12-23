@@ -17,6 +17,19 @@ body {
     }
   }
 
+  .tag.post-item-tag {
+    margin-right: 5px;
+
+    font-weight: bold;
+    color: darkorange;
+    font-style: normal;
+
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid darkorange;
+  }
+
   > footer {
     margin: 0 30px;
     padding: 20px 0;
