@@ -1,6 +1,8 @@
 header.header-widget
     section
         a(href="/")= config.author + "'s blog"
+    h3
+        block topic
     aside
         each url, label in theme.menu
             a(href=url)= label

@@ -1,0 +1,37 @@
+extends widget/layout.pug
+
+block append link
+  link(rel='stylesheet', href="/style/home.css")
+
+block content
+  article.post-container.is-flex.is-justify-content-center.section
+    div.container.is-max-widescreen
+      div.columns
+        section.column.is-9
+            if page.posts.length > 0
+                each post, idx in page.posts.sort('date', -1).limit(3).toArray()
+                  - var postURL = url_for(post.path)
+                  article.post-item-card
+                    a(href= postURL)
+                      img(src="https://api.ixiaowai.cn/gqapi/gqapi.php")
+                    section.content.post-card-content
+                      div.is-flex.is-justify-content-space-between
+                        aside
+                          if post.tags && post.tags.length > 0
+                            each tag in post.tags.toArray()
+                              i.tag.post-item-tag= tag.name
+                        if post.date
+                          time(datetime=post.date.toJSON())= date(post.date, date_format)
+                      if post.title
+                        h2
+                          a(href= postURL)= post.title
+                      p= truncate(strip_html(post.content), {length: 600, omission: '..'})
+                      //button.tag
+                      a.tag.read-more-btn(href= postURL) Read more
+
+                section.paginator.is-flex.is-justify-content-flex-end!= paginator()
+        aside.column.is-3
+          include home/profile
+          include home/recent
+          include home/categories
+          include home/archives

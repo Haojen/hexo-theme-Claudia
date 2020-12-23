@@ -1,11 +1,16 @@
 extends widget/layout.pug
 
+block topic
+  span= `Category · ${ page.category || 'all' }`
+
 block content
-  #category
-    h1= page.category
-    - page.posts.each(function(article){
-      .category-item
-        a(href=url_for(article.path))= article.title
-        time(datetime=date_xml(article.date))= date(article.date)
-    - })
-  #paginator!= paginator()
+  include widget/showcase.pug
+    block sidebar
+      include home/categories.pug
+
+block script
+  script(src='/js/addActiveLinkStyle.js')
+
+
+
+
