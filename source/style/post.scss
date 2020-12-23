@@ -1,8 +1,6 @@
 @import "./variable";
 
 .post-page {
-  margin-top: 15px;
-
   > header {
     position: relative;
     max-height: 40vh;
@@ -80,5 +78,10 @@
       margin-left: 15px;
       list-style: none!important;
     }
+  }
+
+  :target {
+    padding-top: 60px;
+    margin-top: -60px!important;
   }
 }
