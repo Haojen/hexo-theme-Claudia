@@ -1,12 +1,10 @@
 @import "./variable";
 $avatarSize: 150px;
-$borderRadius: 6px;
-$boxShadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 
 .post-container {
   .post-item-card {
     min-height: 300px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 
     background: #fff;
     overflow: hidden;
