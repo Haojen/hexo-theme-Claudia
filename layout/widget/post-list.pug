@@ -5,7 +5,7 @@ block append link
 article.post-container.is-flex.is-justify-content-center.section
     div.container.is-max-widescreen
         div.columns
-            section.column.is-9
+            section.column
                 if page.posts.length > 0
                     each post in page.posts.sort('date', -1).toArray()
                         - var postURL = url_for(post.path)
@@ -29,5 +29,5 @@ article.post-container.is-flex.is-justify-content-center.section
                                 a.tag.read-more-btn(href= postURL) Read more
 
                     section.paginator.is-flex.is-justify-content-flex-end!= paginator()
-            aside.column.is-3
+            aside.column.is-hidden-mobile.is-one-third.is-4-desktop.is-3-widescreen
                 block sidebar
