@@ -6,11 +6,28 @@ block append link
   script(src="/jslib/highlight.pack.js")
 
 block content
+    -
+        function getPostCoverImg(post) {
+            const content = post.content
+            const regex = /<img src="\S+"/
+            const result = regex.exec(content)
+            // is post first img
+            if (result) {
+                return result[0].split('src="')[1].split('"')[0]
+            }
+
+            // is font-matter
+            if (post.header_img) {
+                return post.header_img
+            }
+        }
     main.container.is-max-widescreen.content.section.post-page
         .columns
             .column.is-9
-                header.post-cover
-                    img(src="https://api.ixiaowai.cn/gqapi/gqapi.php")
+                - var imgURL = getPostCoverImg(page)
+                if imgURL
+                    header.post-cover
+                        img(src= imgURL)
                 .is-flex.is-justify-content-space-between.is-align-items-center
                     div
                         if page.tags && page.tags.length > 0

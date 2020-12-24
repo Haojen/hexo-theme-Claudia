@@ -1,3 +1,18 @@
+-
+    function getPostCoverImg(post) {
+        const content = post.content
+        const regex = /<img src="\S+"/
+        const result = regex.exec(content)
+        // is post first img
+        if (result) {
+            return result[0].split('src="')[1].split('"')[0]
+        }
+
+        // is font-matter
+        if (post.header_img) {
+            return post.header_img
+        }
+    }
 
 block append link
     link(rel='stylesheet', href="/style/widget-post-list.css")
@@ -8,9 +23,11 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                 if page.posts.length > 0
                     each post in page.posts.sort('date', -1).toArray()
                         - var postURL = url_for(post.path)
+                        - var imgURL = getPostCoverImg(post)
                         article.post-item-card
-                            a(href= postURL)
-                                //img(src="https://api.ixiaowai.cn/gqapi/gqapi.php")
+                            if imgURL
+                                a(href= postURL)
+                                    img(src= imgURL)
                             section.content.post-card-content
                                 div.is-flex.is-justify-content-space-between
                                     aside
