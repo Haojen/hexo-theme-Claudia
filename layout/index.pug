@@ -4,7 +4,11 @@ block content
     include widget/post-list
         block sidebar
             include widget/profile
-            include widget/recent
-            include widget/categories
-            include widget/archives
-            include widget/tag
+            if theme.widgets.includes('recent_posts')
+                include widget/recent
+            if theme.widgets.includes('category')
+                include widget/categories
+            if theme.widgets.includes('archive')
+                include widget/archives
+            if theme.widgets.includes('tag')
+                include widget/tag

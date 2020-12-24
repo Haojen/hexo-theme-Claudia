@@ -8,11 +8,11 @@ menu:
   About: /about
   Archives: /archives
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /style/bulma.css
-- /style/layout.css
-- /style/widget-header.css
+widgets:
+#  - category
+  - tag
+  - archive
+  - recent_posts
 
 # scripts loaded in the end of the body
 scripts:
@@ -28,3 +28,9 @@ twitter_username: williamlong
 
 user_location: In the dust
 user_description: May the Force be with you
+
+# stylesheets loaded in the <head>
+stylesheets:
+  - /style/bulma.css
+  - /style/layout.css
+  - /style/widget-header.css
