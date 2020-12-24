@@ -1,18 +1,8 @@
 @import url("//at.alicdn.com/t/font_2266068_0fz09zmium7k.css");
 
-html {
-  overflow: hidden;
-}
-
 body {
   margin: 0;
   height: 100vh;
-  overflow: auto;
-
-  // override
-  .section {
-    padding-top: 15px;
-  }
 
   a {
     color: #4a4a4a;

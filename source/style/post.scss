@@ -1,7 +1,7 @@
 @import "./variable";
 
 .post-page {
-  > header {
+  .post-cover {
     position: relative;
 
     overflow: hidden;
@@ -11,7 +11,7 @@
 
     img {
       width: 100%;
-      max-height: 320px;
+      max-height: 350px;
       object-fit: cover;
     }
 
@@ -38,7 +38,7 @@
     }
   }
 
-  > article {
+  .post-content {
     background: #ffffff;
     padding: 15px 15px 30px;
 
@@ -56,15 +56,12 @@
 
     margin-left: 0;
     margin-right: 0;
+    padding-left: 15px;
+    height: calc(100vh - 100px);
+
     overflow: auto;
-    height: calc(100vh - 120px);
-
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
-
-    &, ol {
-      margin-left: 0;
-      list-style: none!important;
-    }
+    list-style: none!important;
+    border-left: 2px solid rgba(0, 0, 0, .05);
 
     ol {
       margin-top: 5px;
