@@ -11,14 +11,14 @@ block content
             const content = post.content
             const regex = /<img src="\S+"/
             const result = regex.exec(content)
-            // is post first img
-            if (result) {
-                return result[0].split('src="')[1].split('"')[0]
-            }
 
             // is font-matter
             if (post.header_img) {
                 return post.header_img
+            }
+            // is post first img
+            if (result) {
+                return result[0].split('src="')[1].split('"')[0]
             }
         }
     main.container.is-max-widescreen.content.section.post-page

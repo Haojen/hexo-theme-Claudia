@@ -7,11 +7,11 @@
     overflow: hidden;
     border-top-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, .05);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, .02);
 
     img {
       width: 100%;
-      max-height: 350px;
+      max-height: 300px;
       object-fit: cover;
     }
 

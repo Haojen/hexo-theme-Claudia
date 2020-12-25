@@ -3,14 +3,15 @@
         const content = post.content
         const regex = /<img src="\S+"/
         const result = regex.exec(content)
-        // is post first img
-        if (result) {
-            return result[0].split('src="')[1].split('"')[0]
-        }
 
         // is font-matter
         if (post.header_img) {
             return post.header_img
+        }
+
+        // is post first img
+        if (result) {
+            return result[0].split('src="')[1].split('"')[0]
         }
     }
 
@@ -40,9 +41,8 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                 if post.title
                                     h2
                                         a(href= postURL)= post.title
-                                p= truncate(strip_html(post.content), {length: 600, omission: '..'})
-                                //button.tag
-                                a.tag.read-more-btn(href= postURL) Read more
+                                p.is-flex-grow-2= truncate(strip_html(post.content), {length: 600, omission: '..'})
+                                a.tag.read-more-btn.is-medium(href= postURL) Read more
 
                     section.paginator.is-flex.is-justify-content-flex-end!= paginator()
             aside.column.is-hidden-mobile.is-4-tablet.is-3-widescreen
