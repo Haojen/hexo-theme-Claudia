@@ -1,6 +1,6 @@
 header.header-widget.is-flex-shrink-0
     section.is-hidden-mobile
-        a(href="/")= config.author + "'s blog"
+        a(href="/")= (theme.user.name || config.author) + "'s blog"
     h3
         block topic
     aside

@@ -70,19 +70,19 @@ $avatarSize: 150px;
     min-height: 300px;
     padding-bottom: 0;
 
-    .avatar {
+    .avatar, .avatar-placeholder {
       position: relative;
 
       width: $avatarSize;
       height: $avatarSize;
-      //margin-top: 15px;
+      margin-top: 15px;
 
       border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: $boxShadow, inset 0 0 10px rgba(0, 0, 0, 0.05);
+      box-shadow: $boxShadow;
+      border: 5px solid rgba(0, 0, 0, 0.05);
     }
 
-    div.avatar:after {
+    .avatar-placeholder:after {
       content: "\e62a";
       font-size: 80px;
       font-family: iconfont;
@@ -150,11 +150,11 @@ $avatarSize: 150px;
         }
       }
     }
-    img {
+    img, .post-img-placeholder {
       width: 50px;
       height: 50px;
       margin-right: 5px;
-      border-radius: 4px;
+      border-radius: $borderRadius;
     }
 
     section {

@@ -1,0 +1,15 @@
+-
+    function getPostCoverImg(post) {
+        const content = post.content
+        const regex = /<img src="\S+"/
+        const result = regex.exec(content)
+
+        // is font-matter
+        if (post.cover) {
+            return post.cover
+        }
+        // is post first img
+        if (result) {
+            return result[0].split('src="')[1].split('"')[0]
+        }
+    }

@@ -9,28 +9,32 @@ menu:
   Archives: /archives
 
 widgets:
-#  - category
   - tag
   - archive
   - recent_posts
+#  - category
 
-# scripts loaded in the end of the body
-scripts:
-- /js/theme.js
+# social config
+social:
+  zhihu:
+  twitter: /
+  facebook: /
+  linkedin:
+  instagram: /
+  github: haojen
 
-# SNS config
-github_username: haojen
-facebook_username: haojen
-instagram_username: haojenma
-twitter_username: williamlong
-#zhihu_username: zhihu user id
-#linkedin_username: linkedin user id
-
-user_location: In the dust
-user_description: May the Force be with you
+user:
+  name: Haojen Ma
+  avatar: /images/avatar.jpg
+  location: In the dust
+  description: May the Force be with you
 
 # stylesheets loaded in the <head>
 stylesheets:
   - /style/bulma.css
   - /style/layout.css
   - /style/widget-header.css
+
+# scripts loaded in the end of the body
+scripts:
+  - /js/theme.js
