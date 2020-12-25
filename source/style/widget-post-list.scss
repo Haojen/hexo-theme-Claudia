@@ -32,12 +32,8 @@ $avatarSize: 150px;
     }
   }
 
-  .profile-info-container,
-  .categories-widget,
-  .archives-widget,
-  .recent-widget,
-  .tag-widget {
-    padding: 15px;
+  .aside-card-container {
+    padding: 10px;
     background: #fff;
     margin-bottom: 15px;
     box-shadow: $boxShadow;
@@ -72,13 +68,14 @@ $avatarSize: 150px;
 
   .profile-info-container {
     min-height: 300px;
+    padding-bottom: 0;
 
     .avatar {
       position: relative;
 
       width: $avatarSize;
       height: $avatarSize;
-      margin-top: 25px;
+      //margin-top: 15px;
 
       border-radius: 50%;
       border: 5px solid #fff;
@@ -125,15 +122,15 @@ $avatarSize: 150px;
     }
 
     address {
-      margin-top: 12px;
+      margin-top: 5px;
       font-style: normal;
     }
 
     .sns-container {
       overflow: auto;
-      padding-top: 15px;
-      margin: 30px -15px 0;
-      border-top: 1.333px solid rgba(0, 0, 0, 0.05);
+      padding: 5px 0;
+      margin-top: 15px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
 
       i {
         color: #000;
