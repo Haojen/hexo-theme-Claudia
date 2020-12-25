@@ -21,8 +21,10 @@ block content
                 return result[0].split('src="')[1].split('"')[0]
             }
         }
+        var tocContent = toc(page.content, {list_number: false})
+
     main.container.is-max-widescreen.content.section.post-page
-        .columns
+        .columns.is-flex-desktop.is-justify-content-center
             .column.is-9
                 - var imgURL = getPostCoverImg(page)
                 if imgURL
@@ -38,9 +40,8 @@ block content
                         time(datetime=page.date.toJSON())= date(page.date, date_format)
                 h1(style="margin-top: 20px;")= page.title
                 article.post-content!= page.content
-            .column.is-3.is-hidden-mobile
-                != toc(page.content, {list_number: false})
-
+            .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')
+                    != tocContent
     // Next post, maybe most people don't need it.
     //#paginator!= paginator()
 block script
