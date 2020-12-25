@@ -178,7 +178,7 @@ $avatarSize: 180px;
       padding: 2px 10px;
       background: #fff;
       border-radius: 5px;
-      box-shadow: $boxShadow;
+      box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
 
       &.current {
         color: #fff;
