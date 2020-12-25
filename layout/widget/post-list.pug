@@ -26,7 +26,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                 if post.title
                                     h2
                                         a(href= postURL)= post.title
-                                p.is-flex-grow-2= truncate(strip_html(post.content), {length: 600, omission: '..'})
+                                p.is-flex-grow-2= truncate(strip_html(post.content), {length: 600, omission: '..', separator: ' '})
                                 a.tag.read-more-btn.is-medium(href= postURL) Read more
 
                     section.paginator.is-flex.is-justify-content-flex-end!= paginator()

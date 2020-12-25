@@ -1,9 +1,8 @@
 @import "./variable";
-$avatarSize: 150px;
+$avatarSize: 180px;
 
 .post-container {
   .post-item-card {
-    //min-height: 300px;
     margin-bottom: 30px;
 
     background: #fff;
@@ -19,7 +18,7 @@ $avatarSize: 150px;
     }
 
     .post-card-content {
-      padding: 15px;
+      padding: 15px 15px 25px;
 
       time {
         font-size: 14px;
@@ -39,7 +38,6 @@ $avatarSize: 150px;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
   }
-
   .categories-widget,
   .archives-widget,
   .recent-widget,
@@ -65,8 +63,7 @@ $avatarSize: 150px;
       }
     }
   }
-
-  .profile-info-container {
+  .profile-widget {
     min-height: 300px;
     padding-bottom: 0;
 
@@ -75,11 +72,11 @@ $avatarSize: 150px;
 
       width: $avatarSize;
       height: $avatarSize;
-      margin-top: 15px;
+      margin-top: 10px;
 
       border-radius: 50%;
       box-shadow: $boxShadow;
-      border: 5px solid rgba(0, 0, 0, 0.05);
+      border: 6px solid rgba(0, 0, 0, 0.01);
     }
 
     .avatar-placeholder:after {
@@ -95,16 +92,16 @@ $avatarSize: 150px;
     }
 
     .user-name {
-      margin: 15px 0 5px;
-      text-align: center;
+      font-size: 18px;
       font-weight: bold;
+
+      margin: 15px 0 2px;
     }
 
     // user describe quote style
     blockquote:before {
       content: '“';
       margin-right: 5px;
-
       vertical-align: middle;
     }
 
@@ -118,11 +115,13 @@ $avatarSize: 150px;
     blockquote:after {
       line-height: 0;
       font-size: 32px;
+      color: #585858;
       font-family: sans-serif;
     }
 
     address {
-      margin-top: 5px;
+      color: gray;
+      margin-top: 14px;
       font-style: normal;
     }
 
@@ -139,7 +138,6 @@ $avatarSize: 150px;
       }
     }
   }
-
   .recent-widget {
     ul li {
       margin-bottom: 15px;
@@ -172,7 +170,6 @@ $avatarSize: 150px;
       }
     }
   }
-
   // turn page
   .paginator {
     .page-number,
