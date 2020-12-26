@@ -8,28 +8,6 @@
 
 ## How to Use
 
-### Upper-right navigation bar menu config
-
-Attention: Configure the file `_config.yml` under the theme profile ,not the one in root of whole hexo direction
-
-```yaml
- # main menu navigation
- menu:
-   Home: /
-   About: /about
-   Archives: /archives
-```
-
-## Sidebar widget config
-
-```yaml
-widgets:
-  - tag
-  - archive
-	- category
-	- recent_posts
-```
-
 ## User's profile
 
 Configure the file `_config.yml` under the theme profile, not the one in  root of whole hexo direction
@@ -50,6 +28,25 @@ social:
   instagram:
   github: haojen
 
+```
+
+### Upper-right navigation bar menu config
+
+```yaml
+ # main menu navigation
+ menu:
+   Home: /
+   About: /about
+   Archives: /archives
+```
+
+## Sidebar widget config
+```yaml
+widgets:
+  - tag
+  - archive
+  - category
+  - recent_posts
 ```
 
 ## Code highlighting
