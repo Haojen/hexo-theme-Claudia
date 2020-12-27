@@ -1,5 +1,8 @@
 # Claudia
 ![Build Claudia blog](https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master)
+![GitHub issues](https://img.shields.io/github/issues/Haojen/hexo-theme-Claudia)
+![GitHub license](https://img.shields.io/github/license/Haojen/hexo-theme-Claudia)
+
 
 [简体中文](./README-EN.md) | English
 
