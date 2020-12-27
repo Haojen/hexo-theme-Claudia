@@ -17,6 +17,10 @@ body {
     }
   }
 
+  img[alt="$cover"] {
+    display: none;
+  }
+
   .tag.post-item-tag {
     margin-right: 5px;
 
