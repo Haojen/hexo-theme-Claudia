@@ -1,8 +1,8 @@
 extends widget/layout.pug
 block append link
-  link(rel='stylesheet', href='/style/post.css')
-  link(rel='stylesheet', href='/style/highlight-theme-light.css')
-  script(src="/jslib/highlight.pack.js")
+  link(rel='stylesheet', href= url_for('/style/post.css'))
+  link(rel='stylesheet', href= url_for('/style/highlight-theme-light.css'))
+  script(src= url_for("/jslib/highlight.pack.js"))
 
 block content
     include widget/methods
