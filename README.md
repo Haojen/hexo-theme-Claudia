@@ -1,4 +1,5 @@
 # Claudia
+![Build Claudia blog](https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master)
 
 [简体中文](./README-EN.md) | English
 
@@ -74,7 +75,7 @@ About Somebody
 
 ### Set post cover image
 
-`cover-image`:  set  cover image path
+`$cover`:  set cover image
 
 ```yaml
 --
@@ -82,8 +83,9 @@ title: post title
 categories: [notes]
 date: 2020-12-25 10:05:56
 tags: [hexo, cutie, tutorial]
-cover-image: /images/yourImg.png
 ---
+// set cover example
+![$cover](/images/yourImg.png)
 ```
 
 ## License
