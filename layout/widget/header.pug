@@ -1,8 +1,8 @@
 header.header-widget.is-flex-shrink-0
     section.is-hidden-mobile
-        a(href="/")= (theme.user.name || config.author) + "'s blog"
+        a(href= url_for("/"))= (theme.user.name || config.author) + "'s blog"
     h3
         block topic
     aside
         each url, label in theme.menu
-            a(href=url)= label
+            a(href= url_for(url))= label
