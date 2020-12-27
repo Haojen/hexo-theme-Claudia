@@ -14,7 +14,7 @@ html(lang=config.language)
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       //- stylesheets list from _config.yml
       each url in theme.stylesheets
-        link(rel='stylesheet', href=url)
+        link(rel='stylesheet', href= url_for(url))
     block link
     block style
   body.is-flex.is-flex-direction-column
@@ -36,7 +36,7 @@ html(lang=config.language)
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
-        script(src=url)
+        script(src= url_for(url))
     script(async defer src="https://buttons.github.io/buttons.js")
     block script
 
