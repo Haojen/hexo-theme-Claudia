@@ -15,18 +15,17 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                 a(href= postURL)
                                     img(src= imgURL)
                             section.content.post-card-content
-                                div.is-flex.is-justify-content-space-between
-                                    aside
-                                        if post.tags && post.tags.length > 0
-                                            each tag in post.tags.toArray()
-                                                a(href= `/tags/${tag.name}`)
-                                                    i.tag.post-item-tag= tag.name
-                                    if post.date
-                                        time(datetime=post.date.toJSON())= date(post.date, date_format)
+                                div
+                                    if post.tags && post.tags.length > 0
+                                        each tag in post.tags.toArray()
+                                            a(href= `/tags/${tag.name}`)
+                                                i.tag.post-item-tag= tag.name
                                 if post.title
                                     h2
                                         a(href= postURL)= post.title
-                                p.is-flex-grow-2= truncate(strip_html(post.content), {length: 600, omission: '..', separator: ' '})
+                                if post.date
+                                    time(datetime=post.date.toJSON())= date(post.date, date_format)
+                                p.is-flex-grow-2.abstract-content= truncate(strip_html(post.content), {length: 600, omission: '..', separator: ' '})
                                 a.tag.read-more-btn.is-medium(href= postURL) Read more
 
                     section.paginator.is-flex.is-justify-content-flex-end!= paginator()

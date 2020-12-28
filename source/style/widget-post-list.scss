@@ -20,9 +20,17 @@ $avatarSize: 180px;
     .post-card-content {
       padding: 15px 15px 25px;
 
+      h2 {
+        margin: 20px 0 0;
+      }
+
       time {
+        color: gray;
         font-size: 14px;
-        font-weight: bold;
+      }
+
+      .abstract-content {
+        margin-top: 5px;
       }
 
       .read-more-btn {
