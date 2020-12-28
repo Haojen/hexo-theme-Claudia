@@ -5,15 +5,15 @@
 ![GitHub license](https://img.shields.io/github/license/Haojen/hexo-theme-Claudia)
 
 
-[简体中文](./README-EN.md) | English
+ English | [简体中文](./README-EN.md) 
 
-[Click me to preview](https://haojen.github.io/Claudia-theme-blog/)
+[Click me to preview demo](https://haojen.github.io/Claudia-theme-blog/)
 
 ![cover](./screenshot/claudia-cover.png)
 
 ## How to Use
 
-## User's profile
+### User's profile
 
 Configure the file `_config.yml` under the theme profile, not the one in  root of whole hexo direction
 
@@ -45,7 +45,7 @@ social:
    Archives: /archives
 ```
 
-## Sidebar widget config
+### Sidebar widget config
 ```yaml
 widgets:
   - tag
@@ -54,7 +54,7 @@ widgets:
   - recent_posts
 ```
 
-## Code highlighting
+### Code highlighting
 
 1. Disable the default hexo highlight configuration(modify your `_config.yml` in main directory of hexo)
 
@@ -63,9 +63,10 @@ highlight:
 enable: false
 ```
 
-## Create About Page
+### Create About Page
 
 Create a new folder `about` under the source of hexo, and then, create a `index.md` file and copy the following content into it.
+also you `about.png` in put `about` folder
 
 ```yaml
 --
@@ -92,6 +93,8 @@ tags: [hexo, cutie, tutorial]
 ![$cover](/images/yourImg.png)
 ```
 
-## License
+### My demo blog config 
+https://github.com/Haojen/Claudia-theme-blog
 
+## License
 MIT © [haojen ma](http://haojen.github.io/)
