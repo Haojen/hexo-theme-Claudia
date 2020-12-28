@@ -25,7 +25,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                         a(href= postURL)= post.title
                                 if post.date
                                     time.has-text-grey(datetime=post.date.toJSON())= date(post.date, date_format)
-                                p.is-flex-grow-2.mt-2= truncate(strip_html(post.content), {length: 600, omission: '..'})
+                                p.is-flex-grow-2.mt-2= truncate(strip_html(post.content), {length: 360, omission: '..'})
                                 a.tag.read-more-btn.is-medium(href= postURL) Read more
 
                     section.paginator.is-flex.is-justify-content-flex-end!= paginator()
