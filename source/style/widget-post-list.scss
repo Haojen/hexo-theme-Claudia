@@ -18,19 +18,8 @@ $avatarSize: 180px;
     }
 
     .post-card-content {
-      padding: 15px 15px 25px;
-
-      h2 {
-        margin: 20px 0 0;
-      }
-
       time {
-        color: gray;
         font-size: 14px;
-      }
-
-      .abstract-content {
-        margin-top: 5px;
       }
 
       .read-more-btn {
@@ -128,7 +117,6 @@ $avatarSize: 180px;
     }
 
     address {
-      color: gray;
       margin-top: 14px;
       font-style: normal;
     }

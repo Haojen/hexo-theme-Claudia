@@ -39,14 +39,11 @@
   }
 
   .post-content {
-    background: #ffffff;
-    padding: 15px 15px 30px;
-
     pre {
       padding: 5px;
       background: transparent;
       border-radius: $borderRadius;
-      border: 1px solid rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.08);
     }
   }
 

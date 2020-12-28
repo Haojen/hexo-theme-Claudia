@@ -15,16 +15,15 @@ block content
                 if imgURL
                     header.post-cover
                         img(src= imgURL)
-                .is-flex.is-justify-content-space-between.is-align-items-center
-                    div
-                        if page.tags && page.tags.length > 0
-                            each tag in page.tags.toArray()
-                                a(href= `/tags/${tag.name}`)
-                                    i.tag.post-item-tag= tag.name
-                    if page.date
-                        time(datetime=page.date.toJSON())= date(page.date, date_format)
-                h1(style="margin-top: 20px;")= page.title
-                article.post-content!= page.content
+                header.mx-4.my-4
+                    if page.tags && page.tags.length > 0
+                        each tag in page.tags.toArray()
+                            a(href= url_for(`/tags/${tag.name}`))
+                                i.tag.post-item-tag= tag.name
+                h1.mx-4.mt-0.mb-1= page.title
+                if page.date
+                    time.has-text-grey.mx-4(datetime=page.date.toJSON())= date(page.date, date_format)
+                article.mx-4.post-content!= page.content
             .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')
                     != tocContent
     // Next post, maybe most people don't need it.
