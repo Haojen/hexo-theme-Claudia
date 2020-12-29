@@ -4,16 +4,16 @@ div.aside-card-container.profile-widget
         section.is-flex.is-justify-content-center
             if (theme.user.avatar)
                 // debug images "https://api.ixiaowai.cn/gqapi/gqapi.php"
-                img.avatar(src= url_for(theme.user.avatar))
+                img.avatar(src= url_for(theme.user.avatar) alt="user avatar")
             else
                 div.avatar-placeholder
-        h3.user-name= theme.user.name || config.author || 'User Name'
+        h3.user-name= theme.user.name || config.author || 'NO ONE'
         if theme.user.description
             blockquote.has-text-centered.is-relative.is-inline-block2
                 span(style="margin-bottom: 5px;")= theme.user.description
         if (theme.user.location)
             address.has-text-centered.has-text-grey
                 i.iconfont.icon-location(style="margin-right: 5px;")
-                span= theme.user.location || 'In the dust'
+                span= theme.user.location || ''
     section.sns-container.is-flex.is-justify-content-center.is-align-items-center
         include ./sns.pug

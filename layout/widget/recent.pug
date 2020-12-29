@@ -5,10 +5,11 @@ main.aside-card-container.recent-widget
         if page.posts.length > 0
             each post in page.posts.sort('date', -1).limit(6).toArray()
                 li.is-flex
-                    - var title = post.title || 'title'
-                    - var backgroundColor = 'f5f5f5'
-                    - var uiAvatarURL = `background=${backgroundColor}&name=${title.slice(0, 2)}`
-                    img(src= getPostCoverImg(post) || `https://ui-avatars.com/api/?${uiAvatarURL}`)
+                    - const title = post.title || 'title'
+                    // change to element replace image placeholder
+                    - const backgroundColor = 'f5f5f5'
+                    - const uiAvatarURL = `background=${backgroundColor}&name=${title.slice(0, 2)}`
+                    img(src= getPostCoverImg(post) || `https://ui-avatars.com/api/?${uiAvatarURL}` alt="recent post cover")
                     //else
                     //    div.post-img-placeholder
                     section.is-flex-grow-2
