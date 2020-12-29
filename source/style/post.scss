@@ -1,49 +1,18 @@
 @import "./variable";
 
 .post-page {
-  .post-cover {
-    position: relative;
-
-    overflow: hidden;
-    border-top-left-radius: $borderRadius;
-    border-top-right-radius: $borderRadius;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, .02);
-
-    img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
-
-    .header-content {
-      position: absolute;
-      left: 0;
-      top: 0;
-
-      width: 100%;
-      height: 100%;
-
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-
-      h1, p {
-        color: #fff;
-        padding: 0 10px;
-        backdrop-filter: blur(15px);
-        border-radius: $borderRadius;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
-    }
-  }
-
   .post-content {
     pre {
       padding: 5px;
       background: transparent;
       border-radius: $borderRadius;
       border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: $borderRadius;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .05);
     }
   }
 

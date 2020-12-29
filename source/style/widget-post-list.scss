@@ -12,8 +12,9 @@ $avatarSize: 180px;
 
     // cover image
     img {
+      display: block;
       width: 100%;
-      max-height: 300px;
+      //max-height: 300px;
       object-fit: cover;
     }
 
@@ -147,6 +148,7 @@ $avatarSize: 180px;
       width: 50px;
       height: 50px;
       margin-right: 5px;
+      object-fit: cover;
       border-radius: $borderRadius;
     }
 
