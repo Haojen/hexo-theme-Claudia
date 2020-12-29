@@ -6,7 +6,7 @@
       padding: 5px;
       background: transparent;
       border-radius: $borderRadius;
-      border: 1px solid rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.07);
     }
     img {
       display: block;
@@ -27,7 +27,7 @@
 
     overflow: auto;
     list-style: none!important;
-    border-left: 2px solid rgba(0, 0, 0, .05);
+    border-left: 1px solid rgba(0, 0, 0, .07);
 
     ol {
       margin-top: 5px;
