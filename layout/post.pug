@@ -10,17 +10,16 @@ block content
     main.container.is-max-widescreen.content.section.post-page.pt-4
         .columns.is-flex-desktop.is-justify-content-center
             .column.is-9
-                header.mx-4.my-4
+                header.my-4
                     if page.tags && page.tags.length > 0
                         each tag in page.tags.toArray()
                             a(href= url_for(`/tags/${tag.name}`))
                                 i.tag.post-item-tag= tag.name
-                h1.mx-4.mt-0.mb-1= page.title
+                h1.mt-0.mb-1= page.title
                 if page.date
-                    time.has-text-grey.mx-4(datetime=page.date.toJSON())= date(page.date, date_format)
-                article.mx-4.mt-2.post-content!= page.content
-            .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')
-                    != tocContent
+                    time.has-text-grey(datetime=page.date.toJSON())= date(page.date, date_format)
+                article.mt-2.post-content!= page.content
+            .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')!= tocContent
     // Next post, maybe most people don't need it.
     //#paginator!= paginator()
 block script
