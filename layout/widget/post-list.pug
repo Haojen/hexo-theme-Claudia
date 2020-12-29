@@ -21,7 +21,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                             a(href= url_for(`/tags/${tag.name}`))
                                                 i.tag.post-item-tag= tag.name
                                 if post.title
-                                    h2.mt-4.mb-0
+                                    h2.mt-4.mb-0.is-family-serif
                                         a(href= postURL)= post.title
                                 if post.date
                                     time.has-text-grey(datetime=post.date.toJSON())= date(post.date, date_format)

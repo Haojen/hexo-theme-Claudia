@@ -24,22 +24,19 @@ html(lang=config.language)
     include ./header.pug
     main.is-flex-grow-2
       block content
-    footer.is-flex.is-flex-direction-column.is-align-items-center.is-flex-shrink-0
+    footer.is-flex.is-flex-direction-column.is-align-items-center.is-flex-shrink-0.is-family-serif
       section.sns-container
         include ./sns.pug
       p
         span Copyright ©
         span= ' ' + config.author + ' ' + new Date().getFullYear()
-      p Powered by Hexo
-      div.is-flex.is-justify-content-center.is-align-items-center
-        span Theme by
-        a(href='//github.com/haojen') &nbspHaojen&nbsp
-        div(style="margin-top: 8px;")
+      div.is-flex
+        p Powered by Hexo｜
+        p.is-flex.is-justify-content-center
+          a(href='//github.com/haojen') theme by &nbspHaojen&nbsp
+        div(style="margin-top: 2px")
           a(class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-icon="octicon-star" data-color-scheme="no-preference: light; light: light; dark: light;" data-show-count="true")
-    if theme.scripts !== undefined && theme.scripts.length > 0
-      //- scripts list from config.yml
-      each url in theme.scripts
-        script(src= url_for(url))
+
     script(async defer src="https://buttons.github.io/buttons.js")
     block script
 

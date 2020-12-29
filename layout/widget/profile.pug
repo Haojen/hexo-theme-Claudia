@@ -9,11 +9,11 @@ div.aside-card-container.profile-widget
                 div.avatar-placeholder
         h3.user-name= theme.user.name || config.author || 'NO ONE'
         if theme.user.description
-            blockquote.has-text-centered.is-relative.is-inline-block2
+            blockquote.has-text-centered.is-relative
                 span(style="margin-bottom: 5px;")= theme.user.description
         if (theme.user.location)
             address.has-text-centered.has-text-grey
                 i.iconfont.icon-location(style="margin-right: 5px;")
-                span= theme.user.location || ''
+                span= theme.user.location
     section.sns-container.is-flex.is-justify-content-center.is-align-items-center
         include ./sns.pug
