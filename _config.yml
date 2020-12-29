@@ -36,5 +36,5 @@ stylesheets:
   - /style/widget-header.css
 
 # scripts loaded in the end of the body
-scripts:
-  - /js/theme.js
+#scripts:
+#  - /js/theme.js
