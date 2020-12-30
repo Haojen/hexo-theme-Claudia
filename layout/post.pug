@@ -19,6 +19,16 @@ block content
                 if page.date
                     time.has-text-grey(datetime=page.date.toJSON())= date(page.date, date_format)
                 article.mt-2.post-content!= page.content
+                if theme.comment_utteranc.enable
+                    article.mt-6.comment-container
+                        script(
+                            src="https://utteranc.es/client.js"
+                            repo= theme.comment_utteranc.repo
+                            issue-term= theme.comment_utteranc.issue_term || "pathname"
+                            theme= theme.comment_utteranc.theme || "github-light"
+                            label= theme.comment_utteranc.label
+                            async
+                        )
             .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')!= tocContent
     // Next post, maybe most people don't need it.
     //#paginator!= paginator()

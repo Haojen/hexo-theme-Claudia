@@ -1,12 +1,14 @@
 @import "./variable";
 
+$lineColor: rgba(0, 0, 0, 0.07);
+
 .post-page {
   .post-content {
     pre {
       padding: 5px;
       background: transparent;
       border-radius: $borderRadius;
-      border: 1px solid rgba(0, 0, 0, 0.07);
+      border: 1px solid $lineColor;
     }
     img {
       display: block;
@@ -14,6 +16,10 @@
       border-radius: $borderRadius;
       box-shadow: 0 0 15px rgba(0, 0, 0, .05);
     }
+  }
+
+  .comment-container {
+    border-top: 1px solid $lineColor;
   }
 
   .toc {
@@ -27,7 +33,7 @@
 
     overflow: auto;
     list-style: none!important;
-    border-left: 1px solid rgba(0, 0, 0, .07);
+    border-left: 1px solid $lineColor;
 
     ol {
       margin-top: 5px;

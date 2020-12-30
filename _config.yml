@@ -28,3 +28,9 @@ user:
   avatar: /images/avatar.jpg
   location: In the dust
   description: May the Force be with you
+
+# documents: https://github.com/utterance/utterances
+# API config: https://utteranc.es/
+comment_utteranc:
+  enable: true
+  repo: Haojen/Claudia-theme-blog # your blog repo
