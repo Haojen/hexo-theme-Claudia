@@ -1,5 +1,6 @@
 main.aside-card-container.tag-widget
     h3 Tag
-    each tag in site.tags.toArray()
-        a(href= url_for(`/tags/${tag.name}`))
-            span.tag.post-item-tag(style="margin-bottom: 5px;")= tag.name
+    section
+        each tag in site.tags.toArray()
+            a(href= url_for(`/tags/${tag.name}`))
+                span.tag.post-item-tag(style="margin-bottom: 5px;")= tag.name
