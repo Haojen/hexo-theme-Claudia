@@ -5,3 +5,8 @@
 .is-family-serif {
   font-family: serif;
 }
+
+.js-progressive-loading {
+  opacity: 0;
+  transition: opacity 360ms;
+}

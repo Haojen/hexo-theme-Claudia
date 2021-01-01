@@ -1,5 +1,7 @@
 @import "./variable";
 $avatarSize: 180px;
+$coverMaxHeight: 360px;
+$coverBlurEffect: 20px;
 
 .post-container {
   .post-item-card {
@@ -11,10 +13,37 @@ $avatarSize: 180px;
     border-radius: $borderRadius;
 
     // cover image
-    img {
-      display: block; // fix bottom white spacer
-      width: 100%;
-      object-fit: cover;
+    > header {
+      overflow: hidden;
+
+      .post-cover-backdrop {
+        position: absolute;
+        z-index: 0;
+
+        img {
+          width: 100%;
+          height: $coverMaxHeight;
+
+          object-fit: cover;
+          transform: scale(1.2);
+          filter: blur($coverBlurEffect) ;
+        }
+      }
+
+      .post-cover-link {
+        position: relative;
+        z-index: 1;
+
+        // fix white spacer
+        font-size: 0;
+
+        width: 100%;
+      }
+
+      .post-cover-img {
+        max-height: $coverMaxHeight;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
     }
 
     .post-card-content {
