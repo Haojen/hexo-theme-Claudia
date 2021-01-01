@@ -3,7 +3,7 @@ include methods
 block append link
     link(rel='stylesheet', href= url_for("/style/widget-post-list.css"))
 
-article.post-container.is-flex.is-justify-content-center.section.container.is-max-widescreen.pt-4
+article.post-container.is-flex.is-justify-content-center.section.container.is-max-widescreen.pt-4.px-4
         div.columns.is-variable.is-1-tablet.is-3-desktop-only.is-2-widescreen
             section.column
                 if page.posts.length > 0
@@ -29,7 +29,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                 if post.date
                                     time.has-text-grey(datetime=post.date.toJSON())= date(post.date, date_format)
                                 p.is-flex-grow-2.mt-2= truncate(strip_html(post.content), {length: 360, omission: '..'})
-                                a.tag.read-more-btn.is-medium(href= postURL) Read more
+                                a.tag.read-more-btn.is-medium.mt-2(href= postURL) Read more
 
                     section.paginator.is-flex.is-justify-content-flex-end!= paginator()
             aside.column.is-hidden-mobile.is-4-tablet.is-3-widescreen
