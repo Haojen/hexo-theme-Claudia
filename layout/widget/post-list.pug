@@ -26,7 +26,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                                 i.tag.post-item-tag= tag.name
                                 if post.title
                                     h2.mt-4.mb-0.is-family-serif
-                                        a(href= '#' + post.title)= post.title
+                                        a(href= postURL)= post.title
                                 if post.date
                                     time.has-text-grey(datetime=post.date.toJSON())= date(post.date, date_format)
                                 p.is-flex-grow-2.mt-2= truncate(strip_html(post.content), {length: 360, omission: '..'})

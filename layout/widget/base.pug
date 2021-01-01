@@ -4,14 +4,14 @@
 - if (is_category()) pageTitle = 'Category: ' + page.category
 - if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
 - if (is_year()) pageTitle += ': ' + page.year
-- var pageTitle = page.title || theme.user.name + "'s blog"
+- var pageTitle = page.title || theme.user && theme.user.name + "'s blog"
 
 doctype html
 html(lang=config.language)
   head
     meta(charset='UTF-8')
     title= pageTitle
-    meta(name="description" content= config.description || theme.user.description)
+    meta(name="description" content= config.description || theme.user && theme.user.description)
     meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1")
 
     link(rel="icon" href= theme.favicon)
