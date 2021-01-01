@@ -32,7 +32,8 @@ html(lang=config.language)
         include ./sns.pug
       p
         span Copyright ©
-        span= ' ' + config.author + ' ' + new Date().getFullYear()
+        - var author = (theme.user && theme.user.name) || config.author || ''
+        span= ' ' + author + ' ' + new Date().getFullYear()
       div.is-flex
         p Powered by Hexo｜
         p.is-flex.is-justify-content-center
