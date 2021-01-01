@@ -4,7 +4,7 @@ html {
   body {
     margin: 0;
     height: 100vh;
-    overflow: auto;
+    padding-top: 45px;
 
     a {
       color: #4a4a4a;
@@ -24,6 +24,11 @@ html {
       border-radius: 10px;
       background: transparent;
       border: 2px solid darkorange;
+    }
+
+    > main {
+      flex-grow: 2;
+      flex-basis: 0;
     }
 
     > footer {

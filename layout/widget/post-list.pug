@@ -19,11 +19,11 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                     a.post-cover-link.has-text-centered(href= postURL)
                                         img.post-cover-img.js-progressive-loading(src= imgURL alt="loading..", data-backdrop= true)
                             section.content.post-card-content.p-4.pb-5
-                                header
-                                    if post.tags && post.tags.length > 0
-                                        each tag in post.tags.toArray()
-                                            a(href= url_for(`/tags/${tag.name}`))
-                                                i.tag.post-item-tag= tag.name
+                                if post.tags && post.tags.length > 0
+                                    header
+                                            each tag in post.tags.toArray()
+                                                a(href= url_for(`/tags/${tag.name}`))
+                                                    i.tag.post-item-tag= tag.name
                                 if post.title
                                     h2.mt-4.mb-0.is-family-serif
                                         a(href= postURL)= post.title
