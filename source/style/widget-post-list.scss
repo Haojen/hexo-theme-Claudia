@@ -53,6 +53,8 @@ $coverBlurEffect: 20px;
     }
 
     .post-card-content {
+      word-break: break-word;
+
       time {
         font-size: 14px;
       }
