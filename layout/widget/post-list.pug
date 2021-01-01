@@ -10,10 +10,14 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                     each post in page.posts.sort('date', -1).toArray()
                         - var postURL = url_for(post.path)
                         - var imgURL = getPostCoverImg(post)
-                        article.post-item-card
+                        article.post-item-card(id= post.title)
                             if imgURL
-                                a(href= postURL)
-                                    img(src= imgURL alt="post cover")
+                                header.is-relative.is-flex
+                                    div.post-cover-backdrop.is-hidden
+                                        img(src= imgURL alt="loading..")
+
+                                    a.post-cover-link.has-text-centered(href= postURL)
+                                        img.post-cover-img.js-progressive-loading(src= imgURL alt="loading..", data-backdrop= true)
                             section.content.post-card-content.p-4.pb-5
                                 header
                                     if post.tags && post.tags.length > 0
@@ -22,7 +26,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                                 i.tag.post-item-tag= tag.name
                                 if post.title
                                     h2.mt-4.mb-0.is-family-serif
-                                        a(href= postURL)= post.title
+                                        a(href= '#' + post.title)= post.title
                                 if post.date
                                     time.has-text-grey(datetime=post.date.toJSON())= date(post.date, date_format)
                                 p.is-flex-grow-2.mt-2= truncate(strip_html(post.content), {length: 360, omission: '..'})
