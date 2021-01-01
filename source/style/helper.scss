@@ -8,5 +8,6 @@
 
 .js-progressive-loading {
   opacity: 0;
-  transition: opacity 360ms;
+  will-change: opacity;
+  transition: opacity 320ms;
 }
