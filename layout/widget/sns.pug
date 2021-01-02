@@ -10,6 +10,10 @@ if (debugSNS || theme.social.github)
 if (debugSNS || theme.social.instagram)
     a(target="_blank" rel="noopener nofollow" href=`//www.instagram.com/${theme.social.instagram}`)
         i.iconfont.icon-ins
+// RSS
+if (debugSNS || config.feed && config.feed.enable)
+    a(target="_blank" rel="noopener nofollow" href= url_for(config.feed.path))
+        i.iconfont.icon-rss
 // 知乎
 if (debugSNS || theme.social.zhihu)
     a(target="_blank" rel="noopener nofollow" href=`//zhihu.com/${theme.social.zhihu}`)

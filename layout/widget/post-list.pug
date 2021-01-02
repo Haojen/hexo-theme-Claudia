@@ -31,6 +31,6 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                 p.is-flex-grow-2.mt-2= truncate(strip_html(post.content), {length: 360, omission: '..'})
                                 a.tag.read-more-btn.is-medium.mt-2(href= postURL) Read more
 
-                    section.paginator.is-flex.is-justify-content-flex-end!= paginator()
+                    section.paginator.is-flex.is-justify-content-flex-end.is-flex-wrap-wrap!= paginator()
             aside.column.is-hidden-mobile.is-4-tablet.is-3-widescreen
                 block sidebar

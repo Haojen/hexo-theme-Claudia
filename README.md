@@ -11,6 +11,9 @@
 
 ![cover](./screenshot/claudia-cover.png)
 
+## CHANGELOG
+[Click me read changelog, recent update 2021.01.02](CHANGELOG.md)
+
 ## How to Use
 
 ### User's profile
@@ -97,5 +100,8 @@ About Somebody
 ### My demo blog config 
 https://github.com/Haojen/Claudia-theme-blog
 
+## And my another Hexo theme
+This it [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina), hope you like it!
+
 ## License
-MIT © [haojen ma](http://haojen.github.io/)
+MIT

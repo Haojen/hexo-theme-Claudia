@@ -219,15 +219,15 @@ $coverBlurEffect: 20px;
   .paginator {
     .page-number,
     .extend {
-      margin: 0 5px;
       padding: 2px 15px;
-      background: #fff;
-      border-radius: 5px;
-      box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+      margin: 0 5px 10px;
+
+      border-radius: $borderRadius;
+      box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.1);
 
       &.current {
         color: #fff;
-        background: #515151;
+        background: $activeColor;
       }
     }
   }
