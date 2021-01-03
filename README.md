@@ -11,8 +11,8 @@
 
 ![cover](./screenshot/claudia-cover.png)
 
-## CHANGELOG
-[Click me read changelog, recent update 2021.01.02](CHANGELOG.md)
+## CHANGELOG 
+Recent update [2021.01.03](CHANGELOG.md)
 
 ## How to Use
 
