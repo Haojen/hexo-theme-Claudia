@@ -8,7 +8,8 @@ block content
     - var tocContent = toc(page.content, {list_number: false})
 
     main.container.is-max-widescreen.content.section.post-page.pt-4.px-4
-        .columns.is-flex-desktop.is-justify-content-center
+        .columns.is-flex-desktop.is-justify-content-center.is-flex-direction-row-reverse
+            .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')!= tocContent
             .column.is-9
                 header.my-4
                     if page.tags && page.tags.length > 0
@@ -29,8 +30,70 @@ block content
                             label= theme.comment_utteranc.label
                             async
                         )
-            .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')!= tocContent
     // Next post, maybe most people don't need it.
     //#paginator!= paginator()
 block script
-  script hljs.initHighlighting();
+  script.
+      hljs.initHighlighting();
+
+      var directory = document.querySelectorAll('.toc a')
+      if (directory.length > 0) {
+          var contentTocList = []
+          var activeClassName = 'is-active'
+
+          directory.forEach(function (link) {
+              if (!link.href) return
+              var id = decodeURI(link.href).split('#')[1]
+              contentTocList.push(document.getElementById(id))
+          })
+
+          var DELAY = 150
+          var needWait = false
+          window.addEventListener('scroll', function (evt) {
+              if (needWait) {
+                  return
+              }
+              needWait = true
+              var tocContainer = document.querySelector('.toc')
+              setTimeout(function () {
+                  var spacing = 60
+                  var activeTopicEl = null
+                  var scrollTop = window.pageYOffset
+                  for (var i = 0; i < contentTocList.length; i++) {
+                      var currentTopic = contentTocList[i]
+
+                      if (currentTopic.offsetTop > scrollTop + spacing / 2) {
+                          // jump to next loop
+                          continue
+                      }
+
+                      if (!activeTopicEl) {
+                          activeTopicEl = currentTopic
+                      } else if (currentTopic.offsetTop + spacing >= activeTopicEl.offsetTop - spacing) {
+                          activeTopicEl = currentTopic
+                      }
+
+                      var beforeActiveEl = document.querySelector('.toc' + ' .' + activeClassName)
+                      beforeActiveEl && beforeActiveEl.classList.remove(activeClassName)
+
+                      var selectTarget = '.toc a[href="#' + encodeURI(activeTopicEl.id) + '"]'
+                      var direc = document.querySelector(selectTarget)
+                      direc.classList.add(activeClassName)
+
+                      var tocContainerHeight = tocContainer.getBoundingClientRect().height
+                      if (direc.offsetTop >= tocContainerHeight - spacing) {
+                          tocContainer.scrollTo({
+                              // top: direc.offsetTop - spacing,
+                              top: direc.offsetTop + 100 - tocContainerHeight,
+                          })
+                      }
+                      else {
+                          tocContainer.scrollTo({ top: 0 })
+                      }
+                  }
+                  needWait = false
+              }, DELAY)
+
+          })
+
+      }
