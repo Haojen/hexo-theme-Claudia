@@ -1,10 +1,11 @@
 #Changelog
 
-## 01.02.2021
+## 01.03.2021
 - Fix turn page indicator on the mobile device sometimes can't wrap
 - Change page indicator active color
 - Add RSS
-- Add post toc indicator
+- Add highlight current this chapter in Table of content
+- Increase Table of content loading speed
 
 
 ## 01.01.2021
