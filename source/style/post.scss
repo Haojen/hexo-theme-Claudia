@@ -41,6 +41,10 @@ $lineColor: rgba(0, 0, 0, 0.07);
       margin-left: 15px;
       list-style: none!important;
     }
+
+    .is-active {
+      color: $activeColor;
+    }
   }
 
   :target {
