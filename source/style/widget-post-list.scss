@@ -7,10 +7,10 @@ $coverBlurEffect: 20px;
   .post-item-card {
     margin-bottom: 30px;
 
-    background: #fff;
     overflow: hidden;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
+    background: var(--second-bg-color);
 
     // cover image
     > header {
@@ -61,16 +61,18 @@ $coverBlurEffect: 20px;
 
       .read-more-btn {
         border-radius: $borderRadius;
+        color: var(--second-text-color);
+        background: var(--third-bg-color);
       }
     }
   }
 
   .aside-card-container {
     padding: 10px;
-    background: #fff;
     margin-bottom: 15px;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
+    background: var(--second-bg-color);
   }
 
   .categories-widget,
@@ -89,12 +91,13 @@ $coverBlurEffect: 20px;
       justify-content: space-between;
 
       margin-bottom: 5px;
+      color: var(--second-text-color);
 
       .category-list-count,
       .archive-list-count {
         padding: 0 12px;
         border-radius: 11px;
-        background: whitesmoke;
+        background: var(--third-bg-color);
       }
     }
   }
@@ -112,7 +115,7 @@ $coverBlurEffect: 20px;
 
       border-radius: 50%;
       box-shadow: $boxShadow;
-      border: 6px solid rgba(0, 0, 0, 0.01);
+      border: 7px solid var(--border-line-color)
     }
 
     .avatar-placeholder:after {
@@ -164,7 +167,7 @@ $coverBlurEffect: 20px;
       overflow: auto;
       padding: 5px 0;
       margin-top: 15px;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid var(--border-line-color);
 
       i {
         margin: 0 8px;
@@ -191,7 +194,7 @@ $coverBlurEffect: 20px;
     }
 
     section {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid var(--border-line-color);
 
       h4 {
         font-size: 14px;
@@ -201,7 +204,6 @@ $coverBlurEffect: 20px;
 
       time {
         font-size: 12px;
-        font-weight: bold;
       }
     }
   }
@@ -223,10 +225,11 @@ $coverBlurEffect: 20px;
       margin: 0 5px 10px;
 
       border-radius: $borderRadius;
-      box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.1);
+      color: var(--second-text-color);
+      background: var(--third-bg-color);
 
       &.current {
-        color: #fff;
+        color: #fff!important;
         background: $activeColor;
       }
     }

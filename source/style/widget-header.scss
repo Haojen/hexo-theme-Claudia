@@ -15,12 +15,14 @@
   padding: 0 15px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--top-bar-bg-color);
 
   a {
-    color: #2b2a2a;
     margin: 0 8px;
     font-weight: bold;
+
+    //color: #2b2a2a;
+    color: var(--primary-text-color);
   }
 
   h3 {

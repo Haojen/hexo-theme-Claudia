@@ -1,21 +1,39 @@
 @import "./variable";
 
-$lineColor: rgba(0, 0, 0, 0.07);
+$lineColor: var(--border-line-color);
 
 .post-page {
   .post-content {
     pre {
-      padding: 5px;
+      padding: 0;
       background: transparent;
-      border-radius: $borderRadius;
-      border: 1px solid $lineColor;
+
+      code {
+        padding: 15px;
+        border: 1px solid $lineColor;
+        background: var(--pre-code-bg-color);
+      }
     }
+
+    code {
+      border-radius: 4px;
+      background: var(--third-bg-color);
+    }
+
+    .hljs {
+      color: var(--second-text-color);
+    }
+
     img {
       display: block;
       margin: 0 auto;
       max-height: 500px;
       border-radius: $borderRadius;
       box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+    }
+
+    a {
+      color: $activeColor;
     }
   }
 
@@ -43,7 +61,9 @@ $lineColor: rgba(0, 0, 0, 0.07);
     }
 
     .is-active {
-      color: $activeColor;
+      span {
+        color: $activeColor!important;
+      }
     }
   }
 

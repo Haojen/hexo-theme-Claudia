@@ -1,0 +1,53 @@
+@import "themes/default-dark";
+@import "themes/default-light";
+
+:root.appearance-light {
+  @include light;
+}
+
+:root.appearance-dark {
+  @include dark;
+}
+
+:root.appearance-auto {
+  @include light;
+
+  @media (prefers-color-scheme: dark) {
+    @include dark;
+  }
+}
+
+:root {
+  &.appearance-dark,
+  &.appearance-auto,
+  &.appearance-light {
+
+    background: var(--primary-bg-color);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--primary-text-color)!important;
+    }
+
+    hr {
+      background: var(--third-bg-color);
+    }
+
+    p, span, strong, dl, ul, ol, cite{
+      color: var(--second-text-color);
+    }
+
+    .content {
+      blockquote {
+        background: var(--third-bg-color);
+        border-color: var(--blockquote-border-color);
+      }
+
+      table {
+        th, tr, td {
+          border-color: var(--table-border-color);
+          color: var(--second-text-color)!important;
+        }
+      }
+    }
+  }
+}

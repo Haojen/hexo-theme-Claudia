@@ -1,0 +1,14 @@
+@mixin light {
+  --primary-bg-color: #fff;
+  --second-bg-color: #fff;
+  --third-bg-color: #f5f5f5;
+
+  --primary-text-color: #4a4a4a;
+  --second-text-color: #4a4a4a;
+
+  --top-bar-bg-color: rgba(255, 255, 255, 0.85);
+  --border-line-color: rgba(0, 0, 0, 0.05);
+  --blockquote-border-color: #dbdbdb;
+  --table-border-color: #dbdbdb;
+  --pre-code-bg-color: #f5f5f573;
+}
