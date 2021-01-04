@@ -1,4 +1,7 @@
-#Changelog
+# Changelog
+
+## 01.05.2021
+- Add dark mode
 
 ## 01.03.2021
 - Fix turn page indicator on the mobile device sometimes can't wrap
