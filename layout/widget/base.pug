@@ -5,9 +5,10 @@
 - if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
 - if (is_year()) pageTitle += ': ' + page.year
 - var pageTitle = page.title || theme.user && theme.user.name + "'s blog"
+- var appearance = theme.appearance ? theme.appearance : 'auto'
 
 doctype html
-html(lang=config.language)
+html(lang=config.language class= `appearance-${ appearance }`)
   head
     meta(charset='UTF-8')
     title= pageTitle
@@ -15,7 +16,6 @@ html(lang=config.language)
     meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1")
 
     link(rel="icon" href= theme.favicon)
-    link(rel="stylesheet" href= url_for('/style/bulma.css'))
     link(rel="stylesheet" href= url_for('/style/base.css'))
     link(rel="stylesheet" href= url_for('/style/helper.css'))
 
@@ -39,7 +39,7 @@ html(lang=config.language)
         p.is-flex.is-justify-content-center
           a(href='//github.com/haojen') Theme by &nbspHaojen&nbsp
         div(style="margin-top: 2px")
-          a(class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-icon="octicon-star" data-color-scheme="no-preference: light; light: light; dark: light;" data-show-count="true")
+          a(class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true")
 
     script(async defer src="https://buttons.github.io/buttons.js")
     block script
