@@ -12,7 +12,7 @@ widgets:
   - tag
   - archive
   - recent_posts
-#  - category
+  - category
 
 # social config
 social:
@@ -34,3 +34,8 @@ user:
 comment_utteranc:
   enable: true
   repo: Haojen/Claudia-theme-blog # your blog repo
+
+# dark
+# light
+# user-can-set
+appearance: auto # Default value is auto
