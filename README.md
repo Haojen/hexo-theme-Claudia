@@ -1,17 +1,18 @@
 # Claudia
+Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
+
 ![Hexo version](https://img.shields.io/badge/hexo%20version-%3E%3D5.0-brightgreen)
 ![Build Claudia blog](https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master)
 ![GitHub issues](https://img.shields.io/github/issues/Haojen/hexo-theme-Claudia)
 ![GitHub license](https://img.shields.io/github/license/Haojen/hexo-theme-Claudia)
 
+[Preview demo](https://haojen.github.io/Claudia-theme-blog/)
 
- English | [简体中文](./README-EN.md) 
-
-[Click me to preview demo](https://haojen.github.io/Claudia-theme-blog/)
+English | [简体中文](./README-EN.md)
 
 ![cover](./screenshot/claudia-cover-v2.png)
 
-## CHANGELOG 
+## Changelog 
 Recent update [2021.01.05](CHANGELOG.md)
 
 ## How to Use
