@@ -1,14 +1,23 @@
-# Claudia
-Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
+<h1 align="center">Claudia</h1>
+<p align="center"> 
+  Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
+</p>
 
-![Hexo version](https://img.shields.io/badge/hexo%20version-%3E%3D5.0-brightgreen)
-![Build Claudia blog](https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master)
-![GitHub issues](https://img.shields.io/github/issues/Haojen/hexo-theme-Claudia)
-![GitHub license](https://img.shields.io/github/license/Haojen/hexo-theme-Claudia)
+<p align="center">
+  <img  alt="Hexo version" src="https://img.shields.io/badge/hexo%20version-%3E%3D5.0-brightgreen">
+  <img  alt="Build blog" src="https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master">
+  <img  alt="GitHub issues" src="https://img.shields.io/github/issues/Haojen/hexo-theme-Claudia">
+  <img  alt="GitHub license" src="https://img.shields.io/github/license/Haojen/hexo-theme-Claudia">
+</p>
 
-[Preview demo](https://haojen.github.io/Claudia-theme-blog/)
+<p align="center">
+  <a href="https://haojen.github.io/Claudia-theme-blog/" rel="nofollow">Demo</a>
+</p>
 
-English | [简体中文](./README-EN.md)
+<p align="center">
+  <span>English | </span> 
+  <a href="./README-EN.md" rel="nofollow">简体中文</a>
+</p>
 
 ![cover](./screenshot/claudia-cover-v2.png)
 
