@@ -9,10 +9,10 @@
 
 [Click me to preview demo](https://haojen.github.io/Claudia-theme-blog/)
 
-![cover](./screenshot/claudia-cover.png)
+![cover](./screenshot/claudia-cover-v2.png)
 
 ## CHANGELOG 
-Recent update [2021.01.03](CHANGELOG.md)
+Recent update [2021.01.05](CHANGELOG.md)
 
 ## How to Use
 
