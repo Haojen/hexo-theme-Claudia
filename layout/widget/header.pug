@@ -1,9 +1,11 @@
 header.header-widget.is-flex-shrink-0
     section.is-hidden-mobile
-        a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
+        h2
+            a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
     h3
         block topic
     aside
         if theme.menu
             each url, label in theme.menu
-                a(href= url_for(url))= label
+                h3.is-inline-block
+                    a(href= url_for(url))= label

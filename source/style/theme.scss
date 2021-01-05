@@ -32,8 +32,14 @@
       background: var(--third-bg-color);
     }
 
-    p, span, strong, dl, ul, ol, cite{
+    p, strong, dl, ul, ol, cite {
       color: var(--second-text-color);
+    }
+
+    .post-container, .about-page {
+      span {
+        color: var(--second-text-color);
+      }
     }
 
     .content {

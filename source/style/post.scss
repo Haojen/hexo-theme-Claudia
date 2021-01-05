@@ -4,6 +4,12 @@ $lineColor: var(--border-line-color);
 
 .post-page {
   .post-content {
+
+    code {
+      border-radius: 4px;
+      background: var(--third-bg-color);
+    }
+
     pre {
       padding: 0;
       background: transparent;
@@ -15,13 +21,11 @@ $lineColor: var(--border-line-color);
       }
     }
 
-    code {
-      border-radius: 4px;
-      background: var(--third-bg-color);
-    }
-
     .hljs {
       color: var(--second-text-color);
+      //span {
+      //  color: initial;
+      //}
     }
 
     img {
