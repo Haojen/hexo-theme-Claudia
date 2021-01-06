@@ -83,13 +83,21 @@ comment_utteranc:
 #### 2. DISQUS
 developing..
 
+### Appearance
+```yaml
+# 1.light 
+# 2.dark
+# 3.auto (default, match device appearance setting)
+appearance: auto
+```
+
 ### Code highlighting
 
-1. Disable the default hexo highlight configuration(modify your `root/_config.yml` in root directory of hexo)
+1. **Disable** the default hexo highlight configuration(modify your `root/_config.yml` in root directory of hexo)
 
 ```yaml
 highlight:
-enable: false
+  enable: false
 ```
 
 ### Create About Page
@@ -103,8 +111,6 @@ title: about
 date: 2017-05-31 10:05:56
 layout: about
 ---
-
-About Somebody
 ```
 
 ### My demo blog config
