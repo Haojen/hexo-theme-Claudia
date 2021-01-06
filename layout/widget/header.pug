@@ -1,11 +1,17 @@
-header.header-widget.is-flex-shrink-0
+header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-content-space-between.is-hidden-mobile
     section.is-hidden-mobile
         h2
             a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
-    h3
+    h3.is-hidden-mobile
         block topic
     aside
         if theme.menu
             each url, label in theme.menu
                 h3.is-inline-block
                     a(href= url_for(url))= label
+header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-content-center.is-hidden-tablet
+        if theme.menu
+            each url, label in theme.menu
+                h3.is-inline-block
+                    a(href= url_for(url))= label
+
