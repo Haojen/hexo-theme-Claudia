@@ -26,6 +26,17 @@ Recent update [2021.01.05](CHANGELOG.md)
 
 ## How to Use
 
+### Install depend
+
+Install to Hexo blog root directory, **Not theme directory** 
+```bash
+npm install hexo-renderer-pug 
+npm install hexo-renderer-sass
+
+# if you need RSS, you must be install this plugin
+npm install hexo-generator-feed
+```
+
 ### User's profile
 
 Configure the file `hexo-theme-claudia/_config.yml` under the theme profile
