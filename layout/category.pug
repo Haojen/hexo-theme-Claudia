@@ -1,7 +1,7 @@
 extends widget/base
 
 block topic
-  span= `Category · ${ page.category || 'all' }`
+  span= `${ _p('category') } · ${ page.category || __('all') }`
 
 block content
   include widget/post-list

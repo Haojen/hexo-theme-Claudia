@@ -34,6 +34,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                     = truncate( strip_html(postContent), {length: 360, omission: '..'} )
                                 a.tag.read-more-btn.is-medium.mt-2(href= postURL) Read more
 
-                    section.paginator.is-flex.is-justify-content-flex-end.is-flex-wrap-wrap!= paginator()
+                    - var paginatorResult =  paginator({ prev_text: __('prev'), next_text: __('next')})
+                    section.paginator.is-flex.is-justify-content-flex-end.is-flex-wrap-wrap!= paginatorResult
             aside.column.is-hidden-mobile.is-4-tablet.is-3-widescreen
                 block sidebar

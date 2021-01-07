@@ -23,11 +23,11 @@ block content
                 section.is-flex.is-justify-content-space-between.my-6
                     // em is empty placeholder
                     if page.prev
-                        a.button.is-small.is-default(href= url_for(page.prev.path) title= page.prev.title) Previous Post
+                        a.button.is-small.is-default(href= url_for(page.prev.path) title= page.prev.title)= __('prev')
                     else
                         em
                     if page.next
-                        a.button.is-small.is-default(href= url_for(page.next.path) title= page.next.title) Next Post
+                        a.button.is-small.is-default(href= url_for(page.next.path) title= page.next.title)= __('next')
                 if theme.comment_utteranc && theme.comment_utteranc.enable
                     article.mt-6.comment-container
                         script(

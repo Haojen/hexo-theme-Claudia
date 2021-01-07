@@ -1,12 +1,8 @@
-
-# html lang
-language: en
-
 # main menu navigation
 menu:
   Home: /
   About: /about
-  Archives: /archives
+  Archive: /archives
 
 widgets:
   - tag

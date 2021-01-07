@@ -1,7 +1,7 @@
 extends widget/base
 
 block topic
-    span= `Archive · ${ page.year || 'all' }`
+    span= `${ _p('archive') } · ${ page.year || __('all') }`
 
 block content
     include widget/post-list

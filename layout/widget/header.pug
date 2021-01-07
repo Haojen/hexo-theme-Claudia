@@ -8,10 +8,10 @@ header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-c
         if theme.menu
             each url, label in theme.menu
                 h3.is-inline-block
-                    a(href= url_for(url))= label
+                    a(href= url_for(url))= label && _p(label.toLowerCase())
 header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-content-center.is-hidden-tablet
         if theme.menu
             each url, label in theme.menu
                 h3.is-inline-block
-                    a(href= url_for(url))= label
+                    a(href= url_for(url))= label && _p(label.toLowerCase())
 
