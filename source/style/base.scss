@@ -31,6 +31,13 @@
       border: 2px solid darkorange;
     }
 
+    .button.is-default {
+      border: none;
+      border-radius: $borderRadius;
+      color: var(--second-text-color);
+      background: var(--third-bg-color);
+    }
+
     > main {
       flex-grow: 2;
       flex-basis: 0;
