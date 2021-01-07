@@ -16,7 +16,7 @@
 
 <p align="center">
   <span>English | </span> 
-  <a href="./README-EN.md" rel="nofollow">简体中文</a>
+  <a href="README-CN.md" rel="nofollow">简体中文</a>
 </p>
 
 ![cover](./screenshot/claudia-cover-v2.png)
