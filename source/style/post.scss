@@ -23,9 +23,6 @@ $lineColor: var(--border-line-color);
 
     .hljs {
       color: var(--second-text-color);
-      //span {
-      //  color: initial;
-      //}
     }
 
     img {
@@ -57,6 +54,10 @@ $lineColor: var(--border-line-color);
     overflow: auto;
     list-style: none!important;
     border-left: 1px solid $lineColor;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     ol {
       margin-top: 5px;
