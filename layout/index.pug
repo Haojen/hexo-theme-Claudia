@@ -1,5 +1,8 @@
 extends widget/base
 
+block append head
+    link(rel='stylesheet', href= url_for("/style/widget-post-list.css"))
+
 block content
     include widget/post-list
         block sidebar

@@ -22,8 +22,8 @@ html(lang=config.language class= `appearance-${ appearance }`)
 
     script(src= url_for("/js/main.js"))
 
-    block link
-    block style
+    block head
+    //block style
   body.is-flex.is-flex-direction-column
     include ./header.pug
     main
