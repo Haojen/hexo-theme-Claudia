@@ -38,6 +38,15 @@ $lineColor: var(--border-line-color);
     }
   }
 
+  .jump-container .button{
+    max-width: calc(50% - 5px);
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+    }
+  }
+
   .comment-container {
     border-top: 1px solid $lineColor;
   }

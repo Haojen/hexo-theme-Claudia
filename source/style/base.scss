@@ -1,4 +1,4 @@
-@import url("//at.alicdn.com/t/font_2266068_nk7rikzoyl.css");
+@import url("//at.alicdn.com/t/font_2266068_svkwzo3ot3a.css");
 
 @import "variable";
 @import "theme";
@@ -13,7 +13,7 @@
     a {
       color: inherit;
 
-      &:hover {
+      &:hover, &:hover .iconfont {
         text-decoration: none;
         color: $activeColor!important;
       }
