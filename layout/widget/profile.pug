@@ -4,7 +4,7 @@ div.aside-card-container.profile-widget
         section.is-flex.is-justify-content-center
             if (theme.user && theme.user.avatar)
                 // debug images "https://api.ixiaowai.cn/gqapi/gqapi.php"
-                img.avatar(src= url_for(theme.user.avatar) alt="user avatar")
+                img.avatar.js-img-fadeIn(src= url_for(theme.user.avatar) alt="user avatar")
             else
                 div.avatar-placeholder
         if (theme.user)

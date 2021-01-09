@@ -9,7 +9,7 @@ main.aside-card-container.recent-widget
                     // change to element replace image placeholder
                     - var backgroundColor = 'f5f5f5'
                     - var uiAvatarURL = `background=${backgroundColor}&name=${title.slice(0, 2)}`
-                    img(src= getPostCoverImg(post) || `https://ui-avatars.com/api/?${uiAvatarURL}` alt="cover")
+                    img.js-img-fadeIn(src= getPostCoverImg(post) || `https://ui-avatars.com/api/?${uiAvatarURL}` alt="cover")
                     //else
                     //    div.post-img-placeholder
                     section.is-flex-grow-2
