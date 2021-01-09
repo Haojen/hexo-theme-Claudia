@@ -2,6 +2,21 @@
 
 $lineColor: var(--border-line-color);
 
+#postTopic {
+  will-change: transform;
+  transform: translateY(100%);
+  transition: transform 150ms linear;
+
+  &.is-show {
+    transition: transform 250ms linear;
+    transform: translateY(0);
+  }
+
+  &.is-no-animate {
+    transition: none;
+  }
+}
+
 .post-page {
   .post-content {
 

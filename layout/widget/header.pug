@@ -1,10 +1,10 @@
 header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-content-space-between.is-hidden-mobile
-    section.is-hidden-mobile
+    section.is-hidden-mobile.is-flex-shrink-0
         h2
             a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
-    h3.is-hidden-mobile
+    h3.is-hidden-mobile.topic.is-family-serif
         block topic
-    aside
+    aside.is-flex-shrink-0
         if theme.menu
             each url, label in theme.menu
                 h3.is-inline-block
