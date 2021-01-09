@@ -7,10 +7,10 @@ block topic
   span= `${ _p('category') } · ${ page.category || __('all') }`
 
 block content
-  include widget/post-list
+  include widget/widget-post-list
     block sidebar
       div(style="position: sticky; top: 50px;")
-        include widget/categories.pug
+        include widget/widget-categories
 
 block script
   script(src='/js/addActiveLinkStyle.js')

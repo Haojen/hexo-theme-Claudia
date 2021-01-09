@@ -4,14 +4,14 @@ block append head
     link(rel='stylesheet', href= url_for("/style/widget-post-list.css"))
 
 block content
-    include widget/post-list
+    include widget/widget-post-list
         block sidebar
-            include widget/profile
+            include widget/widget-profile
             if theme.widgets.includes('recent_posts')
-                include widget/recent
+                include widget/widget-recent
             if theme.widgets.includes('category')
-                include widget/categories
+                include widget/widget-categories
             if theme.widgets.includes('archive')
-                include widget/archives
+                include widget/widget-archives
             if theme.widgets.includes('tag')
-                include widget/tag
+                include widget/widget-tag

@@ -41,4 +41,16 @@ window.$claudia = {
 
         isCovered ? blurImg.classList.add('is-hidden') : blurImg.classList.remove('is-hidden')
     },
+    getSystemTheme(callback) {
+        var media = window.matchMedia('(prefers-color-scheme: dark)')
+        media.addEventListener('change', function (){
+            callback && callback(e.matches ? "dark" : "light")
+        })
+
+        callback && callback(media.matches ? 'dark' : 'light')
+        // console.log(, 'window.matchMedia(\'(prefers-color-scheme: dark)\')')
+    }
 }
+
+
+// $claudia.getSystemTheme()

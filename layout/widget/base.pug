@@ -19,16 +19,16 @@ html(lang=config.language class= `appearance-${ appearance }`)
     link(rel="stylesheet" href= url_for('/style/bulma.css'))
     link(rel="stylesheet" href= url_for('/style/base.css'))
     link(rel="stylesheet" href= url_for('/style/helper.css'))
-    script(src= url_for("/js/main.js"))
+    script(src= url_for("/js/common.js"))
     block head
 
   body.is-flex.is-flex-direction-column
-    include ./header.pug
+    include widget-header
     main
       block content
     footer.is-flex.is-flex-direction-column.is-align-items-center.is-flex-shrink-0.is-family-serif
       section.sns-container
-        include ./sns.pug
+        include widget-sns
       p
         span Copyright ©
         - var author = (theme.user && theme.user.name) || config.author || ''
