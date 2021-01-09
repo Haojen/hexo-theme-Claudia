@@ -40,12 +40,12 @@ block content
                 if theme.comment_utteranc && theme.comment_utteranc.enable
                     article.mt-6.comment-container
                         script(
-                            src="https://utteranc.es/client.js"
-                            repo= theme.comment_utteranc.repo
-                            issue-term= theme.comment_utteranc.issue_term || "pathname"
-                            theme= theme.comment_utteranc.theme || "github-light"
-                            label= theme.comment_utteranc.label
                             async
+                            repo= theme.comment_utteranc.repo
+                            src= "https://utteranc.es/client.js"
+                            label= theme.comment_utteranc.label
+                            issue-term= theme.comment_utteranc.issue_term || "pathname"
+                            theme= theme.comment_utteranc.theme || "preferred-color-scheme"
                         )
 block script
     script(src= url_for("/js/post.js"))

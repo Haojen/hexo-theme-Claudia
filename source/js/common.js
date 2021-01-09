@@ -43,14 +43,10 @@ window.$claudia = {
     },
     getSystemTheme(callback) {
         var media = window.matchMedia('(prefers-color-scheme: dark)')
-        media.addEventListener('change', function (){
+        media.addEventListener('change', function (e){
             callback && callback(e.matches ? "dark" : "light")
         })
 
         callback && callback(media.matches ? 'dark' : 'light')
-        // console.log(, 'window.matchMedia(\'(prefers-color-scheme: dark)\')')
     }
 }
-
-
-// $claudia.getSystemTheme()
