@@ -1,5 +1,8 @@
 # Changelog
 
+## 01.09.2021
+- Add topic bar
+
 ## 01.08.2021
 - Add `zh-CN` language
 - Hidden catalogue scroll bar
