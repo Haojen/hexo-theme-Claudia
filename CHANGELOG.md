@@ -2,10 +2,12 @@
 
 ## 01.09.2021
 - Add topic bar
+- Add image load fadeIn animate
 
 ## 01.08.2021
 - Add `zh-CN` language
 - Hidden catalogue scroll bar
+- Fix columns width maybe collapse bug
 - Add in post page jump to next or prev post feature
 
 ## 01.05.2021
