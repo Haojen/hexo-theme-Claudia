@@ -2,6 +2,7 @@
 
 ## 01.09.2021
 - Add topic bar
+- Update 简体中文文档
 - Add image load fadeIn animate
 
 ## 01.08.2021
