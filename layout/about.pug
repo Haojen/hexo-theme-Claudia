@@ -8,7 +8,10 @@ block content
         .container.is-max-widescreen
             .columns.is-marginless
                 aside.column.is-4.is-flex.is-flex-direction-column.is-justify-content-center
-                    img(src= 'about.png')
+                    img.js-img-fadeIn(src= 'about.png')
                 section.column.is-8.is-flex.is-flex-direction-column.is-justify-content-center
                     h2.about-title= __('about')
                     article!= page.content
+block append script
+    script.
+        $claudia.fadeInImage()
