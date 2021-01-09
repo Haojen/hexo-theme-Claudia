@@ -19,11 +19,9 @@ html(lang=config.language class= `appearance-${ appearance }`)
     link(rel="stylesheet" href= url_for('/style/bulma.css'))
     link(rel="stylesheet" href= url_for('/style/base.css'))
     link(rel="stylesheet" href= url_for('/style/helper.css'))
-
     script(src= url_for("/js/main.js"))
-
     block head
-    //block style
+
   body.is-flex.is-flex-direction-column
     include ./header.pug
     main
