@@ -98,7 +98,7 @@ Create a new folder `about` under the source of hexo, and then, create a `index.
 also you `about.png` put in `about/` folder
 
 ```yaml
---
+---
 title: about
 date: 2017-05-31 10:05:56
 layout: about
@@ -114,4 +114,4 @@ https://github.com/Haojen/Claudia-theme-blog
 This it [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina), hope you like it!
 
 ## License
-MIT
+MIT © [haojen ma](http://haojen.github.io)

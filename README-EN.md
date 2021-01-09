@@ -4,11 +4,11 @@
 
 [点我查看项目演示](https://haojen.github.io/Claudia-theme-blog/)
 
-![cover](./screenshot/claudia-cover.png)
+![cover](./screenshot/claudia-cover-v2.png)
 
-## Bug fix (2018.12.29)
+## Changelog
 
-fix embed element height auto issues
+最近更新 [2021.01.05](CHANGELOG.md)
 
 
 ## 使用
@@ -90,6 +90,7 @@ block_highlight: highlight_rainbow
 ## 创建 About 页面
 在博客根目录下的 `source` 文件夹里创建一个 `about` 文件夹, 然后打开该文件夹, 新建一个 `index.md`, 打开, 将下面这段文本复制到 `index.md` 里保存
 	
+	---
 	title: about
 	date: 2017-05-31 10:05:56
 	layout: about
@@ -99,6 +100,7 @@ block_highlight: highlight_rainbow
 创建的方式和上述创建 About 页面相同, 只不过是 `index.md` 内容略有不同, works 页面的 `index.md` 如下:
 
 ```
+---
 title: My Works
 date: 2017-05-31 10:05:56
 layout: works
