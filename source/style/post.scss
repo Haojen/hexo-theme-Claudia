@@ -5,10 +5,12 @@ $lineColor: var(--border-line-color);
 #postTopic {
   will-change: transform;
   transform: translateY(100%);
-  transition: transform 150ms linear;
+  transition: transform 100ms linear;
+
+  color: var(--primary-text-color);
 
   &.is-show {
-    transition: transform 250ms linear;
+    transition: transform 200ms linear;
     transform: translateY(0);
   }
 
@@ -44,8 +46,12 @@ $lineColor: var(--border-line-color);
       display: block;
       margin: 0 auto;
       max-height: 500px;
+
       border-radius: $borderRadius;
       box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+
+      opacity: 0;
+      will-change: opacity;
     }
 
     a {

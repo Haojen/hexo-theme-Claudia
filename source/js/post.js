@@ -5,19 +5,11 @@ var $posts = {
             return this
         }
         Scroller.prototype.bindScrollEvent = function () {
-            var DELAY = 150
             var _that = this
-            var needWait = false
 
-            window.addEventListener('scroll', function (event) {
-                if (needWait) return
-                needWait = true
-
-                setTimeout(function () {
-                    _that.callbacks.forEach(function (func) { func(event) })
-                    needWait = false
-                }, DELAY)
-            })
+            window.addEventListener('scroll', $claudia.throttle(function (event) {
+                _that.callbacks.forEach(function (func) { func(event) })
+            }, 150))
         }
 
         return Scroller
@@ -92,6 +84,8 @@ var $posts = {
         }
     },
     mounted: function () {
+        hljs && hljs.initHighlighting()
+
         var Scroller = this.scroller()
         var scrollerInstance = new Scroller()
 
@@ -106,8 +100,9 @@ var $posts = {
         }
 
         scrollerInstance.bindScrollEvent()
+
+        $claudia.fadeInImage(document.querySelectorAll('.post-content img'))
     }
 }
 
-hljs.initHighlighting()
 $posts.mounted()
