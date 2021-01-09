@@ -110,6 +110,19 @@ appearance: auto
 highlight:
   enable: false
 ```
+2. **Setting** Enter the theme `_config.yml` add: 
+```yaml
+block_highlight: highlight_rainbow
+# All options
+# block_highlight: highlight_default
+# block_highlight: highlight_light
+# block_highlight: highlight_github
+# block_highlight: highlight_rainbow
+# block_highlight: highlight_vs
+# block_highlight: highlight_atom
+
+
+```
 
 ### Create About Page
 
@@ -117,7 +130,7 @@ Create a new folder `about` under the source of hexo, and then, create a `index.
 also you `about.png` put in `about/` folder
 
 ```yaml
---
+---
 title: about
 date: 2017-05-31 10:05:56
 layout: about
@@ -131,4 +144,4 @@ https://github.com/Haojen/Claudia-theme-blog
 This it [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina), hope you like it!
 
 ## License
-MIT
+MIT © [haojen ma](http://haojen.github.io)
