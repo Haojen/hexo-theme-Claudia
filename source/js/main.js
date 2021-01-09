@@ -1,58 +1,44 @@
 window.$claudia = {
-    imgAddLoadedEvent: function () {
-        var images = document.querySelectorAll('.js-progressive-loading')
+    throttle: function (func, time) {
+        var wait = false
+        return function () {
+            if (wait) return
+            wait = true
 
-        // TODO: type is image ?
-        // TODO: read data-backdrop
+            setTimeout(function () {
+                func()
+                wait = false
+            }, time || 100)
+        }
+    },
+    fadeInImage: function(imgs, imageLoadedCallback) {
+        var images = imgs || document.querySelectorAll('.js-img-fadeIn')
+
         function loaded(event) {
             var image = event.currentTarget
-            var parent = image.parentElement
-
-            var parentWidth = Math.round(parent.getBoundingClientRect().width)
-            var childImgWidth = Math.round(image.getBoundingClientRect().width)
-
+            image.style.transition = 'opacity 320ms'
             image.style.opacity = 1
+            imageLoadedCallback && imageLoadedCallback(image)
+        }
 
-            var isCovered = parentWidth === childImgWidth
-            var blurImg = parent.previousElementSibling
-            if (isCovered) {
-                blurImg.classList.add('is-hidden')
-                return
+        images.forEach(function (img) {
+            if (img.complete) {
+                return loaded({ currentTarget: img })
             }
-            blurImg.classList.remove('is-hidden')
-        }
 
-        function eachImage(noNeedLoadEvt) {
-            images.forEach(function (img) {
-                if (img.complete) {
-                    loaded({ currentTarget: img })
-                    return
-                }
+            img.addEventListener('load', loaded)
+        })
+    },
+    blurBackdropImg: function(image) {
+        if (!image.dataset.backdrop) return
 
-                if (noNeedLoadEvt) return
-                img.addEventListener('load', loaded)
-            })
-        }
+        var parent = image.parentElement //TODO: Not finish yes, must be a pure function
+        var parentWidth = Math.round(parent.getBoundingClientRect().width)
+        var childImgWidth = Math.round(image.getBoundingClientRect().width)
 
-        // 截流
-        function throttle(func, time) {
-            var wait = false
-            return function () {
-                if (wait) return
-                wait = true
-                setTimeout(function () {
-                    func()
-                    wait = false
-                }, time)
-            }
-        }
+        var isCovered = parentWidth === childImgWidth
+        var blurImg = parent.previousElementSibling //TODO: Not finish yes, must be a pure function
 
-        window.addEventListener('resize', throttle(function () { eachImage(true) }, 100))
-
-        eachImage()
-    }
+        isCovered ? blurImg.classList.add('is-hidden') : blurImg.classList.remove('is-hidden')
+    },
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    $claudia.imgAddLoadedEvent()
-})
