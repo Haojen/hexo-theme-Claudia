@@ -1,6 +1,6 @@
 <h1 align="center">Claudia</h1>
 <p align="center"> 
-  设计简洁 & 轻松上手, 自动跟随系统的亮色/暗色主题, 90+ Lighthouse 得分
+  设计简洁 & 轻松上手, 跟随系统外观自适应, 90+ Lighthouse 得分
 </p>
 
 <p align="center">
@@ -17,12 +17,12 @@
 </p>
 
 <p align="center">
-  <a href="https://haojen.github.io/Claudia-theme-blog/" rel="nofollow">Demo</a>
+  <a href="https://haojen.github.io/Claudia-theme-blog/" rel="nofollow">预览 Demo</a>
 </p>
 
 ![cover](./screenshot/claudia-cover-v2.png)
 
-## Changelog
+## 更新日志
 
 最近更新 [01.09.2021](CHANGELOG.md)
 
@@ -141,7 +141,7 @@ https://github.com/Haojen/Claudia-theme-blog
 
 ## 最后
 
-如果遇到任何问题或反馈建议，请发起一个 issue
+如果遇到任何问题或反馈建议，请发起 issue
 
 ## 我的另外一款 Hexo 主题
 [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina)
