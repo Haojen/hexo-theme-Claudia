@@ -1,5 +1,5 @@
-@import url("//at.alicdn.com/t/font_2266068_nk7rikzoyl.css");
-@import "bulma/bulma";
+@import url("//at.alicdn.com/t/font_2266068_svkwzo3ot3a.css");
+
 @import "variable";
 @import "theme";
 
@@ -13,7 +13,7 @@
     a {
       color: inherit;
 
-      &:hover {
+      &:hover, &:hover .iconfont {
         text-decoration: none;
         color: $activeColor!important;
       }
@@ -29,6 +29,13 @@
       border-radius: 10px;
       background: transparent;
       border: 2px solid darkorange;
+    }
+
+    .button.is-default {
+      border: none;
+      border-radius: $borderRadius;
+      color: var(--second-text-color);
+      background: var(--third-bg-color);
     }
 
     > main {

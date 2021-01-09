@@ -1,0 +1,28 @@
+archive:
+  one: 'Archive'
+  other: 'Archives'
+
+category:
+  one: 'Category'
+  other: 'Categories'
+tag:
+  one: 'Tag'
+  other: 'Tags'
+post:
+  one: 'Post'
+  other: 'Posts'
+page:
+  one: 'Page'
+  other: 'Pages'
+prev: 'Previous'
+next: 'Next'
+
+all: 'All'
+home: 'Home'
+title: 'Title'
+about: 'About'
+recent: 'Recent'
+read_more: 'Read more'
+backtotop: 'Back to top'
+user_name: 'User name'
+

@@ -1,5 +1,10 @@
 # Changelog
 
+## 01.08.2021
+- Add `zh-CN` language
+- Hidden catalogue scroll bar
+- Add in post page jump to next or prev post feature
+
 ## 01.05.2021
 - Add dark mode
 - Support `<--more-->` mark

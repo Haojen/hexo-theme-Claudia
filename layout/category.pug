@@ -1,7 +1,10 @@
 extends widget/base
 
+block append head
+  link(rel='stylesheet', href= url_for("/style/widget-post-list.css"))
+
 block topic
-  span= `Category · ${ page.category || 'all' }`
+  span= `${ _p('category') } · ${ page.category || __('all') }`
 
 block content
   include widget/post-list

@@ -1,5 +1,5 @@
 extends widget/base
-block append link
+block append head
   link(rel='stylesheet', href= url_for('/style/post.css'))
   link(rel='stylesheet', href= url_for('/style/highlight-theme-light.css'))
   script(src= url_for("/jslib/highlight.pack.js"))
@@ -20,6 +20,20 @@ block content
                 if page.date
                     time.has-text-grey(datetime=page.date.toJSON())= date(page.date, date_format)
                 article.mt-2.post-content!= page.content
+                section.jump-container.is-flex.is-justify-content-space-between.my-6
+                    // em is empty placeholder
+                    if page.prev
+                        - var preContent= `${ __('prev') }: ${ page.prev.title }`
+                        a.button.is-small.is-default.py-4(href= url_for(page.prev.path) title= page.prev.title)
+                            i.iconfont.icon-prev.mr-2.has-text-grey
+                            span.has-text-weight-semibold= preContent
+                    else
+                        em
+                    if page.next
+                        - var nextContent= `${ __('next') }: ${ page.next.title }`
+                        a.button.is-small.is-default.py-4(href= url_for(page.next.path) title= page.next.title)
+                            span.has-text-weight-semibold= nextContent
+                            i.iconfont.icon-next.ml-2.has-text-grey
                 if theme.comment_utteranc && theme.comment_utteranc.enable
                     article.mt-6.comment-container
                         script(
@@ -30,8 +44,6 @@ block content
                             label= theme.comment_utteranc.label
                             async
                         )
-    // Next post, maybe most people don't need it.
-    //#paginator!= paginator()
 block script
   script.
       hljs.initHighlighting();

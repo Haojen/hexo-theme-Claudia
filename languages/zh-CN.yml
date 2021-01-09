@@ -1,0 +1,28 @@
+archive:
+  one: '归档'
+  other: '归档'
+
+category:
+  one: '分类'
+  other: '分类'
+tag:
+  one: '标签'
+  other: '标签'
+post:
+  one: '文章'
+  other: '文章'
+page:
+  one: '页面'
+  other: '页面'
+prev: '上一页'
+next: '下一页'
+
+all: '全部'
+home: '首页'
+title: '标题'
+about: '关于'
+recent: '最近'
+read_more: '更多'
+backtotop: '回到顶部'
+user_name: '名字'
+

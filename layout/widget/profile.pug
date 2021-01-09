@@ -8,7 +8,7 @@ div.aside-card-container.profile-widget
             else
                 div.avatar-placeholder
         if (theme.user)
-            h3.user-name= theme.user.name || config.author || 'NO ONE'
+            h3.user-name= theme.user.name || config.author || ''
             if theme.user.description
                 blockquote.has-text-centered.is-relative
                     span(style="margin-bottom: 5px;")= theme.user.description

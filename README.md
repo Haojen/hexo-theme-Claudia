@@ -16,15 +16,26 @@
 
 <p align="center">
   <span>English | </span> 
-  <a href="./README-EN.md" rel="nofollow">简体中文</a>
+  <a href="README-CN.md" rel="nofollow">简体中文</a>
 </p>
 
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## Changelog
-Recent update [2021.01.05](CHANGELOG.md)
+Recent update [01.08.2021](CHANGELOG.md)
 
 ## How to Use
+
+### Install depend
+
+Install to Hexo blog root directory, **Not theme directory** 
+```bash
+npm install hexo-renderer-pug 
+npm install hexo-renderer-sass
+
+# if you need RSS, you must be install this plugin
+npm install hexo-generator-feed
+```
 
 ### User's profile
 
@@ -83,13 +94,21 @@ comment_utteranc:
 #### 2. DISQUS
 developing..
 
+### Appearance
+```yaml
+# 1.light 
+# 2.dark
+# 3.auto (default, match device appearance setting)
+appearance: auto
+```
+
 ### Code highlighting
 
-1. Disable the default hexo highlight configuration(modify your `root/_config.yml` in root directory of hexo)
+1. **Disable** the default hexo highlight configuration(modify your `root/_config.yml` in root directory of hexo)
 
 ```yaml
 highlight:
-enable: false
+  enable: false
 ```
 
 ### Create About Page
@@ -103,8 +122,6 @@ title: about
 date: 2017-05-31 10:05:56
 layout: about
 ---
-
-About Somebody
 ```
 
 ### My demo blog config

@@ -16,13 +16,14 @@ html(lang=config.language class= `appearance-${ appearance }`)
     meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1")
 
     link(rel="icon" href= theme.favicon)
+    link(rel="stylesheet" href= url_for('/style/bulma.css'))
     link(rel="stylesheet" href= url_for('/style/base.css'))
     link(rel="stylesheet" href= url_for('/style/helper.css'))
 
     script(src= url_for("/js/main.js"))
 
-    block link
-    block style
+    block head
+    //block style
   body.is-flex.is-flex-direction-column
     include ./header.pug
     main
@@ -37,9 +38,9 @@ html(lang=config.language class= `appearance-${ appearance }`)
       div.is-flex
         p Powered by Hexo｜
         p.is-flex.is-justify-content-center
-          a(href='//github.com/haojen') Theme by &nbspHaojen&nbsp
+          a(title="Hexo theme author" href='//github.com/haojen') Theme by &nbspHaojen&nbsp
         div(style="margin-top: 2px")
-          a(class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true")
+          a(title="github-button" class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true")
 
     script(async defer src="https://buttons.github.io/buttons.js")
     block script

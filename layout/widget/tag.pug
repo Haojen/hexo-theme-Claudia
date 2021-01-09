@@ -1,5 +1,5 @@
 main.aside-card-container.tag-widget
-    h3 Tag
+    h3= _p('tag')
     section
         each tag in site.tags.toArray()
             a(href= url_for(`/tags/${tag.name}`))
