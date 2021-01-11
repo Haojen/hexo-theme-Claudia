@@ -4,8 +4,6 @@
   left: 0;
   z-index: 100;
 
-  text-align: center;
-
   overflow: hidden;
 
   width: 100vw;
@@ -14,17 +12,6 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   background: var(--top-bar-bg-color);
-
- .topic {
-   margin: 0 50px;
-   overflow: hidden;
-
-   * {
-     overflow: hidden;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-   }
- }
 
   a {
     margin: 0 8px;
