@@ -4,8 +4,10 @@ block append head
   link(rel='stylesheet', href= url_for('/style/highlight-theme-light.css'))
   script(src= url_for("/jslib/highlight.pack.js"))
 block topic
-    if page.title
-        p#postTopic= page.title
+    div#postTopic.is-full-height
+        - var title = truncate( page.title, {length: 65, omission: '..'} ) || ''
+        p.is-full-height.is-flex-shrink-0.is-flex.is-align-items-center.is-justify-content-center= title
+        p.is-full-height.is-flex-shrink-0.is-flex.is-align-items-center.is-justify-content-center= __('click_back_to_the_top')
 
 block content
     - var tocContent = toc(page.content, {list_number: false})

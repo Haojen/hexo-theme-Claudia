@@ -7,28 +7,94 @@ var $posts = {
         Scroller.prototype.bindScrollEvent = function () {
             var _that = this
 
-            window.addEventListener('scroll', $claudia.throttle(function (event) {
-                _that.callbacks.forEach(function (func) { func(event) })
-            }, 150))
+            window.addEventListener('scroll', function (event) {
+                var wait = false
+                var beforeOffsetY = window.pageYOffset
+
+                if (wait) return
+                wait = true
+
+                setTimeout(function () {
+                    var params = {
+                        event: event,
+                        beforeOffsetY: beforeOffsetY,
+                    }
+                    _that.callbacks.forEach(function (func) { func(params) })
+
+                    wait = false
+                }, 150)
+            })
         }
 
         return Scroller
     },
-    showTopic: function (evt, isImmediatelyShow) {
-        var CLASS_SHOW = 'is-show'
-        var CLASS_NO_ANIMATE = 'is-no-animate'
+    showTopic: function (evt) {
         var topicEl = document.getElementById('postTopic')
         var postTitle = document.getElementById('postTitle')
 
         var postTitleCoordinate = postTitle.getBoundingClientRect()
         var threshold = postTitle.offsetTop + postTitleCoordinate.height
 
+        // show title
         if (window.pageYOffset > threshold) {
-            isImmediatelyShow ? topicEl.classList.add(CLASS_NO_ANIMATE) : topicEl.classList.remove(CLASS_NO_ANIMATE)
-            return topicEl.classList.add(CLASS_SHOW)
-        }
+            var beforeOffsetY = evt && evt.beforeOffsetY
+            var isScrollToTop = beforeOffsetY - window.pageYOffset > 0
 
-        topicEl.classList.remove(CLASS_SHOW)
+            topicEl.classList.remove('is-hidden-topic-bar')
+
+            if (beforeOffsetY - window.pageYOffset === 0) {
+                topicEl.classList.remove('is-switch-post-title')
+                topicEl.classList.remove('is-show-post-title')
+                topicEl.classList.remove('immediately-show')
+
+                if (topicEl.classList.contains('is-show-scrollToTop-tips')) {
+                    topicEl.classList.remove('is-show-scrollToTop-tips')
+                    topicEl.classList.add('is-flash-scrollToTop-tips')
+                }
+                else {
+                    topicEl.classList.add('immediately-show')
+                }
+            }
+            // scroll to up👆
+            else if (isScrollToTop) {
+                // show scroll to top tips
+                if (window.pageYOffset > window.innerHeight * 2) {
+                    topicEl.classList.remove('immediately-show')
+                    topicEl.classList.remove('is-show-post-title')
+                    topicEl.classList.remove('is-switch-post-title')
+                    topicEl.classList.remove('is-flash-scrollToTop-tips')
+
+                    topicEl.classList.add('is-show-scrollToTop-tips')
+                }
+                // show post title
+                else {
+                    topicEl.classList.remove('immediately-show')
+                    topicEl.classList.remove('is-show-post-title')
+                    topicEl.classList.remove('is-show-scrollToTop-tips')
+                    topicEl.classList.remove('is-flash-scrollToTop-tips')
+
+                    topicEl.classList.add('is-switch-post-title')
+                }
+            }
+            // scroll to down👇
+            else if (beforeOffsetY - window.pageYOffset !== 0) {
+                topicEl.classList.remove('immediately-show')
+                topicEl.classList.remove('is-switch-post-title')
+                topicEl.classList.remove('is-show-scrollToTop-tips')
+                topicEl.classList.remove('is-flash-scrollToTop-tips')
+                topicEl.classList.add('is-show-post-title')
+            }
+        }
+        else{
+            // hidden all
+            topicEl.classList.remove('is-flash-scrollToTop-tips')
+            topicEl.classList.remove('is-show-scrollToTop-tips')
+            topicEl.classList.remove('is-switch-post-title')
+            topicEl.classList.remove('is-show-post-title')
+            topicEl.classList.remove('immediately-show')
+
+            topicEl.classList.add('is-hidden-topic-bar')
+        }
     },
     catalogueHighlight: function () {
         var directory = document.querySelectorAll('.toc a')
@@ -83,6 +149,15 @@ var $posts = {
             }
         }
     },
+    smoothScrollToTop: function() {
+        var Y_TopValve = (window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop);
+        if (Y_TopValve > 1) {
+            window.requestAnimationFrame($posts.smoothScrollToTop);
+            scrollTo(0, Math.floor(Y_TopValve * 0.85));
+        } else {
+            scrollTo(0, 0);
+        }
+    },
     mounted: function () {
         hljs && hljs.initHighlighting()
 
@@ -92,16 +167,13 @@ var $posts = {
         var catalogueHighlight = this.catalogueHighlight()
         catalogueHighlight && scrollerInstance.callbacks.push(catalogueHighlight)
 
-        var haveTitle = document.getElementById('postTopic')
-
-        if (haveTitle) {
-            this.showTopic(null, true)
-            scrollerInstance.callbacks.push(this.showTopic)
-        }
+        scrollerInstance.callbacks.push(this.showTopic)
 
         scrollerInstance.bindScrollEvent()
 
         $claudia.fadeInImage(document.querySelectorAll('.post-content img'))
+
+        document.getElementById('postTopic').addEventListener('click', this.smoothScrollToTop)
     }
 }
 
