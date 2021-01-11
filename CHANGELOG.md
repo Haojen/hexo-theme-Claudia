@@ -1,7 +1,8 @@
 # Changelog
 
-## 01.10.2021
+## 01.11.2021
 - Comments support dark mode
+- Add click header title go back to the page top
 
 ## 01.09.2021
 - Add topic bar
