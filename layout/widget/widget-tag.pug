@@ -1,4 +1,4 @@
-main.aside-card-container.tag-widget
+main.aside-card-container.tag-widget(class= is_tag() && 'is-in-tag-page')
     h3= _p('tag')
     section
         each tag in site.tags.toArray()

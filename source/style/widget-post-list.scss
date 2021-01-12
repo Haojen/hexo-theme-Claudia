@@ -208,14 +208,37 @@ $coverBlurEffect: 20px;
     }
   }
 
-  .tag-widget > section {
-    overflow: auto;
-    max-height: 30vh;
+  .archives-widget {
+      > section {
+        overflow: auto;
+        max-height: 45vh;
+      }
+
+      &.is-in-archive-page {
+        max-height: 100%;
+      }
   }
 
-  .archives-widget > section {
-    overflow: auto;
-    max-height: 45vh;
+  .tag-widget {
+    > section {
+      overflow: auto;
+      max-height: 30vh;
+    }
+
+    &.is-in-tag-page > section {
+      max-height: 100%;
+    }
+  }
+
+  .category-page {
+    > section {
+      overflow: auto;
+      max-height: 40vh;
+    }
+
+    &.categories-widget > section {
+      max-height: 100%;
+    }
   }
   // turn page
   .paginator {
