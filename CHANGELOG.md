@@ -1,5 +1,10 @@
 # Changelog
 
+## 01.12.2021
+- Maximize the height on the `archive` 、 `category` 、 `Tag` page
+- Hidden page indicator when only 1 page
+
+
 ## 01.11.2021
 - Comments support dark mode
 - Add click header title go back to the page top
