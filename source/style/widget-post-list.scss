@@ -214,8 +214,8 @@ $coverBlurEffect: 20px;
         max-height: 45vh;
       }
 
-      &.is-in-archive-page {
-        max-height: 100%;
+      &.is-in-archive-page > section {
+        max-height: 80vh;
       }
   }
 
@@ -226,7 +226,7 @@ $coverBlurEffect: 20px;
     }
 
     &.is-in-tag-page > section {
-      max-height: 100%;
+      max-height: 80vh;
     }
   }
 
@@ -237,7 +237,7 @@ $coverBlurEffect: 20px;
     }
 
     &.categories-widget > section {
-      max-height: 100%;
+      max-height: 80vh;
     }
   }
   // turn page
