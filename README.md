@@ -22,7 +22,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## Changelog
-Recent update [01.12.2021](CHANGELOG.md)
+Recent update [01.14.2021](CHANGELOG.md)
 
 ## How to Use
 
@@ -109,19 +109,6 @@ appearance: auto
 ```yaml
 highlight:
   enable: false
-```
-2. **Setting** Enter the theme `_config.yml` add: 
-```yaml
-block_highlight: highlight_rainbow
-# All options
-# block_highlight: highlight_default
-# block_highlight: highlight_light
-# block_highlight: highlight_github
-# block_highlight: highlight_rainbow
-# block_highlight: highlight_vs
-# block_highlight: highlight_atom
-
-
 ```
 
 ### Create About Page

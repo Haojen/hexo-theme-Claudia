@@ -1,9 +1,13 @@
 # Changelog
 
+## 01.14.2021
+- Add skeleton loading
+- Fix maximize the height on the `archive` 、 `category` 、 `Tag` page
+- Other details of optimization
+
 ## 01.12.2021
 - Maximize the height on the `archive` 、 `category` 、 `Tag` page
 - Hidden page indicator when only 1 page
-
 
 ## 01.11.2021
 - Comments support dark mode
