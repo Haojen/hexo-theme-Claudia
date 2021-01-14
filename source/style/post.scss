@@ -7,7 +7,9 @@ $lineColor: var(--border-line-color);
   will-change: transform;
   transform: translateY(100%);
 
-  color: var(--primary-text-color);
+  p {
+    color: var(--primary-text-color);
+  }
 
   &.is-show-scrollToTop-tips {
     transition: transform 300ms linear 300ms;
