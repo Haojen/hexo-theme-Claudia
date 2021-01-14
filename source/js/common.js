@@ -18,6 +18,10 @@ window.$claudia = {
             var image = event.currentTarget
             image.style.transition = 'opacity 320ms'
             image.style.opacity = 1
+
+            if (image.parentElement && image.parentElement.classList.contains('skeleton')) {
+                image.parentElement.classList.remove('skeleton')
+            }
             imageLoadedCallback && imageLoadedCallback(image)
         }
 

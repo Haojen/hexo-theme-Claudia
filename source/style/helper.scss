@@ -18,3 +18,47 @@
   opacity: 0;
   will-change: opacity;
 }
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    will-change: transform;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    z-index: 100;
+    animation: skeleton-ani 1s ease infinite;
+    background: linear-gradient(120deg,
+                                hsla(0, 0%, 100%, 0) 30%,
+                                hsla(0, 0%, 100%, var(--skeleton-flash-color)) 50%,
+                                hsla(0, 0%, 100%, 0) 70%);
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: var(--skeleton-bg-color);
+  }
+
+  @keyframes skeleton-ani {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+}
+

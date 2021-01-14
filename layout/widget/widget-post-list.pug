@@ -14,7 +14,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                 header.is-relative.is-flex
                                     div.post-cover-backdrop.is-hidden
                                         img(src= imgURL alt="loading..")
-                                    a.post-cover-link.has-text-centered(href= postURL)
+                                    a.post-cover-link.has-text-centered.skeleton(href= postURL)
                                         img.post-cover-img.js-img-fadeIn(src= imgURL alt="loading..", data-backdrop="true")
                             section.content.post-card-content.p-4.pb-5
                                 if post.tags && post.tags.length > 0
