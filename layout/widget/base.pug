@@ -33,10 +33,10 @@ html(lang=config.language class= `appearance-${ appearance }`)
         span Copyright ©
         - var author = (theme.user && theme.user.name) || config.author || ''
         span= ' ' + author + ' ' + new Date().getFullYear()
-      div.is-flex
-        p Powered by Hexo｜
+      div.is-flex.is-justify-content-center.is-flex-wrap-wrap
+        p Powered by Hexo &verbar;
         p.is-flex.is-justify-content-center
-          a(title="Hexo theme author" href='//github.com/haojen') Theme by &nbspHaojen&nbsp
+          a(title="Hexo theme author" href='//github.com/haojen') Theme by Haojen
         div(style="margin-top: 2px")
           a(title="github-button" class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true")
 
