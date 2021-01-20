@@ -113,6 +113,9 @@ $coverBlurEffect: 20px;
       height: $avatarSize;
       margin-top: 10px;
 
+      // fix on safari will-change bugs
+      z-index: 1;
+
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
       border: 7px solid var(--avatar-border-color);
