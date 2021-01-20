@@ -29,7 +29,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
                                     time.has-text-grey(datetime=post.date.toJSON())= date(post.date, date_format)
                                 p.is-flex-grow-2.mt-2
                                     = truncate( strip_html(postContent), {length: 360, omission: '..'} )
-                                a.tag.read-more-btn.is-medium.mt-2(href= postURL) Read more
+                                a.button.is-default.mt-2.has-text-weight-semibold(href= postURL) Read more
 
                     -
                         // turnPage

@@ -32,6 +32,8 @@
     }
 
     .button.is-default {
+      height: 40px;
+
       border: none;
       border-radius: $borderRadius;
       color: var(--second-text-color);

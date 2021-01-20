@@ -29,14 +29,14 @@ block content
                     // em is empty placeholder
                     if page.prev
                         - var preContent= `${ __('prev') }: ${ page.prev.title }`
-                        a.button.is-small.is-default.py-4(href= url_for(page.prev.path) title= page.prev.title)
+                        a.button.is-default(href= url_for(page.prev.path) title= page.prev.title)
                             i.iconfont.icon-prev.mr-2.has-text-grey
                             span.has-text-weight-semibold= preContent
                     else
                         em
                     if page.next
                         - var nextContent= `${ __('next') }: ${ page.next.title }`
-                        a.button.is-small.is-default.py-4(href= url_for(page.next.path) title= page.next.title)
+                        a.button.is-default(href= url_for(page.next.path) title= page.next.title)
                             span.has-text-weight-semibold= nextContent
                             i.iconfont.icon-next.ml-2.has-text-grey
                 if theme.comment_utteranc && theme.comment_utteranc.enable
