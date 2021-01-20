@@ -1,5 +1,9 @@
 # Changelog
 
+## 01.20.2021
+- Improve readability
+- Fix i18N bugs
+
 ## 01.14.2021
 - Add skeleton loading
 - Fix maximize the height on the `archive` 、 `category` 、 `Tag` page
