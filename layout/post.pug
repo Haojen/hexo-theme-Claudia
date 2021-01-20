@@ -1,8 +1,8 @@
 extends widget/base
 block append head
   link(rel='stylesheet', href= url_for('/style/post.css'))
-  link(rel='stylesheet', href= url_for('/style/highlight-theme-light.css'))
-  script(src= url_for("/jslib/highlight.pack.js"))
+  link(rel='stylesheet', href= url_for('/style/themes/highlight-theme-light.css'))
+  script(src= url_for("/js/highlight.pack.js"))
 block topic
     div#postTopic.is-full-height
         - var title = truncate( page.title, {length: 65, omission: '..'} ) || ''
