@@ -3,6 +3,7 @@
 ## 01.20.2021
 - Improve readability
 - Fix i18N bugs
+- Improve avatar UI
 
 ## 01.14.2021
 - Add skeleton loading
