@@ -11,6 +11,7 @@ $coverBlurEffect: 20px;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
     background: var(--second-bg-color);
+    border: 1px solid var(--border-line-color-2);
 
     // cover image
     > header {
@@ -73,6 +74,7 @@ $coverBlurEffect: 20px;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
     background: var(--second-bg-color);
+    border: 1px solid var(--border-line-color-2);
   }
 
   .categories-widget,
