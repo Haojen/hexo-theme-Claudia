@@ -102,7 +102,11 @@ $coverBlurEffect: 20px;
     min-height: 300px;
     padding-bottom: 0;
 
-    .avatar, .avatar-placeholder {
+    img {
+      object-fit: cover;
+    }
+
+    .avatar{
       position: relative;
 
       width: $avatarSize;
@@ -110,8 +114,8 @@ $coverBlurEffect: 20px;
       margin-top: 10px;
 
       border-radius: 50%;
-      box-shadow: $boxShadow;
-      border: 7px solid var(--border-line-color)
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      border: 7px solid var(--avatar-border-color);
     }
 
     .avatar-placeholder:after {
