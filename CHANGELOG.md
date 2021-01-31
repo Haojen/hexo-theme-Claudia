@@ -1,6 +1,8 @@
 # Changelog
 
 ## 01.20.2021
+- Fix if no have 0 length category、tag
+## 01.20.2021
 - Improve readability
 - Fix i18N bugs
 - Improve avatar UI
