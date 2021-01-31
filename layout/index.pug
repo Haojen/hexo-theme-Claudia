@@ -9,9 +9,9 @@ block content
             include widget/widget-profile
             if theme.widgets.includes('recent_posts')
                 include widget/widget-recent
-            if theme.widgets.includes('category')
+            if theme.widgets.includes('category') && site.categories.length > 0
                 include widget/widget-categories
             if theme.widgets.includes('archive')
                 include widget/widget-archives
-            if theme.widgets.includes('tag')
+            if theme.widgets.includes('tag') && site.tags.length > 0
                 include widget/widget-tag
