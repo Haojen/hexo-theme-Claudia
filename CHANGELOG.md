@@ -1,5 +1,8 @@
 # Changelog
 
+## 03.08.2021
+- Add footnotes
+
 ## 01.31.2021
 - Fix if no have 0 length category、tag
 
