@@ -59,6 +59,7 @@ user:
   avatar: /images/avatar.jpg
   location:
   description:
+  footnotes:
 
 # config you SNS
 social:
