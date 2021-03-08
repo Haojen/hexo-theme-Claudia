@@ -24,6 +24,7 @@ user:
   avatar: /images/avatar.jpg
   location: In the dust
   description: May the Force be with you
+  footnotes: #footnotes
 
 # documents: https://github.com/utterance/utterances
 # API config: https://utteranc.es/
