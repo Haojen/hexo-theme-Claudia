@@ -1,5 +1,8 @@
 # Changelog
 
+## 03.12.2021
+- Add Valine comment system
+
 ## 03.08.2021
 - Add footnotes
 

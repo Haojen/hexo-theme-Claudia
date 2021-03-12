@@ -24,7 +24,7 @@
 
 ## 更新日志
 
-最近更新 [03.08.2021](CHANGELOG.md)
+最近更新 [03.12.2021](CHANGELOG.md)
 
 
 ## 使用
@@ -104,8 +104,15 @@ comment_utteranc:
   repo: Haojen/myBlogRepo # change to your blog repo
 ```
 
-#### 2. DISQUS
-开发中..
+#### 2. Valine
+使用文档： https://valine.js.org/quickstart.html
+
+```yaml
+comment_valine:
+  enable: true
+  appId:
+  appKey:
+```
 
 
 ### 夜间模式设置
