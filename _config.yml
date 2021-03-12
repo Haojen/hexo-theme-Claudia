@@ -32,6 +32,13 @@ comment_utteranc:
   enable: true
   repo: Haojen/Claudia-theme-blog # your blog repo
 
+
+# documents: https://valine.js.org/quickstart.html
+comment_valine:
+  enable: false
+  appId:
+  appKey:
+
 # dark
 # light
 # user-can-set

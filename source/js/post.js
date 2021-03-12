@@ -158,6 +158,14 @@ var $posts = {
             scrollTo(0, 0);
         }
     },
+    addValineComment() {
+        var el = document.getElementById('vcomments')
+        new Valine({
+            el: '#vcomments',
+            appId: el.dataset.comment_valine_id,
+            appKey: el.dataset.comment_valine_key
+        })
+    },
     mounted: function () {
         hljs && hljs.initHighlighting()
 
@@ -174,6 +182,8 @@ var $posts = {
         $claudia.fadeInImage(document.querySelectorAll('.post-content img'))
 
         document.getElementById('postTopic').addEventListener('click', this.smoothScrollToTop)
+
+        window.Valine && this.addValineComment()
     }
 }
 
