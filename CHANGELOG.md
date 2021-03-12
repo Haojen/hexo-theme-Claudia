@@ -2,6 +2,7 @@
 
 ## 03.12.2021
 - Add Valine comment system
+- Adjust about page padding on mobile devices
 
 ## 03.08.2021
 - Add footnotes
