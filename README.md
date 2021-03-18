@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://haojen.github.io/Claudia-theme-blog/" rel="nofollow">Demo</a>
+  <a href="https://haojen.github.io/Claudia-theme-blog/" rel="nofollow">👉 Demo</a>
 </p>
 
 <p align="center">
