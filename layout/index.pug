@@ -6,7 +6,9 @@ block append head
 block content
     include widget/widget-post-list
         block sidebar
-            include widget/widget-profile
+            include widget/widget-search
+            if theme.widgets.includes('profile')
+                include widget/widget-profile
             if theme.widgets.includes('recent_posts')
                 include widget/widget-recent
             if theme.widgets.includes('category') && site.categories.length > 0

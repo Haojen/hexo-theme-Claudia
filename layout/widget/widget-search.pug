@@ -1,0 +1,128 @@
+style.
+    .search-widget {
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)!important;
+        box-sizing: content-box;
+        border: none!important;
+    }
+
+    .search-widget .search-input {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var(--second-text-color);
+    }
+
+    .search-widget .search-content {
+        position: absolute;
+        left: 0;
+        top: calc(100% - 4px);
+        z-index: 2;
+
+        width: 100%;
+        min-height: 80px;
+        max-height: 500px;
+
+        overflow: auto;
+        box-sizing: border-box;
+
+        /*border: 1px solid var(--border-line-color-2);*/
+        /*border-top: none;*/
+
+        background: var(--top-bar-bg-color);
+        backdrop-filter: blur(var(--backdropFilter));
+        -webkit-backdrop-filter: blur(var(--backdropFilter));
+
+        border-bottom-left-radius: var(--borderRadius);
+        border-bottom-right-radius: var(--borderRadius);
+        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.1);
+    }
+main.aside-card-container.search-widget
+    label(for="searchInput")
+        div#searchButton.is-flex.px-4
+                i.iconfont.icon--search1.mr-1
+                input#searchInput.search-input.is-flex-grow-1(placeholder= _p('search_input_placeholder'))
+    section#searchContent.search-content.p-4
+
+script.
+    var loading = false
+    var searchDatabase = []
+    var searchInputEl = document.getElementById('searchInput')
+    var searchButtonEl = document.getElementById('searchButton')
+    var searchResultEl = document.getElementById('searchContent')
+
+    searchInputEl.oninput = function (evt) {
+        var searchValue = evt.srcElement.value
+        var haveSearchValue = Boolean(searchValue.trim())
+        if (!haveSearchValue) {
+            searchResultEl.innerHTML = null
+            return
+        }
+
+        var searchResults = searching(searchValue)
+        console.log(searchResults, 'searchResults')
+        renderSearchResults(searchResults)
+    }
+
+    function renderSearchResults(results) {
+        searchResultEl.innerHTML = null
+        var fragment = document.createDocumentFragment()
+
+        results.forEach(function (item) {
+            var link = document.createElement('a')
+            var title = document.createElement('h5')
+            var content = document.createElement('p')
+
+            title.innerText = item.title
+            content.innerText = item.content
+
+            link.appendChild(title)
+            link.appendChild(content)
+
+            link.className = 'content'
+            fragment.appendChild(link)
+        })
+
+        searchResultEl.appendChild(fragment)
+    }
+
+    function searching(inputText) {
+        var inputTexts = inputText.split(' ')
+        // console.log(searchDatabase, 'searchDatabase', inputTexts)
+        var searchResults = []
+        inputTexts.forEach(function (searchKey) {
+            var haveSearchValue = Boolean(searchKey.trim())
+            if (!haveSearchValue) return
+
+            var key = searchKey.toLowerCase()
+
+            for (var entry of searchDatabase) {
+                var title = entry.getElementsByTagName('title')[0].textContent
+                var link = entry.getElementsByTagName('link')[0].getAttribute('href')
+                var content = entry.getElementsByTagName('content')[0].textContent
+
+                // console.log('title search', title.indexOf(key))
+                    // || content.indexOf(key) > -1
+                if (title.indexOf(key) > -1 ) {
+                    searchResults.push({
+                        link: link,
+                        title: title,
+                        content: content
+                    })
+                }
+                // console.log('content search', content.indexOf(content))
+
+                // console.log(content, 'title', key, inputTexts)
+            }
+        })
+        return searchResults
+    }
+
+    searchButtonEl.onclick = function () {
+        fetch(window.location.href + '/search.xml').then(res => res.text()).then(res => {
+            var domparser = new DOMParser
+            var doc = domparser.parseFromString(res, 'application/xml')
+            searchDatabase = doc.getElementsByTagName('search')[0].children
+        })
+    }
+

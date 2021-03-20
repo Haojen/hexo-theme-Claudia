@@ -1,5 +1,9 @@
 # Changelog
 
+## 03.20.2021
+- Support search
+- User profile can be hidden
+
 ## 03.12.2021
 - Add Valine comment system
 - Adjust about page padding on mobile devices

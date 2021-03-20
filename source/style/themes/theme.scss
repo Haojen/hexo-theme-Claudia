@@ -18,6 +18,11 @@
 }
 
 :root {
+  --backdropFilter: 20px;
+  --borderRadius: 6px;
+  --activeColor: #3273dc;
+  --boxShadow: 0 6px 30px -10px rgba(0, 0, 0, .1);
+
   &.appearance-dark,
   &.appearance-auto,
   &.appearance-light {

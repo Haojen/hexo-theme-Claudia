@@ -9,6 +9,7 @@ widgets:
   - archive
   - recent_posts
   - category
+  - profile
 
 # social config
 social:
