@@ -24,7 +24,7 @@
 
 ## 更新日志
 
-最近更新 [03.12.2021](CHANGELOG.md)
+最近更新 [03.21.2021](CHANGELOG.md)
 
 
 ## 使用
@@ -35,6 +35,7 @@
 #必要
 npm install hexo-renderer-pug 
 npm install hexo-renderer-sass
+npm install hexo-generator-search
 
 #选择性安装
 # 如果需要添加订阅功能

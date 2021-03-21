@@ -22,7 +22,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## Changelog
-Recent update [03.12.2021](CHANGELOG.md)
+Recent update [03.21.2021](CHANGELOG.md)
 
 ## How to Use
 
@@ -32,6 +32,7 @@ Install to Hexo blog root directory, **Not theme directory**
 ```bash
 npm install hexo-renderer-pug 
 npm install hexo-renderer-sass
+npm install hexo-generator-search
 
 # if you need RSS, you must be install this plugin
 npm install hexo-generator-feed
