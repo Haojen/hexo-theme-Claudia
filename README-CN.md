@@ -23,8 +23,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## 更新日志
-
-最近更新 [03.21.2021](CHANGELOG.md)
+[最近更新 03.22.2021](CHANGELOG.md)
 
 
 ## 使用
@@ -131,6 +130,17 @@ appearance: auto
 ```yaml
 highlight:
   enable: false
+```
+
+## 统计
+配置谷歌和百度统计
+```yaml
+#Baidu Analytics**
+ba_track_id: 
+
+#Google Analytics
+ga_track_id: 
+ga_domain:
 ```
 	
 ## 创建 About 页面

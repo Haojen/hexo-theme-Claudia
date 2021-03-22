@@ -47,3 +47,10 @@ appearance: auto # Default value is auto
 
 # Miscellaneous
 favicon: /images/favicon.png
+
+# Google Analytics
+ga_track_id:
+ga_domain:
+
+# Baidu Analytics
+ba_track_id:

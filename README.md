@@ -22,7 +22,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## Changelog
-Recent update [03.21.2021](CHANGELOG.md)
+[Recent update 03.22.2021](CHANGELOG.md)
 
 ## How to Use
 
@@ -118,6 +118,17 @@ appearance: auto
 ```yaml
 highlight:
   enable: false
+```
+
+## Analytics
+Google Analytics and Baidu Analytics simple config:
+```yaml
+#Baidu Analytics**
+ba_track_id: 
+
+#Google Analytics
+ga_track_id: 
+ga_domain:
 ```
 
 ### Create About Page

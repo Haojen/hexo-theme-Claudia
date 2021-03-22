@@ -1,5 +1,9 @@
 # Changelog
 
+## 03.22.2021
+- Add Baidu Analytics
+- Add Google Analytics
+
 ## 03.21.2021
 - Support search
 - User profile can be hidden
