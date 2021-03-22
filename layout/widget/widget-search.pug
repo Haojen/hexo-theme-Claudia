@@ -127,6 +127,8 @@ script.
     }
 
     searchButtonEl.onclick = function () {
+        if (searchDatabase.length > 0) return;
+
         fetch(window.location.href + '/search.xml').then(res => res.text()).then(res => {
             var domparser = new DOMParser
             var doc = domparser.parseFromString(res, 'application/xml')
