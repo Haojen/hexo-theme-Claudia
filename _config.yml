@@ -41,9 +41,9 @@ comment_valine:
   appKey:
   
 comment_disqus:
-    enable: true
-    url: https://eritque-arcus.tech # your main domain like this
-    name: blog-*** # the short name in disqus
+    enable: false
+    url:  # the url of your website main domain like this https://xxx.xxx/
+    name: # the short name in disqus
 
 # dark
 # light
