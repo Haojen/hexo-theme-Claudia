@@ -14,7 +14,6 @@ block topic
 
 block content
     - var tocContent = toc(page.content, {list_number: false})
-
     main.container.is-max-widescreen.content.section.post-page.pt-4.px-4
         .columns.is-flex-desktop.is-justify-content-center.is-flex-direction-row-reverse
             .column.is-3.is-hidden-mobile(class= tocContent.length < 1 && 'is-hidden')!= tocContent
@@ -64,6 +63,24 @@ block content
                         script="(function() {var d = document, s = d.createElement('script');s.src = 'https://"+theme.comment_disqus.name+".disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();"
                         noscript(content="please enable JavaScript to view the comments powered by Disqus.")
                         script(id="dsq-count-scr", src="//blog-pubgj2togw.disqus.com/count.js", async)
+                script.
+                        String.prototype.replaceAll = function (FindText, RepText) {
+                          return this.replace(new RegExp(FindText, "g"), RepText);
+                        }
+                        function html_encode(str) 
+                        { 
+                            var s = ""; 
+                            if (str.length == 0) return ""; 
+                            s = str.replaceAll("&#125;", "}"); 
+                            s = s.replaceAll("&#123;", "{"); 
+                            s = s.replaceAll("<", "&lt;"); 
+                            s = s.replaceAll("&lt;code", "<code");
+                            s = s.replaceAll("&lt;/code", "</code");
+                            return s; 
+                        } 
+                        $('pre').each(function(i,elem){
+                            $(elem).html(html_encode($(elem).html()));
+                        });
                 
 block script
     script(src= url_for("/js/post.js"))
