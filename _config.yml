@@ -39,6 +39,11 @@ comment_valine:
   enable: false
   appId:
   appKey:
+  
+comment_disqus:
+    enable: false
+    url:  # the url of your website main domain like this https://xxx.xxx/
+    name: # the short name in disqus
 
 # dark
 # light
@@ -54,3 +59,6 @@ ga_domain:
 
 # Baidu Analytics
 ba_track_id:
+
+# picture of about page
+about_pic: about.png
