@@ -1,14 +1,15 @@
-header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-content-space-between.is-hidden-mobile
-    section.is-hidden-mobile.is-flex-shrink-0
-        h2
-            a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
-    h3.is-hidden-mobile.is-family-serif.is-full-height.is-flex.is-align-items-center.is-flex-shrink-0
-        block topic
-    aside.is-flex-shrink-0
-        if theme.menu
-            each url, label in theme.menu
-                h3.is-inline-block
-                    a(href= url_for(url))= label && _p(label.toLowerCase())
+header.header-widget.is-flex-shrink-0.is-hidden-mobile
+    .container.is-fullhd.is-flex.is-justify-content-space-between.is-align-items-center.is-full-height
+        section.is-hidden-mobile.is-flex-shrink-0
+            h2
+                a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
+        h3.is-hidden-mobile.is-family-serif.is-full-height.is-flex.is-align-items-center.is-flex-shrink-0
+            block topic
+        aside.is-flex-shrink-0
+            if theme.menu
+                each url, label in theme.menu
+                    h3.is-inline-block
+                        a(href= url_for(url))= label && _p(label.toLowerCase())
 header.is-flex.header-widget.is-flex-shrink-0.is-align-items-center.is-justify-content-center.is-hidden-tablet
         if theme.menu
             each url, label in theme.menu
