@@ -1,8 +1,5 @@
 # Changelog
 
-## 03.24.2021
-- Adjust header container max-width
-
 ## 03.22.2021
 - Add Baidu Analytics
 - Add Google Analytics
