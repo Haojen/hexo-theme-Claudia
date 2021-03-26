@@ -60,3 +60,5 @@ ga_domain:
 # Baidu Analytics
 ba_track_id:
 
+# picture of about page
+about_pic: about.png
