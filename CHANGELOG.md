@@ -1,5 +1,10 @@
 # Changelog
 
+## 03.26.2021
+- Add Meta description
+- Add Disqus comment
+- Bug fix
+
 ## 03.24.2021
 - Adjust header container max-width
 

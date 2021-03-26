@@ -23,7 +23,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## 更新日志
-[最近更新 03.24.2021](CHANGELOG.md)
+[最近更新 03.26.2021](CHANGELOG.md)
 
 
 ## 使用
