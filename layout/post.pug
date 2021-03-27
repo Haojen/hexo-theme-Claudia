@@ -58,10 +58,9 @@ block content
                     )
                 if theme.comment_disqus && theme.comment_disqus.enable
                     article.mt-6.comment-container#disqus
-                        div(id="disqus_thread")
+                        div#disqus_thread
                         script="var disqus_config = function () {this.page.url = window.location.href;this.page.identifier = document.title;};"
                         script="(function() {var d = document, s = d.createElement('script');s.src = 'https://"+theme.comment_disqus.name+".disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();"
-                        noscript(content="please enable JavaScript to view the comments powered by Disqus.")
                         script(id="dsq-count-scr", src="//blog-pubgj2togw.disqus.com/count.js", async)
                 script.
                         String.prototype.replaceAll = function (FindText, RepText) {
