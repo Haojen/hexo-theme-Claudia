@@ -70,16 +70,17 @@ block content
                         { 
                             var s = ""; 
                             if (str.length == 0) return ""; 
-                            s = str.replaceAll("&#125;", "}"); 
-                            s = s.replaceAll("&#123;", "{"); 
-                            s = s.replaceAll("<", "&lt;");  
-                            s = s.replaceAll("&lt;code", "<code");
-                            s = s.replaceAll("&lt;/code", "</code");
+                            s = str.replace(/</g, "&lt;");  
+                            s = s.replace(/>/g, "&gt;");
                             return s; 
                         } 
-                        document.querySelectorAll('pre').forEach(function(node) {
-                            node.innerHTML = html_encode(node.innerHTML);
+                        document.addEventListener('DOMContentLoaded', (event) => {
+                          document.querySelectorAll('pre code').forEach((block) => {
+                            block.innerHTML = html_encode(block.innerHTML);
+                            hljs.highlightBlock(block);
+                          });
                         });
-                
 block script
+    if theme.hljs && theme.hljs.enable
+        script=hljs.highlightAll()
     script(src= url_for("/js/post.js"))
