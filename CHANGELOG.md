@@ -1,5 +1,8 @@
 # Changelog
 
+## 04.08.2021
+- Adjust layout details
+
 ## 03.26.2021
 - Add Meta description
 - Add Disqus comment
