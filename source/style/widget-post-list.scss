@@ -50,6 +50,13 @@ $coverBlurEffect: 20px;
       .post-cover-img {
         max-height: $coverMaxHeight;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+        will-change: transform;
+        transition: transform 500ms;
+      }
+
+      &:hover .post-cover-img {
+        transform: scale(1.04);
       }
     }
 

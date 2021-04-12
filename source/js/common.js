@@ -16,6 +16,11 @@ window.$claudia = {
 
         function loaded(event) {
             var image = event.currentTarget
+
+            image.ontransitionend = function () {
+                image.ontransitionend = null
+                image.style.transition = null
+            }
             image.style.transition = 'opacity 320ms'
             image.style.opacity = 1
 
