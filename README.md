@@ -22,7 +22,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## Changelog
-[Recent update 04.08.2021](CHANGELOG.md)
+[Recent update 04.12.2021](CHANGELOG.md)
 
 ## How to Use
 

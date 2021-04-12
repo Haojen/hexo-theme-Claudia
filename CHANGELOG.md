@@ -1,5 +1,9 @@
 # Changelog
 
+## 04.12.2021
+- Add Postcard image hover zoom animate effect
+- Adjust page indicator top margin
+
 ## 04.08.2021
 - Adjust layout details
 
