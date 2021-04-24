@@ -81,6 +81,6 @@ block content
                           });
                         });
 block script
-    if theme.highlight && theme.highlight.enable && hljs
+    if theme.highlight && theme.highlight.enable
         script=hljs.highlightAll()
     script(src= url_for("/js/post.js"))

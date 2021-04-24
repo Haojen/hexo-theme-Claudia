@@ -64,7 +64,7 @@ html(lang=config.language class= `appearance-${ appearance }`)
         div(style="margin-top: 2px")
           a(title="github-button" class="github-button" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true")
       div
-        span!= theme.user && theme.user.footnotes
+        span= theme.user && theme.user.footnotes
 
     script(async defer src="https://buttons.github.io/buttons.js")
     block script
