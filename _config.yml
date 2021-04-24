@@ -10,10 +10,10 @@ widgets:
   - recent_posts
   - category
   - profile
-  - friend-links
+  - links
 
-# friend links
-friendlinks: {"foo":"foourl", "bar":"barurl"}
+# links
+links: {"foo":"foourl", "bar":"barurl"}
 # social config
 social:
   zhihu:

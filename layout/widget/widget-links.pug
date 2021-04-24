@@ -1,0 +1,6 @@
+main.aside-card-container.tag-widget(class= is_links)
+    h3= _p('Links')
+    section
+        each url, text in theme.links
+            a(href = url style="color: white")= text
+            br
