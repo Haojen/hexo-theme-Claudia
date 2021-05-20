@@ -147,7 +147,7 @@ layout: about
 ### My demo blog config
 https://github.com/Haojen/Claudia-theme-blog
 
-## And my another Hexo theme
+## Another my Hexo theme
 This it [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina), hope you like it!
 
 ## License
