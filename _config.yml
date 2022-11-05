@@ -62,3 +62,6 @@ ba_track_id:
 
 # picture of about page
 about_pic: about.png
+
+image_zoom:
+  enable: true
