@@ -1,7 +1,7 @@
-// /*
-//  A img fancybox wrapper for img zoom in&out with jquery
-//  author: jackfromeast
-//  */
+/*
+    A img fancybox wrapper for img zoom in&out
+    author: jackfromeast
+ */
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
