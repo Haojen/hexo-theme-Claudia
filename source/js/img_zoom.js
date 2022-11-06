@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     Array.prototype.filter.call(images, function(img){
         wrap_image_with_fancybox(img);
     });
+
+    // prevent returning to the top of the page after loading the fancybox
+    $.fancybox.defaults.hideScrollbar = false;
 });
 
 
