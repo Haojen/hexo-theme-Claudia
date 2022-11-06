@@ -2,6 +2,7 @@ extends widget/base
 block append head
   link(rel='stylesheet', href= url_for('/style/post.css'))
   link(rel='stylesheet', href= url_for('/style/themes/highlight-theme-light.css'))
+  link(rel='stylesheet', href= url_for('/style/common/jquery.fancybox.min.css'))
   script(src= url_for("/js/highlight.pack.js"))
   meta(name="description", content=truncate( strip_html(page.content), {length: 360, omission: '..'} ))
   if theme.comment_valine && theme.comment_valine.enable
@@ -63,4 +64,8 @@ block content
                         script="(function() {var d = document, s = d.createElement('script');s.src = 'https://"+theme.comment_disqus.name+".disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();"
                         script(id="dsq-count-scr", src="//blog-pubgj2togw.disqus.com/count.js", async)
 block script
+    if theme.image_zoom && theme.image_zoom.enable
+        script(src= url_for("/js/jquery-3.6.1.min.js"))
+        script(src= url_for("/js/jquery-fancybox.min.js"))
+        script(src= url_for("/js/img_zoom.js"))
     script(src= url_for("/js/post.js"))
