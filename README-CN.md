@@ -163,8 +163,7 @@ https://github.com/Haojen/Claudia-theme-blog
 如果遇到任何问题或反馈建议，请发起 issue
 
 ## 支持我做的更好, 请我喝杯饮料 🥤️
-<img src="./screenshot/Alipay.png" width="150">
-<img src="./screenshot/WeChatPay.png" width="155">
+<img src="./screenshot/BuyMeCoffeeQRCode.png" width="300">
 
 ## 其他我开发的项目
 - [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina)

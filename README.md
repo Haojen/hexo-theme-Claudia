@@ -156,8 +156,7 @@ https://github.com/Haojen/Claudia-theme-blog
 
 
 ## Buy me coffee ☕️
-<img src="./screenshot/Alipay.png" width="150">
-<img src="./screenshot/WeChatPay.png" width="155">
+<img src="./screenshot/BuyMeCoffeeQRCode.png" width="300">
 
 ## License
 MIT © [HAOZHEN MA](http://haojen.github.io)
