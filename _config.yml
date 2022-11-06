@@ -22,7 +22,7 @@ social:
 
 user:
   name: Haojen
-  avatar: /images/avatar.jpg
+  avatar:
   location: In the dust
   description: May the Force be with you
   footnotes: # footnotes
@@ -51,7 +51,7 @@ comment_disqus:
 appearance: auto # Default value is auto
 
 # Miscellaneous
-favicon: img/favicon.ico
+favicon: images/favicon.ico
 
 # Google Analytics
 ga_track_id:

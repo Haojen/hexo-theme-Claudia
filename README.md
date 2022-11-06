@@ -35,6 +35,11 @@ npm install hexo-generator-search
 
 # if you need RSS, you must be install this plugin
 npm install hexo-generator-feed
+
+# Flowchat
+npm install hexo-filter-flowchart        
+# Math
+npm install hexo-renderer-mathjax
 ```
 
 ### User's profile
@@ -59,7 +64,7 @@ social:
   github: haojen
 
 # Page icon
-favicon: img/favicon.ico
+favicon: images/favicon.ico
 
 ```
 

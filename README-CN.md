@@ -70,7 +70,7 @@ social:
   github: haojen
 
 # 页面 icon
-favicon: img/favicon.ico
+favicon: images/favicon.ico
 ```
 
 ### 配置导航栏右上角菜单项
