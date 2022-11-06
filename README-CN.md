@@ -5,7 +5,6 @@
 
 <p align="center">
   <img  alt="Hexo version" src="https://img.shields.io/badge/hexo%20version-%3E%3D%204.2-brightgreen">
-  <img  alt="Build blog" src="https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master">
   <img  alt="GitHub issues" src="https://img.shields.io/github/issues/Haojen/hexo-theme-Claudia">
   <img  alt="GitHub license" src="https://img.shields.io/github/license/Haojen/hexo-theme-Claudia">
 </p>
@@ -70,6 +69,8 @@ social:
   instagram:
   github: haojen
 
+# 页面 icon
+favicon: img/favicon.ico
 ```
 
 ### 配置导航栏右上角菜单项
@@ -160,6 +161,10 @@ https://github.com/Haojen/Claudia-theme-blog
 ## 最后
 
 如果遇到任何问题或反馈建议，请发起 issue
+
+## 支持我做的更好, 请我喝杯饮料 🥤️
+<img src="./screenshot/Alipay.png" width="150">
+<img src="./screenshot/WeChatPay.png" width="155">
 
 ## 其他我开发的项目
 - [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina)

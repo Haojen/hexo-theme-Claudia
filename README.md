@@ -5,7 +5,6 @@
 
 <p align="center">
   <img  alt="Hexo version" src="https://img.shields.io/badge/hexo%20version-%3E%3D%204.2-brightgreen">
-  <img  alt="Build blog" src="https://github.com/Haojen/Claudia-theme-blog/workflows/Build%20Claudia%20blog/badge.svg?branch=master">
   <img  alt="GitHub issues" src="https://img.shields.io/github/issues/Haojen/hexo-theme-Claudia">
   <img  alt="GitHub license" src="https://img.shields.io/github/license/Haojen/hexo-theme-Claudia">
 </p>
@@ -58,6 +57,9 @@ social:
   linkedin:
   instagram:
   github: haojen
+
+# Page icon
+favicon: img/favicon.ico
 
 ```
 
@@ -152,6 +154,10 @@ https://github.com/Haojen/Claudia-theme-blog
 - [Vimkey - a browser extension, let you use keyboard control browser](https://github.com/Haojen/vimkey)
 - [PlanetTab - a cool dynamic 3D planet browser new tab](https://github.com/Haojen/planet-tab)
 
+
+## Buy me coffee ☕️
+<img src="./screenshot/Alipay.png" width="150">
+<img src="./screenshot/WeChatPay.png" width="155">
 
 ## License
 MIT © [HAOZHEN MA](http://haojen.github.io)
