@@ -17,3 +17,10 @@ block content
                 include widget/widget-archives
             if theme.widgets.includes('tag') && site.tags.length > 0
                 include widget/widget-tag
+            if theme.links && theme.links.length > 0
+                main.aside-card-container.friend-widget
+                    h3= _p('friends')
+                    section
+                        each link in theme.links
+                            a(href= link.link)
+                                span.tag.post-item-tag(style="margin-bottom: 5px;")= link.title

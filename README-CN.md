@@ -71,6 +71,11 @@ social:
 
 # 页面 icon
 favicon: images/favicon.ico
+
+# 友情链接
+friend_links:
+  - title: Link1
+    link: https://www.link1.test.com/
 ```
 
 ### 配置导航栏右上角菜单项

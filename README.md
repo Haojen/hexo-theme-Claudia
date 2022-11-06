@@ -66,6 +66,10 @@ social:
 # Page icon
 favicon: images/favicon.ico
 
+friend_links:
+  - title: Link1
+    link: https://www.link1.test.com/
+
 ```
 
 ### Upper-right navigation bar menu config

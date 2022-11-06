@@ -2,6 +2,7 @@
 
 ## 11.06.2022
 - Support Fancybox (thank you @jackfromeast)
+- Add Friend Links
 - Fix more detail Bugs
 - Update Readme
 

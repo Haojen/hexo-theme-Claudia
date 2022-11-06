@@ -53,6 +53,16 @@ appearance: auto # Default value is auto
 # Miscellaneous
 favicon: images/favicon.ico
 
+friend_links:
+  - title: Google
+    link: https://www.google.com/
+  - title: Github
+    link: https://www.github.com/
+  - title: V2EX
+    link: https://v2ex.com/
+  - title: Twitter
+    link: https://twitter.com/
+
 # Google Analytics
 ga_track_id:
 ga_domain:
