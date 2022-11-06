@@ -1,5 +1,10 @@
 # Changelog
 
+## 11.06.2022
+- Support Fancybox (thank you @jackfromeast)
+- Fix more detail Bugs
+- Update Readme
+
 ## 04.12.2021
 - Add Postcard image hover zoom animate effect
 - Adjust page indicator top margin

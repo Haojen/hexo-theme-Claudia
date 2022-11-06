@@ -23,7 +23,7 @@
 ![cover](./screenshot/claudia-cover-v2.png)
 
 ## 更新日志
-[最近更新 04.12.2021](CHANGELOG.md)
+[最近更新 11.06.2022](CHANGELOG.md)
 
 
 ## 使用
@@ -125,8 +125,7 @@ appearance: auto
 
 ## 配置代码高亮
 
-在theme主题目录下, 可以通过 `_config.yml` 文件(注意不是hexo根目录), 配置代码高亮的style, 步骤如下:
-首先在您的hexo根目录下 `_config.yml` , 关闭内置的着色器:
+Claudia 自带代码高亮，但在正常使用前，需要您在根目录下 `_config.yml`关闭hexo自带的高亮模块，关闭后记得 `hexo clean` 清理缓存
 ```yaml
 highlight:
   enable: false
@@ -162,9 +161,11 @@ https://github.com/Haojen/Claudia-theme-blog
 
 如果遇到任何问题或反馈建议，请发起 issue
 
-## 我的另外一款 Hexo 主题
-[Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina)
+## 其他我开发的项目
+- [Hexo-theme-Anisina](https://github.com/Haojen/hexo-theme-Anisina)
+- [Vimkey - 一个浏览器插件，让你用键盘控制浏览器](https://github.com/Haojen/vimkey)
+- [PlanetTab - 一个非常酷的3D动态星球浏览器新标签页](https://github.com/Haojen/planet-tab)
 
 ## License
 
-MIT © [haojen ma](http://haojen.github.io)
+MIT © [HAOZHEN MA](http://haojen.github.io)
