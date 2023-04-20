@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="HandheldFriendly" content="true" />
+  <title>{{ page.title | safe }} - Snippet</title>
+  <meta name="author" content="{{ getAuthor(page.author, getAuthor(config.author, 'L3n4r0x')) }}" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="{{ page.keyword or page.keywords }}" />
+  <meta name="description" content="{{ page.description or page.excerpt or page.subtitle }}" />
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- prettier-ignore-start-start -->
+  <!-- { json_data('main', json_config()) | safe } -->
+  <link rel="stylesheet"
+    href="https://rawcdn.githack.com/dimaslanjaka/Web-Manajemen/cb8d4c9a99c2950886ab182ddbf69149bce3ce02/fontawesome-pro/web/css/all.min.css" />
+  <!-- prettier-ignore-start-end -->
+  <link rel="stylesheet" href="//www.webmanajemen.com/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/vs.min.css" />
+  <link rel="stylesheet" href="/css/snippet.css" />
+</head>
+<body>
+  <div class="container-fluid bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" id="search-form">
+            <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+            <button class="btn btn-outline-danger" type="reset"><i class="fa fa-refresh"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="search-result-container"></div>
+
+    <div class="container-fluid mt-4">
+      <div class="bg-dark rounded-3 text-white p-5">
+        <h1 class="display-5 fw-bold">{{ page.title }}</h1>
+
+        <p class="d-block">
+          <span class="me-2">{{ page.type }} label</span>
+
+          {%- if page.tags and page.tags.length %}
+          {%- for label in page.tags.toArray() %}
+          <a class="tag tag-{{ label.name }}" href="{{ url_for(label.path) }}" rel="tag"><i class="fa fa-tag"></i>
+            {{ label.name }}</a>
+          {%- endfor %}
+          {% endif %}
+
+          {%- if page.categories and page.categories.length %}
+          {%- for label in page.categories.toArray() %}
+          <a class="tag tag-{{ label.name }}" href="{{ url_for(label.path) }}" rel="tag"><i class="fa fa-tag"></i>
+            {{ label.name }}</a>
+          {%- endfor %}
+          {% endif %}
+        </p>
+        <p class="col-md-8 fs-4">{{ page.description or page.excerpt or page.subtitle }}</p>
+        <a class="btn btn-outline-light" type="button" href="../">BACK</a>
+      </div>
+    </div>
+
+    <div class="py-4">
+      {{- page.content | safe }}
+    </div>
+
+    {% set postbylabel = getPostByLabel('tags', ['snippet', 'script', 'snippets', 'scripts']) or [] %}
+    <div class="py-4">
+      <h2>Another Snippets</h2>
+      <ul class="list-group">
+        {% for item in postbylabel %}
+        <li class="list-group-item">
+          <img
+            src="{{ item.thumbnail or item.photos[0] or 'https://thumbs.dreamstime.com/b/no-picture-available-placeholder-thumbnail-icon-illustration-261212107.jpg' }}"
+            onerror="this.src='https://thumbs.dreamstime.com/b/no-picture-available-placeholder-thumbnail-icon-illustration-261212107.jpg'"
+            width="100px" height="100px" alt="thumbnail {{ item.title }}" class="d-inline me-2" />
+          <a href="{{ item.permalink }}" class="d-inline">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <script src="//www.webmanajemen.com/page/assets/js/r-ads.js"></script>
+  <script src="//www.webmanajemen.com/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+  <script>
+    /* global CONFIG, pjax, LocalSearch */
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!CONFIG.path) {
+        // Search DB path
+        console.warn('`hexo-generator-searchdb` plugin is not installed!');
+        return;
+      }
+      const localSearch = new LocalSearch({
+        path: CONFIG.path,
+        top_n_per_article: CONFIG.localsearch.top_n_per_article,
+        unescape: CONFIG.localsearch.unescape
+      });
+
+      const input = document.querySelector('.search-input');
+
+      const inputEventFunction = () => {
+        if (!localSearch.isfetched) return;
+        const searchText = input.value.trim().toLowerCase();
+        const keywords = searchText.split(/[-\s]+/);
+        const container = document.querySelector('.search-result-container');
+        let resultItems = [];
+        if (searchText.length > 0) {
+          // Perform local searching
+          resultItems = localSearch.getResultItems(keywords);
+        }
+        if (keywords.length === 1 && keywords[0] === '') {
+          container.classList.add('no-result');
+          container.innerHTML = '<div class="search-result-icon"><i class="fa fa-search fa-5x"></i></div>';
+        } else if (resultItems.length === 0) {
+          container.classList.add('no-result');
+          container.innerHTML = '<div class="search-result-icon"><i class="far fa-frown fa-5x"></i></div>';
+        } else {
+          resultItems.sort((left, right) => {
+            if (left.includedCount !== right.includedCount) {
+              return right.includedCount - left.includedCount;
+            } else if (left.hitCount !== right.hitCount) {
+              return right.hitCount - left.hitCount;
+            }
+            return right.id - left.id;
+          });
+          const stats = CONFIG.i18n.hits.replace('${hits}', resultItems.length);
+
+          container.classList.remove('no-result');
+          container.innerHTML = `<div class="search-stats">${stats}</div>
+        <hr>
+        <ul class="search-result-list">${resultItems.map(result => result.item).join('')}</ul>`;
+          if (typeof pjax === 'object') pjax.refresh(container);
+        }
+      };
+
+      localSearch.highlightSearchWords(document.querySelector('.post-body'));
+      if (CONFIG.localsearch.preload) {
+        localSearch.fetchData();
+      }
+
+      if (CONFIG.localsearch.trigger === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
+        input.addEventListener('keypress', event => {
+          if (event.key === 'Enter') {
+            inputEventFunction();
+          }
+        });
+      }
+      window.addEventListener('search:loaded', inputEventFunction);
+
+      // Handle and trigger popup window
+      document.querySelectorAll('.popup-trigger').forEach(element => {
+        element.addEventListener('click', () => {
+          document.body.classList.add('search-active');
+          // Wait for search-popup animation to complete
+          setTimeout(() => input.focus(), 500);
+          if (!localSearch.isfetched) localSearch.fetchData();
+        });
+      });
+
+      // Monitor main search box
+      const onPopupClose = () => {
+        document.body.classList.remove('search-active');
+      };
+
+      document.querySelector('.search-pop-overlay').addEventListener('click', event => {
+        if (event.target === document.querySelector('.search-pop-overlay')) {
+          onPopupClose();
+        }
+      });
+      document.querySelector('.popup-btn-close').addEventListener('click', onPopupClose);
+      document.addEventListener('pjax:success', () => {
+        localSearch.highlightSearchWords(document.querySelector('.post-body'));
+        onPopupClose();
+      });
+      window.addEventListener('keyup', event => {
+        if (event.key === 'Escape') {
+          onPopupClose();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
