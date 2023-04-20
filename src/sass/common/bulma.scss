@@ -1,0 +1,15 @@
+@charset "utf-8";
+@import 'bulma/bulma.sass';
+
+//* fix .title font size inside pretext */
+
+pre,
+code {
+  .number,
+  .title {
+    all: unset;
+  }
+  .title {
+    color: hsl(104, 62.3%, 56.3%);
+  }
+}
