@@ -1,4 +1,4 @@
-@import "common/variable";
+@import 'common/variable';
 
 $lineColor: var(--border-line-color);
 
@@ -49,7 +49,6 @@ $lineColor: var(--border-line-color);
 
 .post-page {
   .post-content {
-
     code {
       border-radius: 4px;
       background: var(--third-bg-color);
@@ -76,7 +75,7 @@ $lineColor: var(--border-line-color);
       max-height: 500px;
 
       border-radius: $borderRadius;
-      box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 
       opacity: 0;
       will-change: opacity;
@@ -87,12 +86,12 @@ $lineColor: var(--border-line-color);
     }
   }
 
-  .jump-container .button{
+  .jump-container .button {
     max-width: calc(50% - 5px);
     span {
       overflow: hidden;
       white-space: nowrap;
-      text-overflow:ellipsis;
+      text-overflow: ellipsis;
     }
   }
 
@@ -110,7 +109,7 @@ $lineColor: var(--border-line-color);
     height: calc(100vh - 100px);
 
     overflow: auto;
-    list-style: none!important;
+    list-style: none !important;
     border-left: 1px solid $lineColor;
 
     &::-webkit-scrollbar {
@@ -120,18 +119,22 @@ $lineColor: var(--border-line-color);
     ol {
       margin-top: 5px;
       margin-left: 15px;
-      list-style: none!important;
+      list-style: none !important;
     }
 
     .is-active {
       span {
-        color: $activeColor!important;
+        color: $activeColor !important;
       }
     }
   }
 
   :target {
     padding-top: 60px;
-    margin-top: -60px!important;
+    margin-top: -60px !important;
   }
+}
+
+.hidden {
+  display: none !important;
 }
