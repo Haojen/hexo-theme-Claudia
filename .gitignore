@@ -8,3 +8,4 @@
 .idea/
 layout/**/*.njk
 .vscode/launch.json
+source/js/quiz.js
