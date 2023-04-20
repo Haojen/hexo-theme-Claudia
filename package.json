@@ -1,9 +1,45 @@
 {
   "name": "hexo-theme-claudia",
-  "version": "2.0.0",
-  "peerDependencies": {
-    "hexo": "^5.0.2",
-    "hexo-renderer-pug": "^1.0.0",
-    "hexo-renderer-sass": "^0.4.0"
+  "version": "2.0.1",
+  "files": [
+    "layout",
+    "languages",
+    "scripts",
+    "source",
+    "screenshot",
+    "*.md",
+    "LICENSE"
+  ],
+  "contributors": [
+    {
+      "email": "dimaslanjaka@gmail.com",
+      "name": "dimaslanjaka",
+      "url": "https://www.webmanajemen.com"
+    }
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "bulma": "^0.9.4",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "sbg-utility": "^1.0.9"
+  },
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/gulp": "^4",
+    "@types/gulp-sass": "^5",
+    "@types/hexo": "https://github.com/dimaslanjaka/nodejs-package-types/raw/hexo/release/types-hexo.tgz",
+    "@types/prettier": "^2",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7"
   }
 }
