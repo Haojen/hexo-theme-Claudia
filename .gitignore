@@ -6,3 +6,4 @@
 **/.yarn/version*
 **/tmp
 .idea/
+layout/**/*.njk
