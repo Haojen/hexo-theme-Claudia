@@ -7,3 +7,4 @@
 **/tmp
 .idea/
 layout/**/*.njk
+.vscode/launch.json
