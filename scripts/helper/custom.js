@@ -77,3 +77,21 @@ hexo.extend.helper.register('json_stringify', function (value, spaces) {
 hexo.extend.helper.register('object_keys', function (obj) {
   return Object.keys(obj);
 });
+
+/**
+ * fix url
+ * - remove double slashes
+ * - decode url
+ * @param {string} url
+ * @param {Record<string,any>} options
+ * @returns
+ */
+function fixURL(url, options = {}) {
+  const fixed = url.replace(/([^:]\/)\/+/gm, '$1');
+  if (options) {
+    if (options.decode) return decodeURI(fixed);
+  }
+  return fixed;
+}
+
+hexo.extend.helper.register('fixURL', fixURL);
