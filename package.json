@@ -30,7 +30,6 @@
     "@types/eslint": "^8",
     "@types/gulp": "^4",
     "@types/gulp-sass": "^5",
-    "@types/hexo": "https://github.com/dimaslanjaka/nodejs-package-types/raw/hexo/release/types-hexo.tgz",
     "@types/prettier": "^2",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
