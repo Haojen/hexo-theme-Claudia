@@ -10283,8 +10283,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 pre .number,
 pre .title,
+pre .tag,
 code .number,
-code .title {
+code .title,
+code .tag {
   all: unset;
 }
 pre .title,

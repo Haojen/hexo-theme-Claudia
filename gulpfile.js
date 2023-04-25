@@ -22,3 +22,4 @@ function buildStyles() {
 }
 
 gulp.task('build', gulp.series(buildStyles));
+gulp.task('default', gulp.series('build'));
