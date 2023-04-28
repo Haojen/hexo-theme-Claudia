@@ -2,7 +2,8 @@ header.header-widget.is-flex-shrink-0.is-hidden-mobile
     .container.is-fullhd.is-flex.is-justify-content-space-between.is-align-items-center.is-full-height
         section.is-hidden-mobile.is-flex-shrink-0
             h2
-                a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
+                //a(href= url_for("/"))= (theme.user && theme.user.name || config.author) + "'s blog"
+                a(href= url_for("/"))=config.title||page.title
         h3.is-hidden-mobile.is-family-serif.is-full-height.is-flex.is-align-items-center.is-flex-shrink-0
             block topic
         aside.is-flex-shrink-0

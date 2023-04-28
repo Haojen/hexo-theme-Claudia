@@ -1,5 +1,5 @@
 <h1 align="center">Claudia</h1>
-<p align="center"> 
+<p align="center">
   Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
 </p>
 
@@ -14,11 +14,17 @@
 </p>
 
 <p align="center">
-  <span>English | </span> 
+  <span>English | </span>
   <a href="README-CN.md" rel="nofollow">简体中文</a>
 </p>
 
 ![cover](./screenshot/claudia-cover-v2.png)
+
+## Development
+to build or update bulma
+```bash
+gulp build
+```
 
 ## Changelog
 [Recent update 11.06.2022](CHANGELOG.md)
@@ -29,7 +35,7 @@
 
 Install to Hexo blog root directory, **Not theme directory**
 ```bash
-npm install hexo-renderer-pug 
+npm install hexo-renderer-pug
 npm install hexo-renderer-dartsass
 npm install hexo-generator-search
 
@@ -37,7 +43,7 @@ npm install hexo-generator-search
 npm install hexo-generator-feed
 
 # Flowchat
-npm install hexo-filter-flowchart        
+npm install hexo-filter-flowchart
 # Math
 npm install hexo-renderer-mathjax
 ```
@@ -48,7 +54,7 @@ Configure the file `hexo-theme-claudia/_config.yml` under the theme profile
 
 ```yaml
 user:
-  name: 
+  name:
   avatar: /images/avatar.jpg
   location:
   description:
@@ -116,7 +122,7 @@ comment_valine:
 
 ### Appearance
 ```yaml
-# 1.light 
+# 1.light
 # 2.dark
 # 3.auto (default, match device appearance setting)
 appearance: auto
@@ -135,10 +141,10 @@ highlight:
 Google Analytics and Baidu Analytics simple config:
 ```yaml
 #Baidu Analytics**
-ba_track_id: 
+ba_track_id:
 
 #Google Analytics
-ga_track_id: 
+ga_track_id:
 ga_domain:
 ```
 

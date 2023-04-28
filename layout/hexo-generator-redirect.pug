@@ -1,0 +1,18 @@
+- var newUrl = typeof page !== 'undefined' && typeof page.target !== 'undefined' && page.target.path ? full_url_for(page.target.path) : typeof page.redirect_to === 'string' ? full_url_for(page.redirect_to) : null;
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title=page.title
+  link(rel='canonical' href=page.redirect_to)
+  meta(http-equiv='refresh' content="0; url='"+page.redirect_to+"'")
+h1=page.title+" Page address was changed"
+p
+  | The new page address is #[a(href=newUrl rel='follow dofollow') #{newUrl}]
+script(type='text/javascript').
+  setTimeout(function () {
+  //document.location.href = ''+newUrl+'';
+  location.replace(''+newUrl+'');
+  }, 3000);

@@ -1,0 +1,31 @@
+archive:
+  one: 'Arsip'
+  other: 'Arsip'
+
+category:
+  one: 'Kategori'
+  other: 'Kategori'
+tag:
+  one: 'Tag'
+  other: 'Tags'
+post:
+  one: 'Postingan'
+  other: 'Postingan'
+page:
+  one: 'Halaman'
+  other: 'Halaman'
+prev: 'Sebelumnya'
+next: 'Selanjutnya'
+
+all: 'Semua'
+home: 'Beranda'
+title: 'Judul'
+about: 'Tentang'
+recent: 'Baru-baru ini'
+friends: 'Teman'
+read_more: 'Baca Selengkapnya'
+user_name: 'Nama Pengguna'
+click_back_to_the_top: 'Klik ke atas'
+
+search_input_placeholder: 'Pencarian'
+

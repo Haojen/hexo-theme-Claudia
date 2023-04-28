@@ -1,4 +1,11 @@
 .DS_Store
-node_modules
-tmp
+**/node_modules
+**/.yarn/cache/**
+**/.yarn/unplugged/**
+**/.yarn/*.gz
+**/.yarn/version*
+**/tmp
 .idea/
+layout/**/*.njk
+.vscode/launch.json
+source/js/quiz.js

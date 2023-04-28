@@ -4,7 +4,7 @@ article.post-container.is-flex.is-justify-content-center.section.container.is-ma
         div.columns.is-variable.is-1-tablet.is-3-desktop-only.is-2-widescreen.is-full-width
             section.column
                 if page.posts.length > 0
-                    each post in page.posts.sort('date', -1).toArray()
+                    each post in page.posts.sort('updated', -1).toArray()
                         - var postURL = url_for(post.path)
                         - var imgURL = getPostCoverImg(post)
                         - var isExcerpt = post.excerpt && post.excerpt.length > 0
