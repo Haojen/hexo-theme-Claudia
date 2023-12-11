@@ -87,6 +87,11 @@ $lineColor: var(--border-line-color);
     }
   }
 
+  .copyright-container{
+    border:silver 1px dashed;
+    padding: 5px;
+  }
+
   .jump-container .button{
     max-width: calc(50% - 5px);
     span {

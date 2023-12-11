@@ -155,6 +155,18 @@ layout: about
 ---
 ```
 
+## Add copyright description
+
+Manually add: `copyright: true` to your post file, you can also modify the `post.md` template (Scaffold), automatically added when you create a post
+```yaml
+---
+title: {{ title }}
+date: {{ date }}
+tags:
+copyright: true #Set the copyright description to display
+---
+```
+
 ### My demo blog config
 https://github.com/Haojen/Claudia-theme-blog
 

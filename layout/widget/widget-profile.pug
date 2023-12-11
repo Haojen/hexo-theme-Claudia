@@ -16,5 +16,9 @@ main.aside-card-container.profile-widget
                 address.has-text-centered.has-text-grey
                     i.iconfont.icon-location(style="margin-right: 5px;")
                     span.has-text-grey= theme.user.location
+            if (theme.user.email)
+                span.as-text-centered.has-text-grey
+                    i.iconfont.icon-email(style="margin-right: 5px;")
+                    span.has-text-grey= theme.user.email
     section.sns-container.is-flex.is-justify-content-center.is-align-items-center
         include widget-sns
