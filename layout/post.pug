@@ -28,6 +28,19 @@ block content
                 if page.date
                     time.has-text-grey(datetime=page.date.toJSON())= date(page.date, date_format)
                 article.mt-2.post-content!= page.content
+                if page.copyright===true
+                    footer.mt-3
+                        div.copyright-container
+                            - var author=`${ __('copyright_author') }: ${ theme.user.name }`
+                            - var email=`${ __('copyright_email') }: ${ theme.user.email }`
+                            span.has-text-grey=author
+                            br
+                            span.has-text-grey=`${ __('copyright_link') }: `
+                            a(href= url_for(page.permalink) title=page.permalink).has-text-grey=page.permalink
+                            br
+                            span.has-text-grey=email
+                            br
+                            span.has-text-grey.copyright-statement=_p('copyright_statement')
                 section.jump-container.is-flex.is-justify-content-space-between.my-6
                     // em is empty placeholder
                     if page.prev

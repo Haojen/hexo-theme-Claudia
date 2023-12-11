@@ -57,6 +57,7 @@ user:
   name: 
   avatar: /images/avatar.jpg
   location:
+  email: 
   description:
   footnotes:
 
@@ -156,6 +157,19 @@ ga_domain:
 title: about
 date: 2017-05-31 10:05:56
 layout: about
+---
+```
+
+
+## 添加版权说明
+
+手动在你的博客文件中添加：`copyright: true`，也可以修改`post.md`模版（Scaffold），新增博客时自动添加
+```yaml
+---
+title: {{ title }}
+date: {{ date }}
+tags:
+copyright: true #设置显示版权说明
 ---
 ```
 	

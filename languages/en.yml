@@ -29,3 +29,7 @@ click_back_to_the_top: 'Click back to the top'
 
 search_input_placeholder: 'Search everything..'
 
+copyright_author: 'Author'
+copyright_link: 'Link'
+copyright_email: 'Email'
+copyright_statement: 'The copyright of this article belongs to the author, please contact the author for authorization for commercial reproduction, please indicate the source for non-commercial reproduction.'
