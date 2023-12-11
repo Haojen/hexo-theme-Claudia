@@ -94,6 +94,10 @@ $lineColor: var(--border-line-color);
     overflow: hidden;
     white-space: nowrap;
     text-overflow:ellipsis;
+    
+    .copyright-statement{
+      white-space: normal;
+    }
   }
 
   .jump-container .button{
