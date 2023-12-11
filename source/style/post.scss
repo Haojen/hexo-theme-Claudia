@@ -90,6 +90,10 @@ $lineColor: var(--border-line-color);
   .copyright-container{
     border:silver 1px dashed;
     padding: 5px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
   }
 
   .jump-container .button{

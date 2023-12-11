@@ -36,7 +36,7 @@ block content
                             span.has-text-grey=author
                             br
                             span.has-text-grey=`${ __('copyright_link') }: `
-                            a(href= url_for(page.permalink)).has-text-grey=page.permalink
+                            a(href= url_for(page.permalink) title=page.permalink).has-text-grey=page.permalink
                             br
                             span.has-text-grey=email
                             br
